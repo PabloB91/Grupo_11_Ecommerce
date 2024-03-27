@@ -304,15 +304,21 @@ label {
 .fa-brands{
 	padding: 8px 16px;
 	font-size: 30px;
+	text-align: center;
 }
 
 .right-menu-container {
     display: none;
 }
 
+.register-method-change{
+	text-align: center;
+}
+
 .errores{
 	color: crimson;
 	font-size: 12px;
+	text-align: center;
 
 }
 
