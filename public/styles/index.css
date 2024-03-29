@@ -53,7 +53,7 @@
 		font-size: 1.5em;
 		line-height: 1;
 		letter-spacing: normal;
-		text-transdiv: none;
+		text-transform: none;
 		display: inline-block;
 		white-space: nowrap;
 		word-wrap: normal;
@@ -428,13 +428,14 @@
 	}
 
 	.box {
-		max-height: 250px;
+		/*max-height: 250px;*/
 		overflow: hidden;
+		padding-left: 1em;
 
 		picture {
 			overflow: hidden;
-			width: 45px;
-			height: 55px;
+			width: 25%;
+			/*height: 55px;*/
 			max-width: 200px;
 			max-height: 360px;
 		}
@@ -446,7 +447,8 @@
 		width: 100%;
 
 		img {
-			width: 90%;
+			width: 100%;
+			border-radius: 0px 8px 8px 0px;
 		}
 	}
 
@@ -454,6 +456,7 @@
 		font-family: "Montserrat", sans-serif;
 		font-weight: 600;
 		font-size: 1rem;
+		padding-top: 1em;
 	}
 
 	.promo-container_cards {
@@ -469,7 +472,7 @@
 		display: flex;
 		margin: 7px 0px;
 		cursor: pointer;
-		width: 90%;
+		/*width: 95%;*/
 		align-items: flex-start;
 
 		&:hover {

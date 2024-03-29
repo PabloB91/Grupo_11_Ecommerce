@@ -146,7 +146,7 @@ span.bar-bottom::after {
 	content: "";
 	display: block;
 	width: 90%;
-	height: 2px;
+	height: 0.90px;
 	margin: 10px 0px 10px 0px;
 	background: var(--orange-color);
 }
