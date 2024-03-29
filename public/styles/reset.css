@@ -36,9 +36,10 @@ img {
 	height: 100%;
 }
 
-ul {
+ul, ol {
 	list-style-type: none;
-}
+	list-style: none;
+  }
 
 /* ETIQUETAS DE TEXTO */
 
