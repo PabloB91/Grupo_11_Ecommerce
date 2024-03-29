@@ -5,25 +5,16 @@ header {
 	width: 100%;
 	z-index: 999;
 
-	.header-center {
-		display: flex;
-		margin: 0px auto;
-		justify-content: center;
-		flex-wrap: wrap;
-		width: 100%;
-		max-width: 1555px;
-	}
-
-	.headerTop {
-		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
+	ul,
+	ol {
+		list-style-type: none;
+		list-style: none;
 	}
 
 	.img-profile {
 		width: 38px;
 		height: 38px;
-		border-radius: 50%;
+		border-radius: 9999px;
 		overflow: hidden;
 
 		img {
@@ -32,10 +23,14 @@ header {
 		}
 	}
 
+	.headerTop .fa-solid,
+	.fa-regular {
+		color: #ff540a;
+		margin: 0px 4px;
+		font-size: 1.5rem;
+	}
+
 	.headerTop .comment {
-		/* width: 50%; */
-		/* 50 de 700 px up */
-		width: 100%;
 		display: flex;
 		justify-content: center;
 		margin-bottom: 4px;
@@ -48,57 +43,36 @@ header {
 		p {
 			font-size: 0.7rem;
 			text-align: center;
-			padding: 10px;
+			padding: 0px 10px;
 			color: #fff;
 			width: 95%;
 		}
 	}
 
 	.headerTop .top-navigation-bar {
-		width: 100%;
-		padding: 10px;
-
-		nav {
-			display: flex;
-			justify-content: flex-end;
-		}
-
 		ul {
 			width: 100%;
 			display: flex;
 			justify-content: center;
 			justify-content: space-evenly;
-			/* flex-wrap: wrap;
-			 */
 		}
 
-		.register-login {
+		a.li_register-login {
 			display: flex;
-			width: 100%;
+			color: var(--orange-color);
 
-			a {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: #ff540a;
+			p {
+				/* display: none; */
+				font-size: 0.7rem;
+				color: var(--orange-color);
+			}
 
-				p {
-					display: none;
-					font-size: 0.7rem;
+			&:hover {
+				cursor: pointer;
+
+				.fa-regular,
+				.fa-solid {
 					color: #fff;
-				}
-
-				&:hover {
-					cursor: pointer;
-
-					p {
-						color: #ff540a;
-					}
-
-					.fa-regular,
-					.fa-solid {
-						color: #fff;
-					}
 				}
 			}
 		}
@@ -110,29 +84,6 @@ header {
 
 		.login {
 			width: 50%;
-		}
-
-		.btn-cajita {
-			display: flex;
-			width: 25px;
-			background-color: #ff540a;
-			text-align: center;
-			color: #fff;
-			justify-content: center;
-			align-items: center;
-
-			img {
-				width: 100%;
-			}
-
-			P {
-				display: none;
-			}
-
-			&:hover {
-				cursor: pointer;
-				background: #550c18;
-			}
 		}
 
 		.fa-solid {
@@ -158,16 +109,27 @@ header {
 			}
 
 			.user-dropdown {
+				display: none;
 				overflow: hidden;
-				height: 0%;
-				background: #f9f9f9;
+				background: #fff;
 				flex-wrap: wrap;
 				width: 120px;
 				position: absolute;
 				top: 2.45rem;
 				right: 3rem;
-				z-index: 100;
-				transition: 1s;
+			}
+
+			.user-dropdown::before {
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: #fff;
+				rotate: 45deg;
+
+				position: absolute;
+				top: -5px;
+				z-index: 200;
 			}
 
 			.user-dropdown .fa-solid,
@@ -191,8 +153,27 @@ header {
 			}
 
 			&:hover .user-dropdown {
-				height: 90px;
+				z-index: 100;
+				display: flex;
+				border-radius: 5px;
+				box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 			}
+		}
+	}
+
+	a.btn-cajita {
+		display: block;
+		width: 38px;
+		height: 38px;
+		background: #ff540a;
+
+		P {
+			display: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background: #550c18;
 		}
 	}
 
@@ -605,19 +586,6 @@ footer {
 			padding: 2px 0px;
 			width: 85%;
 		}
-
-		.headerTop .fa-solid,
-		.fa-regular {
-			color: #ff540a;
-			margin: 0px 4px;
-			font-size: 1.5rem;
-			transition-duration: 0.4s;
-
-			&:hover {
-				color: #fff;
-			}
-		}
-
 		.headerTop .comment {
 			width: 50%;
 			justify-content: start;
@@ -631,31 +599,10 @@ footer {
 		.headerTop .top-navigation-bar {
 			width: 50%;
 
-			ul {
-				justify-content: end;
-			}
-
-			li {
-				margin-right: -2.5em; /* Medida negativa momentánea para justificar con respecto a lupa */
-			}
-
 			.li_register-login {
 				width: 257px;
 				display: flex;
 				align-items: center;
-			}
-
-			ul .li_user {
-				margin: 0;
-				padding: 0;
-			}
-
-			ul .material-symbols-outlined {
-				margin-right: 2px;
-			}
-
-			ul .admin {
-				padding-right: 5%;
 			}
 
 			.register-login a p {
@@ -666,10 +613,6 @@ footer {
 				display: flex;
 				width: auto;
 				align-items: center;
-			}
-
-			.btn-cajita {
-				width: 185px;
 			}
 
 			.btn-cajita img {

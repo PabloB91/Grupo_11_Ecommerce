@@ -1,11 +1,11 @@
 <body>
 
-    <header>
-        <div class="header-center">
+    <header class="header flex center-x">
+        <div class="div__header max-width-1555px">
 
-            <section class="headerTop">
+            <section class="headerTop flex center-y">
 
-                <div class="comment immediate-local-and-international-shipping">
+                <div class="comment flex center-y immediate-local-and-international-shipping">
 
                     <i class="fa-solid fa-truck-plane"></i>
 
@@ -16,38 +16,34 @@
                 </div>
 
                 <div class="top-navigation-bar access-and-purchase-buttons">
-                    <nav>
-                        <% if(locals.userIsLogged == false){ %>
+                    <nav class="flex center-y">
+                        <% if(locals.userIsLogged==false){ %>
+
                             <ul>
-                                <li class="li_register-login">
-                                    <div class="register-login">
 
-                                        <div class="register">
-                                            <a href="/users/register">
-                                                <i class="fa-regular fa-user"></i>
-                                                <p>Crear cuenta</p>
-                                            </a>
-                                        </div>
+                                <li class="li_register-login flex width-full">
 
-                                        <div class="login">
-                                            <a href="/users/login">
-                                                <p>Ingresar</p>
-                                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <a href="/users/register" class="register">
+                                        <i class="fa-regular fa-user"></i>
+                                        <p>Crear cuenta</p>
+                                    </a>
+
+                                    <a href="/users/login" class="login">
+                                        <p>Ingresar</p>
+                                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                    </a>
+
                                 </li>
 
                                 <% }else if(locals.userIsLogged==true && locals.userIsAdmin==false){ %>
-                                
+
                                     <li class="li-miCajita">
-                                        <a href="/productCart">
-                                            <div class="btn-cajita">
-                                                <img src="/img/svg/cajitaSBX.svg" class="svg-miCajita">
-                                                <p>Mi cajita- 0 items - $0.00</p>
-                                            </div>
+                                        <a href="/productCart" class="btn-cajita">
+                                            <img src="/img/svg/cajitaSBX.svg" class="svg-miCajita">
+                                            <p>Mi cajita- 0 items - $0.00</p>
                                         </a>
                                     </li>
+
                                     <li class="li_user dropdown">
                                         <div>
                                             <% if (locals.userLoggedIn.image) {%>
@@ -60,7 +56,8 @@
                                         </div>
 
                                         <div class="user-dropdown">
-                                            <p><a href="/users/userProfile/<%=locals.userLoggedIn.id%>">    <!--Ruta para ingresar al perfil del Usuario común-->
+                                            <p><a href="/users/userProfile/<%=locals.userLoggedIn.id%>">
+                                                    <!--Ruta para ingresar al perfil del Usuario común-->
                                                     <i class="fa-regular fa-user"></i>Perfil</a></p>
                                             <p><a href="#"><i class="fa-solid fa-gear"></i>Ajustes</a></p>
                                             <p><a href="#"><i class="fa-solid fa-pen-to-square"></i>Editar</a>
@@ -71,7 +68,9 @@
                                         </div>
 
                                     </li>
+
                                     <% }else if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
+
                                         <li class="li_user admin">
                                             <div class="admin-container">
                                                 <a href="/admin">
@@ -79,7 +78,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        
+
                                         <li class="li_user dropdown">
                                             <div>
                                                 <% if (locals.userLoggedIn.image) {%>
@@ -90,10 +89,13 @@
                                                         <i class="fa-sharp fa-solid fa-circle-user"></i>
                                                         <%} %>
                                             </div>
-    
+
                                             <div class="user-dropdown">
-                                                <p><a href="/admin/profile/<%=locals.userLoggedIn.id%>">    <!--Ruta para ingresar al perfil del Administrador-->
-                                                        <i class="fa-regular fa-user"></i>Perfil</a></p>
+
+                                                <p><a href="/admin/profile/<%=locals.userLoggedIn.id%>"><img
+                                                            src="/img/users/<%=locals.userLoggedIn.image%>"
+                                                            alt="UserOfSoundBox<%=locals.userLoggedIn.name%><%=locals.userLoggedIn.id%>">Perfil</a>
+                                                </p>
                                                 <p><a href="#"><i class="fa-solid fa-gear"></i>Ajustes</a></p>
                                                 <p><a href="#"><i class="fa-solid fa-pen-to-square"></i>Editar</a>
                                                 </p>
@@ -101,9 +103,11 @@
                                                             class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a>
                                                 </p>
                                             </div>
-    
+
                                         </li>
-                                    <% } %>
+
+                                        <% } %>
+
                             </ul>
                     </nav>
                 </div>
