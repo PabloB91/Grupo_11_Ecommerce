@@ -1,3 +1,9 @@
+:root{
+	--transparent-color: #0000;
+	--orange-color: #ff540a;
+	--black-color: #000;
+}
+
 /* ETIQUETAS UNIVERSALES */
 * {
 	text-decoration: none;
@@ -9,7 +15,7 @@
 	min-width: 0;
 
 	/* se lo aplique al scroll de todas las vistas si quieren ver cambios sobre alguna sona especifica en su vista entoncen pongan estas propiedades y modifiquenlas como quieran en la vista necesaria, se modifica segun que tenga la propiedad de overflow*/
-	scrollbar-color: #ff540a #0000; /* el primer color seria el de la barra el segundo el fondo de la barra  */
+	scrollbar-color: var(--orange-color) var(--transparent-color); /* el primer color seria el de la barra el segundo el fondo de la barra  */
 	scrollbar-width: thin; /* con esta propiedad manejamos el ancho de la barra tenemos tres propiedades thin, auto y none */
 	&::-webkit-scrollbar {
 		width: 7px;
@@ -101,14 +107,14 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-	color: #000;
+	color: var(--black-color);
 }
 
 .T-color {
-	color: #000;
+	color: var(--black-color);
 }
 .orange-T-color {
-	color: #ff540a;
+	color: var(--orange-color);
 }
 /* Properties */
 
@@ -126,7 +132,7 @@ span.bar-top::before {
 	width: 90%;
 	height: 2px;
 	margin: 10px 0px 10px 0px;
-	background: #ff540a;
+	background: var(--orange-color);
 }
 span.bar-right::after {
 	content: "";
@@ -134,7 +140,7 @@ span.bar-right::after {
 	width: 90%;
 	height: 2px;
 	margin: 10px 0px 10px 0px;
-	background: #ff540a;
+	background: var(--orange-color);
 }
 span.bar-bottom::after {
 	content: "";
@@ -142,7 +148,7 @@ span.bar-bottom::after {
 	width: 90%;
 	height: 2px;
 	margin: 10px 0px 10px 0px;
-	background: #ff540a;
+	background: var(--orange-color);
 }
 span.bar-left::before {
 	content: "";
@@ -150,7 +156,7 @@ span.bar-left::before {
 	width: 90%;
 	height: 2px;
 	margin: 10px 0px 10px 0px;
-	background: #ff540a;
+	background: var(--orange-color);
 }
 
 span.triangle {
