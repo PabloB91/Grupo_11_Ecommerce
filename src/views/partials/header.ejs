@@ -1,13 +1,13 @@
 <body>
 
     <header class="header flex center-x">
-        <div class="div__header max-width-1555px">
+        <div class="div__header max-width-1555px width-full">
 
-            <section class="headerTop flex center-y">
+            <section class="headerTop flex center-y width-full">
 
                 <div class="comment flex center-y immediate-local-and-international-shipping">
 
-                    <i class="fa-solid fa-truck-plane"></i>
+                    <i class="fa-solid fa-truck-plane i-width"></i>
 
                     <p>
                         Envíos locales e internacionales inmediatos
@@ -17,25 +17,24 @@
 
                 <div class="top-navigation-bar access-and-purchase-buttons">
                     <nav class="flex center-y">
-                        <% if(locals.userIsLogged==false){ %>
-
-                            <ul>
+                        <ul class="flex width-full">
+                            <% if(locals.userIsLogged===false){ %>
 
                                 <li class="li_register-login flex width-full">
 
-                                    <a href="/users/register" class="register">
-                                        <i class="fa-regular fa-user"></i>
+                                    <a href="/users/register" class="register flex center-y hidden mW-768-show">
+                                        <i class="fa-regular fa-user i-width"></i>
                                         <p>Crear cuenta</p>
                                     </a>
 
-                                    <a href="/users/login" class="login">
+                                    <a href="/users/login" class="login flex center-y">
                                         <p>Ingresar</p>
-                                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                        <i class="fa-solid fa-arrow-right-to-bracket i-width"></i>
                                     </a>
 
                                 </li>
 
-                                <% }else if(locals.userIsLogged==true && locals.userIsAdmin==false){ %>
+                                <% }else if(locals.userIsLogged===true && locals.userIsAdmin===false){ %>
 
                                     <li class="li-miCajita">
                                         <a href="/productCart" class="btn-cajita">
@@ -47,29 +46,56 @@
                                     <li class="li_user dropdown">
                                         <div>
                                             <% if (locals.userLoggedIn.image) {%>
+
                                                 <div class="img-profile">
-                                                    <img src="/img/users/<%=locals.userLoggedIn.image%>" alt="">
+                                                    <img src="/img/users/<%=locals.userLoggedIn.image%>"
+                                                        alt="SoundBoxUser <%=locals.userLoggedIn.name%>">
                                                 </div>
+
                                                 <%} else {%>
+
                                                     <i class="fa-sharp fa-solid fa-circle-user"></i>
+
                                                     <%} %>
                                         </div>
 
                                         <div class="user-dropdown">
-                                            <p><a href="/users/userProfile/<%=locals.userLoggedIn.id%>">
-                                                    <!--Ruta para ingresar al perfil del Usuario común-->
-                                                    <i class="fa-regular fa-user"></i>Perfil</a></p>
-                                            <p><a href="#"><i class="fa-solid fa-gear"></i>Ajustes</a></p>
-                                            <p><a href="#"><i class="fa-solid fa-pen-to-square"></i>Editar</a>
-                                            </p>
-                                            <p><a href="/users/logOut"><i
-                                                        class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a>
-                                            </p>
+                                            <a href="/users/userProfile/<%=locals.userLoggedIn.id%>"
+                                                class="flex width-full flex-wrap">
+
+                                                <img src="/img/users/<%=locals.userLoggedIn.image%>"
+                                                    alt="SoundBoxUser/<%= locals.userLoggedIn.first_name %>/<%= locals.userLoggedIn.last_name %>"
+                                                    class="img_user-dropdown width-1_2">
+
+                                                <div class="full-name width-1_8 block">
+                                                    <%= locals.userLoggedIn.first_name %>
+                                                        <%= locals.userLoggedIn.last_name%>
+                                                </div>
+
+                                                <span class="width-full block">Mi perfil</span>
+
+                                            </a>
+
+                                            <a href="#" class="flex width-full">
+                                                <i class="fa-solid fa-gear"></i>
+                                                <p>Ajustes</p>
+                                            </a>
+
+                                            <a href="#" class="flex width-full">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <p>Editar</p>
+                                            </a>
+
+                                            <a href="/users/logOut" class="flex width-full">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                <p>Salir</p>
+                                            </a>
+
                                         </div>
 
                                     </li>
 
-                                    <% }else if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
+                                    <% }else if(locals.userIsLogged===true && locals.userIsAdmin===true){ %>
 
                                         <li class="li_user admin">
                                             <div class="admin-container">
@@ -107,8 +133,7 @@
                                         </li>
 
                                         <% } %>
-
-                            </ul>
+                        </ul>
                     </nav>
                 </div>
 
@@ -244,7 +269,7 @@
                 </div>
                 <!-- =================================================== -->
 
-                <div class="navContainer fireldGeaderBottom">
+                <div class="navContainer flex center-y fireldGeaderBottom">
                     <nav>
 
                         <div class="dropdowns">
