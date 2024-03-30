@@ -35,7 +35,7 @@
 		align-items: center;
 		width: 100%;
 		height: 3em;
-		background: #ff540a;
+		background: var(--orange-color);
 		color: #fff;
 	}
 
@@ -108,7 +108,7 @@
 			justify-content: space-between;
 
 			span {
-				background-color: #ff540a;
+				background-color: var(--orange-color);
 				font-size: 24px;
 				border-radius: 50%;
 				padding: 5px;
@@ -120,9 +120,9 @@
 	.card-outline {
 		flex: 0 0 auto;
 		margin: 0px 5px;
-		border-radius: 7px;
 		overflow: hidden;
-		width: 30%;
+		width: 130px;
+		height: 230px;
 		border: 1px solid #000;
 		border-radius: 5px;
 	}
@@ -167,11 +167,10 @@
 			display: flex;
 			align-items: center;
 			width: 100%;
-			color: #ff540a;
+			color: var(--orange-color);
 		}
 	}
 
-	
 	.div-qualification {
 		display: flex;
 		align-items: center;
@@ -188,7 +187,7 @@
 		}
 
 		.qualification {
-			color: #ff540a;
+			color: var(--orange-color);
 			direction: rtl;
 			unicode-bidi: bidi-override;
 		}
@@ -404,7 +403,7 @@
 			transition-duration: 0.4s;
 
 			&:hover {
-				background-color: #ff540a;
+				background-color: var(--orange-color);
 			}
 		}
 	}
@@ -531,7 +530,7 @@
 		}
 
 		.qualification {
-			color: #ff540a;
+			color: var(--orange-color);
 			direction: rtl;
 			unicode-bidi: bidi-override;
 		}
@@ -641,7 +640,7 @@
 			border-radius: 50%;
 			background: #e6e6e6;
 			top: 50%;
-			color: #ff540a;
+			color: var(--orange-color);
 			cursor: pointer;
 			opacity: 0.3;
 

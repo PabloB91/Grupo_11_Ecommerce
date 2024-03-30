@@ -140,7 +140,7 @@ span.bar-bottom::after {
 	content: "";
 	display: block;
 	width: 90%;
-	height: 0.90px;
+	height: 0.9px;
 	margin: 10px 0px 10px 0px;
 	background: var(--orange-color);
 }

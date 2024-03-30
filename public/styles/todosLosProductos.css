@@ -113,7 +113,7 @@ main {
 	z-index: 1001;
 	border-radius: 18px;
 	border: 3px solid white;
-    text-shadow: #ff540a 0 2px 0px;
+    text-shadow: var(--orange-color); 0 2px 0px;
 	animation: 2s dropdownTituloAnimation ease;
 
 
@@ -246,7 +246,7 @@ input:checked+.slider:before {
 	position: fixed;
 	border-radius: 18px;
 	width: 85vw;
-	background-color: #ff540a;
+	background-color: var(--orange-color);;
 	height: 4rem;
 	display: flex;
 	justify-content: center;
@@ -409,7 +409,7 @@ a:active {
 
 	.card .back {
 		transform: perspective(600px) rotateY(180deg);
-		background-color: #ff540a;
+		background-color: var(--orange-color);;
 		padding: 15px;
 		color: black;
 		display: flex;

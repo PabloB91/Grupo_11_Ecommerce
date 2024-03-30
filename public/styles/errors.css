@@ -41,7 +41,7 @@ header {
 
 .botton-redirect {
 	width: auto;
-	background-color: #ff540a;
+	background-color: var(--orange-color);
 	padding: 1rem;
 	margin: auto;
 	border-radius: 8px;

@@ -7,7 +7,7 @@
 
 	.admin-containe_title {
 		margin-top: 1rem;
-		color: #ff540a;
+		color: var(--orange-color);
 		width: 100%;
 		text-align: center;
 	}
@@ -38,7 +38,7 @@
 	padding-bottom: 10px;
 
 	.imagen-of-product {
-		background-color: #ff540a;
+		background-color: var(--orange-color);
 		width: 113px;
 		margin-left: 20px;
 	}
@@ -48,10 +48,9 @@
 	}
 }
 
-.imagenes img{
+.imagenes img {
 	width: 30%;
 }
-
 
 .fieldset {
 	display: flex;
@@ -118,9 +117,9 @@ a {
 .vista-previa-caja-genera_title {
 	display: flex;
 	width: 100%;
-	color: #ff540a;
+	color: var(--orange-color);
 	text-align: center;
-	border-bottom: solid #ff540a;
+	border-bottom: solid var(--orange-color);
 	margin-bottom: 5px;
 
 	h1 {
@@ -146,7 +145,7 @@ a {
 
 .precio-producto {
 	margin: 0 25px;
-	color: #ff540a;
+	color: var(--orange-color);
 }
 
 .estado-producto {
@@ -181,7 +180,7 @@ a {
 .boton-agregar-carrito {
 	border: none;
 	border-radius: 12px;
-	background-color: #ff540a;
+	background-color: var(--orange-color);
 	color: white;
 	width: 80px;
 	height: 20px;
@@ -196,7 +195,7 @@ a {
 	top: 5px;
 	right: 10px;
 	font-size: 20px;
-	color: #ff540a;
+	color: var(--orange-color);
 }
 
 .fa-cart-shopping {
@@ -365,7 +364,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .enviar-form {
 	width: 80px;
 	border: none;
-	background-color: #ff540a;
+	background-color: var(--orange-color);
 	color: white;
 	height: 24px;
 	border-radius: 4px;
