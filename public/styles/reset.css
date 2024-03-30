@@ -2,7 +2,7 @@
 	--transparent-color: #0000;
 	--orange-color: #ff540a;
 	--black-color: #000;
-	--white-color: #dedede;
+	--white-color: #fff;
 }
 
 /* ETIQUETAS UNIVERSALES */
@@ -215,6 +215,10 @@ span.triangle {
 
 .center-y {
 	align-items: center;
+}
+
+.between{
+	justify-content: space-between;
 }
 
 .flex-wrap {
