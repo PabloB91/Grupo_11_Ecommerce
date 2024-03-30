@@ -3,7 +3,7 @@
     <header class="header flex center-x">
         <div class="div__header max-width-1555px width-full">
 
-            <section class="headerTop flex center-y width-full">
+            <section class="headerTop flex center-y width-full between">
 
                 <div class="comment flex center-y immediate-local-and-international-shipping">
 
@@ -37,61 +37,63 @@
                                 <% }else if(locals.userIsLogged===true && locals.userIsAdmin===false){ %>
 
                                     <li class="li-miCajita">
-                                        <a href="/productCart" class="btn-cajita">
+                                        <a href="/productCart" class="btn-cajita center-y center-x">
                                             <img src="/img/svg/cajitaSBX.svg" class="svg-miCajita">
                                             <p>Mi cajita- 0 items - $0.00</p>
                                         </a>
                                     </li>
 
                                     <li class="li_user dropdown">
-                                        <div>
-                                            <% if (locals.userLoggedIn.image) {%>
+
+
+                                        <% if (locals.userLoggedIn.image) {%>
+
+                                            <div class="img-profile">
+                                                <img src="/img/users/<%=locals.userLoggedIn.image%>"
+                                                    alt="SoundBoxUser <%=locals.userLoggedIn.name%>">
+                                            </div>
+
+                                            <%} else {%>
 
                                                 <div class="img-profile">
-                                                    <img src="/img/users/<%=locals.userLoggedIn.image%>"
-                                                        alt="SoundBoxUser <%=locals.userLoggedIn.name%>">
-                                                </div>
-
-                                                <%} else {%>
-
                                                     <i class="fa-sharp fa-solid fa-circle-user"></i>
-
-                                                    <%} %>
-                                        </div>
-
-                                        <div class="user-dropdown">
-                                            <a href="/users/userProfile/<%=locals.userLoggedIn.id%>"
-                                                class="flex width-full flex-wrap">
-
-                                                <img src="/img/users/<%=locals.userLoggedIn.image%>"
-                                                    alt="SoundBoxUser/<%= locals.userLoggedIn.first_name %>/<%= locals.userLoggedIn.last_name %>"
-                                                    class="img_user-dropdown width-1_2">
-
-                                                <div class="full-name width-1_8 block">
-                                                    <%= locals.userLoggedIn.first_name %>
-                                                        <%= locals.userLoggedIn.last_name%>
                                                 </div>
 
-                                                <span class="width-full block">Mi perfil</span>
+                                                <%} %>
 
-                                            </a>
+                                                    <div class="user-dropdown">
+                                                        <a href="/users/userProfile/<%=locals.userLoggedIn.id%>"
+                                                            class="flex width-full flex-wrap">
 
-                                            <a href="#" class="flex width-full">
-                                                <i class="fa-solid fa-gear"></i>
-                                                <p>Ajustes</p>
-                                            </a>
+                                                            <img src="/img/users/<%=locals.userLoggedIn.image%>"
+                                                                alt="SoundBoxUser/<%= locals.userLoggedIn.first_name %>/<%= locals.userLoggedIn.last_name %>"
+                                                                class="img_user-dropdown width-1_2">
 
-                                            <a href="#" class="flex width-full">
-                                                <i class="fa-solid fa-pen-to-square"></i>
-                                                <p>Editar</p>
-                                            </a>
+                                                            <div class="full-name width-1_8 block">
+                                                                <%= locals.userLoggedIn.first_name %>
+                                                                    <%= locals.userLoggedIn.last_name%>
+                                                            </div>
 
-                                            <a href="/users/logOut" class="flex width-full">
-                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                                <p>Salir</p>
-                                            </a>
+                                                            <span class="width-full block">Mi perfil</span>
 
-                                        </div>
+                                                        </a>
+
+                                                        <a href="#" class="flex width-full">
+                                                            <i class="fa-solid fa-gear"></i>
+                                                            <p>Ajustes</p>
+                                                        </a>
+
+                                                        <a href="#" class="flex width-full">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                            <p>Editar</p>
+                                                        </a>
+
+                                                        <a href="/users/logOut" class="flex width-full">
+                                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                            <p>Salir</p>
+                                                        </a>
+
+                                                    </div>
 
                                     </li>
 

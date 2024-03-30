@@ -5,16 +5,8 @@ header {
 	width: 100%;
 	z-index: 999;
 
-	.img-profile {
-		width: 38px;
-		height: 38px;
-		border-radius: 9999px;
-		overflow: hidden;
-
-		img {
-			width: 100%;
-			height: 100%;
-		}
+	.headerTop {
+		height: 40px;
 	}
 
 	.headerTop .fa-solid,
@@ -24,6 +16,7 @@ header {
 	}
 
 	.headerTop .comment {
+		width: 200px;
 		span {
 			font-size: 0.7rem;
 			color: var(--orange-color);
@@ -45,33 +38,68 @@ header {
 
 		.li_register-login {
 			color: var(--orange-color);
+			justify-content: end;
 
 			p {
-				/* display: none; */
 				font-size: 0.7rem;
 				color: var(--white-color);
-
-				&:hover {
-					transition: 0.5s;
-					color: var(--orange-color);
-				}
 			}
 		}
 
 		.register {
 			margin-right: 10px;
-			width: 50%;
+			&:hover p {
+				transition: 0.5s;
+				color: var(--orange-color);
+			}
 		}
 
 		.login {
-			width: 50%;
+			&:hover p {
+				transition: 0.5s;
+				color: var(--orange-color);
+			}
 		}
 
-		.li_user {
-			/* font-size: 6px; */
+		li.li-miCajita {
+			width: 40px;
+
+			a.btn-cajita {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: var(--orange-color);
+
+				P {
+					color: var(--white-color);
+					display: none;
+					width: 138px;
+					font-size: 0.7rem;
+				}
+
+				&:hover {
+					cursor: pointer;
+					background: #550c18;
+				}
+			}
+		}
+
+		li.li_user {
+			width: 30px;
+			height: 30px;
+			margin: 5px 0px 5px 5px;
+
+			.img-profile {
+				width: 100%;
+				height: 100%;
+				border-radius: 5px;
+				overflow: hidden;
+				border: 1.5px solid var(--white-color);
+			}
 
 			.fa-circle-user {
 				border-radius: 50%;
+
 				color: #fff;
 
 				&:hover {
@@ -122,35 +150,19 @@ header {
 		}
 	}
 
-	a.btn-cajita {
-		display: block;
-		width: 38px;
-		height: 38px;
-		background: var(--orange-color);
-
-		P {
-			display: none;
-		}
-
-		&:hover {
-			cursor: pointer;
-			background: #550c18;
-		}
-	}
-
 	.fixed {
 		position: fixed;
 		z-index: 990;
 	}
 
 	.headerBottom {
-		background: #ffffff;
+		background: var(--white-color);
 		display: flex;
 		width: 100%;
 		padding: 5px;
 		justify-content: space-evenly;
 		transition: 200ms;
-		border-bottom: 0.5px solid #000;
+		border-bottom: 0.5px solid var(--black-color);
 
 		.menu-burguer {
 			width: 30%;
@@ -523,11 +535,12 @@ footer {
 @media screen and (min-width: 768px) {
 	header {
 		.headerTop {
-			padding: 2px 0px;
 			width: 85%;
 		}
+
 		.headerTop .comment {
-			width: 50%;
+			/* width: 50%; */
+			flex: 2;
 			justify-content: start;
 			align-items: center;
 
@@ -549,21 +562,23 @@ footer {
 				display: flex;
 			}
 
-			.li-miCajita {
-				display: flex;
-				width: auto;
-				align-items: center;
-			}
+			li.li-miCajita {
+				width: 200px;
+				height: 40px;
 
-			.btn-cajita img {
-				margin: 8px;
-				width: 10%;
-			}
+				img {
+					width: auto;
+					padding: 5px 0px;
+				}
 
-			.btn-cajita p {
-				display: inline;
-				font-size: 0.8rem;
-				font-family: "sans-serif";
+				a.btn-cajita {
+					display: flex;
+					flex-wrap: wrap;
+
+					p {
+						display: block;
+					}
+				}
 			}
 		}
 
