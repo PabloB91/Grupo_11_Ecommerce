@@ -13,6 +13,11 @@ header {
 	.fa-regular {
 		color: var(--orange-color);
 		margin: 0px 4px;
+		transition-duration: 0.5s;
+	}
+
+	.fa-regular:hover {
+		color: var(--white-color);
 	}
 
 	.headerTop .comment {
@@ -133,8 +138,8 @@ header {
 				transition-duration: 0.4s;
 			}
 
-			.fa-regular:hover {
-				color: white;
+			.fa-solid:hover {
+				color: var(--white-color);
 			}
 
 			.user-dropdown a:hover {
@@ -295,7 +300,7 @@ header {
 		}
 
 		.fa-solid:hover {
-			color: white;
+			color: var(--white-color);
 			background-color: transparent;
 		}
 	}

@@ -25,7 +25,7 @@ main {
 
 .titulo-ordenador {
 	font-size: 22px;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: black;
 	border-radius: 18px;
 	border: 2px solid white;
 	padding: 15px;
@@ -33,6 +33,7 @@ main {
 	left: 0;
 	color: white;
 	text-align: center;
+	cursor: pointer;
 
 }
 
@@ -179,6 +180,7 @@ main {
 	right: 0;
 	bottom: 0;
 	background-color: #ccc;
+	border-radius: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
@@ -191,16 +193,17 @@ main {
 	left: 4px;
 	bottom: 4px;
 	background-color: white;
+	border-radius: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
 
 input:checked+.slider {
-	background-color: #2196F3;
+	background-color: #FF540A;
 }
 
 input:focus+.slider {
-	box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #FF540A;
 }
 
 input:checked+.slider:before {

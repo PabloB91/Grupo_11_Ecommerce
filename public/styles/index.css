@@ -22,6 +22,7 @@
 		display: block;
 		height: 100%;
 		width: 100%;
+		cursor: pointer;
 		/* object-fit: cover; */
 	}
 
@@ -710,6 +711,7 @@
 	.main__slider {
 		.img_sliderSection--min-with-1020 {
 			display: flex;
+			cursor: pointer;
 		}
 
 		.img_sliderSection--min-with-768 {
