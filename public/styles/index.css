@@ -1,10 +1,7 @@
 /* ------------------------------------------------------------------ */
 /*Slider*/
 .main__slider {
-	border-radius: 0px;
 	overflow: hidden;
-	width: 100%;
-	/*height: calc(50vw);*/
 
 	.slider--inner {
 		display: flex;
@@ -78,8 +75,6 @@
 /*cards*/
 .main__container-cards {
 	width: 100%;
-	background: #fff;
-	border-radius: 8px;
 	overflow: hidden;
 	padding-bottom: 1.5em;
 
@@ -119,6 +114,7 @@
 	}
 
 	.card-outline {
+		background: var(--white-color);
 		flex: 0 0 auto;
 		margin: 0px 5px;
 		overflow: hidden;
@@ -206,7 +202,6 @@
 /*SERVICES BANNERS SECTION*/
 .main__section-cards-prom {
 	width: 100%;
-	background-color: white;
 	height: auto;
 	display: flex;
 	justify-content: center;
@@ -239,7 +234,6 @@
 /*SECTION BRANDS*/
 .main__section-brands-slider {
 	overflow: hidden;
-	width: 100%;
 	height: 115px;
 
 	/*----- Contenedor logos -----*/
@@ -328,9 +322,6 @@
 /* ------------------------------------------------------------------ */
 /*-----CATEGORIES-----*/
 .main__content-categories {
-	width: 100%;
-	background-color: #fff;
-
 	.dropdown-content-category_title {
 		width: 100%;
 		display: flex;
@@ -412,12 +403,6 @@
 /* ------------------------------------------------------------------ */
 /*PROM CONTAINER AND COMMENTS*/
 .main__promo-container {
-	border-radius: 8px;
-	background: #fff;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-
 	.container-boxes {
 		display: grid;
 		grid-auto-flow: dense;
@@ -428,14 +413,12 @@
 	}
 
 	.box {
-		/*max-height: 250px;*/
 		overflow: hidden;
 		padding-left: 1em;
 
 		picture {
 			overflow: hidden;
 			width: 25%;
-			/*height: 55px;*/
 			max-width: 200px;
 			max-height: 360px;
 		}
@@ -553,27 +536,7 @@
 } */
 
 @media screen and (min-width: 768px) {
-	.main__section--margin-bottom {
-		margin-bottom: 30px;
-	}
-
-	.main__section--bgColor {
-		border-radius: 8px;
-		background: #fff;
-		box-shadow: -5px 5px 16px #949494, 5px -5px 16px #e4e4e4;
-	}
-
-	.mnw-768px--w-85 {
-		width: 85%;
-	}
-
 	/*slider*/
-	.main__slider {
-		margin: 60px;
-		/*height: 65vh;*/
-		/*max-height: 400px;*/
-	}
-
 	.slider--inner {
 		height: 90%;
 	}
@@ -646,14 +609,11 @@
 			opacity: 0.3;
 
 			/* para evitar que selexionen el texto */
-			-webkit-user-select: none;
-			/* Safari */
-			-moz-user-select: none;
-			/* Firefox */
-			-ms-user-select: none;
-			/* Internet Explorer */
+			-webkit-user-select: none; /* Safari */
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* Internet Explorer */
 			user-select: none;
-			/* Standard syntax */
+			o/* Standard syntax */
 
 			&:hover {
 				opacity: 1;
@@ -685,18 +645,23 @@
 	}
 
 	/*cads-prom*/
-	.main__section-cards-prom {
-		border-radius: 8px;
+	.main__section-brands-prom {
+		display: grid;
+		justify-items: center;
 
+		.main__section-brands-slider {
+			margin-top: 25px;
+			border-radius: 5px;
+			width: 94%;
+		}
+	}
+
+	.main__section-cards-prom {
 		.center_cards-prom {
 			width: 100%;
 			height: 100%;
 			grid-template-columns: repeat(3, 1fr);
 		}
-	}
-
-	.main__content-categories {
-		background-color: #cac7ba;
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -735,15 +700,15 @@
 		}
 	} */
 }
-@media screen and (min-width: 1200px) {
-	/*CATEGORIES*/
+/* @media screen and (min-width: 1200px) {
+	/*CATEGORIES*
 	.main__content-categories {
 		background-color: #cac7ba;
 	}
-	/*cards*/
+	/*cards*
 	.main__container-cards {
 		.card-outline {
 			width: 202px;
 		}
 	}
-}
+} */
