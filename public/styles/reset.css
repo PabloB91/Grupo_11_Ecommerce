@@ -172,6 +172,19 @@ span.triangle {
 	border-bottom: 10px solid var(--white-color);
 }
 
+a.botton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+	height: 30px;
+	width: fit-content;
+	max-width: 200px;
+	background: var(--orange-color);
+	color: var(--white-color);
+	border-radius: 5px;
+}
+
 .max-width-1365px {
 	max-width: 1365px;
 	display: flex;
@@ -271,10 +284,10 @@ span.triangle {
 	.mW-768-show {
 		display: block;
 	}
-	/* 
+
 	.flex {
 		display: flex;
-	} */
+	}
 
 	.main__section--margin-bottom {
 		margin-bottom: 30px;
