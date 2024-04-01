@@ -12,6 +12,7 @@
 	--LightGray-color: #e6e6e6;
 	/* Otros colores */
 	--white-color: #ffffff;
+	--LightTan-color: #cac7ba;
 	--transparent-color: #00000000;
 }
 
@@ -43,8 +44,7 @@ body {
 	min-height: 100dvh;
 	font-family: "Montserrat", sans-serif;
 	font-size: 0.875rem;
-	background: #fff;
-	background: #e3e3e3;
+	background: var(--white-color);
 }
 
 img {
@@ -172,8 +172,8 @@ span.triangle {
 	border-bottom: 10px solid var(--white-color);
 }
 
-.max-width-1555px {
-	max-width: 1555px;
+.max-width-1365px {
+	max-width: 1365px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -209,6 +209,14 @@ span.triangle {
 }
 .width-1_9 {
 	width: 90%;
+}
+
+.margin-30-y {
+	margin: 30px 0px;
+}
+
+.margin-60-y {
+	margin: 60px 0px;
 }
 
 .flex {
@@ -248,6 +256,10 @@ span.triangle {
 }
 
 @media screen and (min-width: 768px) {
+	body {
+		background: var(--LightGray-color);
+	}
+
 	.i-width {
 		font-size: 1.2rem;
 	}
@@ -259,10 +271,10 @@ span.triangle {
 	.mW-768-show {
 		display: block;
 	}
-
+	/* 
 	.flex {
 		display: flex;
-	}
+	} */
 
 	.main__section--margin-bottom {
 		margin-bottom: 30px;
@@ -270,8 +282,9 @@ span.triangle {
 
 	.main__section--bgColor {
 		border-radius: 8px;
-		background: var(--Tan-color);
-		box-shadow: -5px 5px 16px var(--Tan-color), 5px -5px 16px var(--LightGray-color);
+		background: var(--LightTan-color);
+		box-shadow: -5px 5px 16px var(--Tan-color),
+			5px -5px 16px var(--Tan-color);
 	}
 
 	.mnw-768px--w-85 {
