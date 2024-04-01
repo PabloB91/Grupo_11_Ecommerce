@@ -1,8 +1,18 @@
 :root {
-	--transparent-color: #0000;
+	/* Paleta primaria */
 	--orange-color: #ff540a;
 	--black-color: #000;
+	--curuba-color: #ffd4c2;
+	/* Paleta secundaria */
+	--DarkBlue-color: #03254e;
+	--RedWine-color: #550c18;
+	--BlueGray-color: #404e5c;
+	--OlivenGreen-color: #545643;
+	--Tan-color: #b7b3a1;
+	--LightGray: #e6e6e6;
+	/* Otros colores */
 	--white-color: #fff;
+	--transparent-color: #0000;
 }
 
 /* ETIQUETAS UNIVERSALES */
@@ -217,7 +227,7 @@ span.triangle {
 	align-items: center;
 }
 
-.between{
+.between {
 	justify-content: space-between;
 }
 
@@ -252,5 +262,19 @@ span.triangle {
 
 	.flex {
 		display: flex;
+	}
+
+	.main__section--margin-bottom {
+		margin-bottom: 30px;
+	}
+
+	.main__section--bgColor {
+		border-radius: 8px;
+		background: #fff;
+		box-shadow: -5px 5px 16px #949494, 5px -5px 16px #e4e4e4;
+	}
+
+	.mnw-768px--w-85 {
+		width: 85%;
 	}
 }
