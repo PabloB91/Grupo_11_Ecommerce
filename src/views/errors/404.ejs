@@ -3,19 +3,35 @@
 
     <%- include("../partials/header") %>
 
-        <main>
-            <section class="seccion-general">
-                <div class="circular-seccion">
-                    <div class="texto-404">
-                        <span>
-                            <h1 class="text-oops">OOPS... <i class="fa-solid fa-ban"></i></h1>
-                            <h1> ERROR 404 NOT-FOUND!</h1>
-                        </span>
-                        <span class="bottom-text">Lo que busca, no existe</span>
+        <main class="main flex center-x">
+            <section class="main__section main__section--bgColor max-width-1365px flex flex-wrap width-1_7">
+                <div class="div__img-error-404 width-1_5">
+                    <img src="/img/svg/Errors/Error-404.svg" alt="SoundBox-Error-404">
+                </div>
+                <div class="informative-paragrap width-1_5">
+                    <div>
+                        <p>La página que estás buscando no pudo ser encontrada. Verifica la URL e intenta nuevamente.</p>
                     </div>
-                    <div class="botton-redirect">
-                        <a href="/">volver al home</a>
-                    </div>
+                    <ul>
+                        <li>
+                            <h3>
+                                Posibles causas:
+                            </h3>
+                        <li>
+                            <p>
+                                La URL ingresada es incorrecta.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                El recurso solicitado ha sido eliminado o movido.
+                            </p>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div__botton width-full flex center-x">
+                    <a class="botton" href="/">VOLVER AL INICIO</a>
                 </div>
             </section>
         </main>
