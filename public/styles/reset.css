@@ -9,10 +9,10 @@
 	--BlueGray-color: #404e5c;
 	--OlivenGreen-color: #545643;
 	--Tan-color: #b7b3a1;
-	--LightGray: #e6e6e6;
+	--LightGray-color: #e6e6e6;
 	/* Otros colores */
-	--white-color: #fff;
-	--transparent-color: #0000;
+	--white-color: #ffffff;
+	--transparent-color: #00000000;
 }
 
 /* ETIQUETAS UNIVERSALES */
@@ -169,7 +169,7 @@ span.triangle {
 	height: 0;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
-	border-bottom: 10px solid #fff;
+	border-bottom: 10px solid var(--white-color);
 }
 
 .max-width-1555px {
@@ -270,8 +270,8 @@ span.triangle {
 
 	.main__section--bgColor {
 		border-radius: 8px;
-		background: #fff;
-		box-shadow: -5px 5px 16px #949494, 5px -5px 16px #e4e4e4;
+		background: var(--Tan-color);
+		box-shadow: -5px 5px 16px var(--Tan-color), 5px -5px 16px var(--LightGray-color);
 	}
 
 	.mnw-768px--w-85 {
