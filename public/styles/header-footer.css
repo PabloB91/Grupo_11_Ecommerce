@@ -561,8 +561,7 @@ footer {
 			width: 50%;
 
 			.li_register-login {
-				width: 257px;
-				display: flex;
+				width: fit-content;
 				align-items: center;
 			}
 
