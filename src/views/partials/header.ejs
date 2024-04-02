@@ -21,7 +21,7 @@
 
                                 <li class="li_register-login flex width-full">
 
-                                    <a href="/users/register" class="register flex center-y hidden mW-768-show">
+                                    <a href="/users/register" class="register mW-768-flex center-y hidden mW-768-show">
                                         <i class="fa-regular fa-user i-width"></i>
                                         <p>Crear cuenta</p>
                                     </a>
@@ -35,12 +35,10 @@
 
                                 <% }else if(locals.userIsLogged===true && locals.userIsAdmin===false){ %>
 
-                                    <li class="li-miCajita">
-                                        <a href="/productCart" class="btn-cajita center-y center-x">
-                                            <img src="/img/svg/cajitaSBX.svg" class="svg-miCajita">
-                                            <p>Mi cajita- 0 items - $0.00</p>
-                                        </a>
-                                    </li>
+                                    <a href="/productCart" class="btn-cajita  button-orange flex flxCenter">
+                                        <img src="/img/svg/cajitaSBX.svg" class="svg-miCajita">
+                                        <p class="hidden mW-768-show">Mi cajita- 0 items - $0.00</p>
+                                    </a>
 
                                     <li class="li_user dropdown">
 
@@ -149,7 +147,6 @@
                     </a>
                 </div>
 
-                <!-- Logo SBX es mejor colapsar para que no se confundan -->
                 <div class="logoSbx fireldGeaderBottom">
 
                     <a href="/" class="img-logoSBX">
@@ -276,16 +273,17 @@
                 <div class="menu-burguer" id="menu-burguer">
                     <i class="fa-solid fa-bars"></i>
                 </div>
+
                 <!-- desplegable del menu burguer -->
                 <ul class="menu-burguer-desplegable" id="menuBurguerDesplegable" onclick="show()">
                     <li class="closeMenu">
                         <i class="fa-solid fa-xmark" aria-hidden="true" id="closeMenu" onclick="hide()"></i>
                     </li>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/productCart">Carrito</a></li>
-                    <li><a href="/products/search">buscar</a></li>
-                    <li><a href="/#seccion-marcas-banners">Categorías</a></li>
-                    <li><a href="/contactUs">Quienes somos?</a></li>
+                    <a href="/">Inicio</a>
+                    <a href="/productCart">Carrito</a>
+                    <a href="/products/search">buscar</a>
+                    <a href="/#seccion-marcas-banners">Categorías</a>
+                    <a href="/contactUs">Quienes somos?</a>
                 </ul>
 
             </section>
