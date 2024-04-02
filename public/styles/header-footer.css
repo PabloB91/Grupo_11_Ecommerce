@@ -743,7 +743,7 @@ footer {
 
 					/* Contenido desplegable (oculto de forma predeterminada) */
 					.dropdown-content {
-						/* overflow: hidden; */
+						overflow: hidden;
 						display: none;
 						position: absolute;
 						background-color: #fff;
