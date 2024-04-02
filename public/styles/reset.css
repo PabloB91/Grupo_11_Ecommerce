@@ -11,7 +11,9 @@
 	--Tan-color: #b7b3a1;
 	--LightGray-color: #e6e6e6;
 	/* Otros colores */
+	--Gray-color: #7a7c7d;
 	--white-color: #ffffff;
+	--white-color-hover: #f1f1f1;
 	--LightTan-color: #cac7ba;
 	--transparent-color: #00000000;
 }
@@ -172,7 +174,8 @@ span.triangle {
 	border-bottom: 10px solid var(--white-color);
 }
 
-a.botton {
+a.button-orange {
+	color: var(--white-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -180,9 +183,35 @@ a.botton {
 	height: 30px;
 	width: fit-content;
 	max-width: 200px;
+	font-family: "Montserrat";
 	background: var(--orange-color);
-	color: var(--white-color);
 	border-radius: 5px;
+	transition-duration: 0.4s;
+
+	&:hover {
+		background: var(--RedWine-color);
+	}
+}
+
+a.button-black {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+	height: 30px;
+	width: fit-content;
+	max-width: 200px;
+	font-family: "Montserrat";
+	font-weight: bold;
+	font-size: 10px;
+	color: var(--white-color);
+	background-color: var(--black-color);
+	border-radius: 8px;
+	transition-duration: 0.4s;
+
+	&:hover {
+		background-color: var(--orange-color);
+	}
 }
 
 .max-width-1365px {
@@ -248,6 +277,11 @@ a.botton {
 	align-items: center;
 }
 
+.flxCenter {
+	justify-content: center;
+	align-items: center;
+}
+
 .between {
 	justify-content: space-between;
 }
@@ -285,8 +319,31 @@ a.botton {
 		display: block;
 	}
 
-	.flex {
+	.mW-768-margin-30-y {
+		margin: 30px 0px;
+	}
+
+	.mW-768-margin-60-y {
+		margin: 60px 0px;
+	}
+
+	.mW-768-flex {
 		display: flex;
+	}
+
+	.mW-768-width-1_9 {
+		width: 90%;
+	}
+
+	.mW-768-width-1_85 {
+		width: 85%;
+	}
+
+	.mW-768-wrap {
+		flex-wrap: wrap;
+	}
+	.mW-768-noWrap {
+		flex-wrap: nowrap;
 	}
 
 	.main__section--margin-bottom {
@@ -295,12 +352,11 @@ a.botton {
 
 	.main__section--bgColor {
 		border-radius: 8px;
-		background: var(--LightTan-color);
-		box-shadow: -5px 5px 16px var(--Tan-color),
-			5px -5px 16px var(--Tan-color);
+		background: var(--LightGray-color);
+		box-shadow: -5px 5px 16px var(--Tan-color);
 	}
 
-	.mnw-768px--w-85 {
+	.mW-768-W-85 {
 		width: 85%;
 	}
 }

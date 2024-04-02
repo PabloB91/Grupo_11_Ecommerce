@@ -4,23 +4,14 @@
 	overflow: hidden;
 
 	.slider--inner {
-		display: flex;
 		/*se le aumenta 100 dependiendo de las secciones hay 4 por ahora*/
 		width: 400%;
 		height: 90%;
 		margin-left: -100%;
 	}
 
-	.img_sliderSection {
-		width: 100%;
-	}
-
 	.slider--img {
-		display: block;
-		height: 100%;
-		width: 100%;
 		cursor: pointer;
-		/* object-fit: cover; */
 	}
 
 	.img_sliderSection--min-with-1020 {
@@ -34,37 +25,15 @@
 		width: 100%;
 		height: 3em;
 		background: var(--orange-color);
-		color: #fff;
-	}
-
-	span.material-symbols-outlined {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 16px;
+		color: var(--white-color);
 	}
 
 	span.material-symbols-rounded {
-		font-family: "Material Symbols Rounded";
-		font-weight: normal;
-		font-style: normal;
 		font-size: 1.5em;
-		line-height: 1;
-		letter-spacing: normal;
-		text-transform: none;
-		display: inline-block;
-		white-space: nowrap;
-		word-wrap: normal;
-		direction: ltr;
 	}
 
 	.slider--btns {
 		cursor: pointer;
-		color: #ffd4c2;
-	}
-
-	.slider--btns:hover {
-		color: white;
 	}
 
 	div#div__btn-pause-play {
@@ -108,7 +77,7 @@
 				font-size: 24px;
 				border-radius: 50%;
 				padding: 5px;
-				color: white;
+				color: var(--white-color);
 			}
 		}
 	}
@@ -120,7 +89,7 @@
 		overflow: hidden;
 		width: 130px;
 		height: 230px;
-		border: 1px solid #000;
+		border: 1px solid var(--black-color);
 		border-radius: 5px;
 	}
 
@@ -131,7 +100,7 @@
 	.img-product {
 		display: block;
 		overflow: hidden;
-		border-bottom: 1px solid #7a7c7d;
+		border-bottom: 1px solid var(--Gray-color);
 		width: 100%;
 
 		img {
@@ -245,7 +214,7 @@
 		white-space: nowrap;
 		position: relative;
 		border-radius: 8px 8px 0px 0px;
-		background-color: black;
+		background-color: var(--black-color);
 	}
 
 	/*----- Efecto blur/fade en ambos extremos del contenedor -----*/
@@ -262,14 +231,22 @@
 
 	.div__brands-box:before {
 		left: 0;
-		border-radius: 5px;
-		background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+		border-radius: 8px;
+		background: linear-gradient(
+			to left,
+			var(--transparent-color),
+			var(--black-color)
+		);
 	}
 
 	.div__brands-box:after {
 		right: 0;
-		border-radius: 5px;
-		background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+		border-radius: 8px;
+		background: linear-gradient(
+			to right,
+			var(--transparent-color),
+			var(--black-color)
+		);
 	}
 
 	/*----- Detener la animación -----*/
@@ -303,7 +280,7 @@
 
 		img:hover {
 			cursor: pointer;
-			filter: drop-shadow(0 0 10px #ff530a);
+			filter: drop-shadow(0 0 10px var(--orange-color));
 		}
 	}
 }
@@ -327,14 +304,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-family: "Montserrat", sans-serif;
-		font-weight: 700;
 	}
 
 	.div__items-categories--grid {
-		padding: 15px 15px 30px 15px;
+		padding: 0px 30px;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+		max-width: 1000px;
+		justify-items: center;
 		grid-gap: 15px;
 	}
 
@@ -352,7 +329,6 @@
 	}
 
 	.categoria a {
-		text-decoration: none;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -364,7 +340,7 @@
 	.categoria p {
 		display: block;
 		background-color: rgba(0, 0, 0, 0.115);
-		color: white;
+		color: var(--white-color);
 		font-family: "Bebas Neue", sans-serif;
 		font-size: 1.5em;
 		position: absolute;
@@ -377,27 +353,7 @@
 	}
 
 	.categories-button {
-		display: flex;
-		justify-content: center;
-		margin-top: 1em;
-		margin-bottom: 3em;
-
-		button {
-			font-family: "Montserrat";
-			font-weight: bold;
-			font-size: 10px;
-			color: white;
-			background-color: black;
-			padding: 1rem 2rem;
-			border-radius: 8px;
-			border-style: hidden;
-			cursor: pointer;
-			transition-duration: 0.4s;
-
-			&:hover {
-				background-color: var(--orange-color);
-			}
-		}
+		margin: 30px 0px;
 	}
 }
 /* ------------------------------------------------------------------ */
@@ -455,16 +411,15 @@
 		display: flex;
 		margin: 7px 0px;
 		cursor: pointer;
-		/*width: 95%;*/
 		align-items: flex-start;
 
 		&:hover {
-			background: #e6e6e6;
+			background: var(--LightGray-color);
 		}
 	}
 
 	.img-product {
-		border: 1px solid #bebebe;
+		border: 1px solid var(--LightTan-color);
 		border-radius: 4px;
 		width: 10px;
 		height: 100%;
@@ -526,15 +481,6 @@
 }
 /* ------------------------------------------------------------------ */
 /*---MEDIA QUERIES---*/
-/* @media screen and (min-width: 576px) {
-	/*cards*
-	.main__container-cards {
-		.card-outline {
-			width: 182px;
-		}
-	}
-} */
-
 @media screen and (min-width: 768px) {
 	/*slider*/
 	.slider--inner {
@@ -544,13 +490,27 @@
 	.slider-buttons {
 		height: 3em;
 	}
+	.slider--btns {
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.div__items-categories--grid {
+		padding: 15px 15px 30px 15px;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 23%), 1fr));
+	}
+
+	.main__content-categories {
+		background: var(--LightTan-color);
+	}
 
 	/*cards*/
 	.main__container-cards {
 		display: flex;
 		flex-wrap: wrap;
 		width: 85%;
-		height: 430px;
 		position: relative;
 		padding-bottom: revert;
 
@@ -560,33 +520,13 @@
 			height: 97%;
 
 			&:hover {
-				box-shadow: 0px 0px 8px 0px #554b4b69;
+				box-shadow: -5px 5px 30px 0px var(--OlivenGreen-color);
 			}
 		}
 
 		.cards {
-			padding-bottom: 20px;
+			padding: 30px 0px;
 		}
-
-		/* .card {
-			display: block;
-			width: 100%;
-			height: 100%;
-		} */
-
-		/* .img-product {
-			width: 200px;
-		} */
-
-		/* .product-info {
-			.qualification {
-				width: 100%;
-			}
-
-			.price {
-				width: 50%;
-			}
-		} */
 
 		.div-qualification {
 			width: 50%;
@@ -601,24 +541,17 @@
 			position: absolute;
 			width: 50px;
 			height: 50px;
-			border-radius: 50%;
-			background: #e6e6e6;
+			border-radius: 8px;
+			background: var(--LightGray-color);
 			top: 50%;
 			color: var(--orange-color);
 			cursor: pointer;
-			opacity: 0.3;
-
-			/* para evitar que selexionen el texto */
-			-webkit-user-select: none; /* Safari */
-			-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* Internet Explorer */
-			user-select: none;
-			o/* Standard syntax */
+			opacity: 0.5;
 
 			&:hover {
 				opacity: 1;
-				border: 1px solid #000;
-				box-shadow: 1px 0px 5px #737272;
+				border: 1px solid var(--black-color);
+				box-shadow: 1px 0px 5px var(--Gray-color);
 			}
 
 			span {
@@ -700,15 +633,3 @@
 		}
 	} */
 }
-/* @media screen and (min-width: 1200px) {
-	/*CATEGORIES*
-	.main__content-categories {
-		background-color: #cac7ba;
-	}
-	/*cards*
-	.main__container-cards {
-		.card-outline {
-			width: 202px;
-		}
-	}
-} */
