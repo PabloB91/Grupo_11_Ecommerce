@@ -11,6 +11,10 @@ const cookieParser = require("cookie-parser"); //--> Requerimos el módulo 'cook
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 
+const cors = require('cors');
+// Habilitamos CORS para todas las solicitudes a nuestra API
+app.use(cors());
+
 //************************************* API *************************************\\
 //---Estas rutas deben estar antes de los middlewares para el correcto funcionamiento
 const apiUsersRouter= require('./routes/api/apiUsersRouter')
