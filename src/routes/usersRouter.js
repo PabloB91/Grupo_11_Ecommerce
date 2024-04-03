@@ -31,8 +31,8 @@ const registerValidations = [
 
 // Validacion de Login
 const loginValidations = [
-    check('email').notEmpty().withMessage('Ingresa tu E-mail').isEmail().withMessage('Ingresa un correo electrónico válido'),
-    check('password').notEmpty().withMessage('Ingresa tu contraseña').isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres'),
+    check('email').notEmpty().isEmail(),
+    check('password').notEmpty().isLength({ min: 8 }),
 ];
 
 // Register

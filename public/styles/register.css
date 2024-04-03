@@ -179,6 +179,7 @@ header {
 	font-family: "Montserrat";
 	font-size: 14px;
 	font-weight: 400;
+	padding-top: 10px;
 }
 
 .a-crear-cuenta {
@@ -276,18 +277,19 @@ label {
 
 	input {
 		border: none;
+		border-radius: 5px;
 		background: #ff540a;
 		color: #fff;
 		height: 30px;
 		width: 100px;
-
 		font-family: "Montserrat";
 		font-size: 14px;
 		font-weight: 400;
+		transition-duration: 0.4s;
 
 		&:hover {
 			cursor: pointer;
-			background: #550c18;
+			background: black;
 		}
 	}
 }
@@ -384,21 +386,20 @@ label {
 		align-items: center;
 		justify-content: center;
 		width: 50%;
-        animation: normal 1s appear ease-in-out;
+        animation: normal 1.5s appear ease-in-out;
 	}
 
     @keyframes appear {
-        0%{opacity: 0;
-            left: 50%;
+        0%{
+			opacity: 0;
         }
 
-        50%{opacity: 0;
-            left: 25%;
+        50%{
+			opacity: 0;
         }
 
         100% {
             opacity: 1;
-            left: 15px;
         }
     }
 
@@ -439,18 +440,19 @@ label {
 
 		input {
 			border: none;
+			border-radius: 5px;
 			background: #ff540a;
 			color: #fff;
 			height: 30px;
 			width: 100px;
-
 			font-family: "Montserrat";
 			font-size: 14px;
 			font-weight: 400;
+			transition-duration: 0.4s;
 
 			&:hover {
 				cursor: pointer;
-				background: #550c18;
+				background: black;
 			}
 		}
 	}

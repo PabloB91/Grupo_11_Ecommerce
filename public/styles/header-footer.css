@@ -94,6 +94,11 @@ header {
 					p {
 						color: #ff540a;
 					}
+
+					.fa-regular,
+					.fa-solid {
+						color: #fff;
+					}
 				}
 			}
 		}
@@ -134,7 +139,7 @@ header {
 			color: #ff540a;
 
 			&:hover {
-				color: #550c18;
+				color: white;
 			}
 		}
 
@@ -170,6 +175,11 @@ header {
 				color: #ff540a;
 				margin: 0px 4px;
 				font-size: 1rem;
+				transition-duration: 0.4s;
+			}
+
+			.fa-regular:hover {
+				color: white;
 			}
 
 			.user-dropdown a {
@@ -322,7 +332,7 @@ header {
 		a {
 			font-size: 1rem;
 			border-radius: 5px;
-			background: #E6E6E6;
+			background: #e6e6e6;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -332,18 +342,14 @@ header {
 		}
 
 		a:hover {
-			background-color: #FF540A;
+			background-color: #ff540a;
 		}
 
 		.fa-solid {
-			color: #FF540A;
+			color: #ff540a;
 			background-color: transparent;
 			border-radius: 5px;
-			width: 30px;
-			height: 30px;
 			position: absolute;
-			/*top: 0px;
-			left: 0px; pendiente organizar posicionamiento absoluto con respecto a contenedor madre div_btnSearch ¿por qué funciona en @media query 768 y aquí no?...*/
 			background-origin: padding-box;
 			transition-duration: 0.4s;
 		}
@@ -439,7 +445,6 @@ footer {
 		}
 
 		.container__button:hover {
-
 			.aside-text,
 			#cart-text,
 			#fav-text {
@@ -451,7 +456,7 @@ footer {
 			position: fixed;
 			bottom: 45px;
 			right: 15px;
-			background-color: #8F8F8F;
+			background-color: #8f8f8f;
 			border-radius: 50%;
 			width: 50px;
 			height: 50px;
@@ -468,7 +473,7 @@ footer {
 		}
 
 		#goTop:hover {
-			background-color: #FF540A;
+			background-color: #ff540a;
 			cursor: pointer;
 		}
 	}
@@ -504,6 +509,11 @@ footer {
 			a {
 				font-size: 0.9em;
 				color: #fff;
+				transition-duration: 0.4s;
+
+				&:hover {
+					color: #ff540a;
+				}
 			}
 
 			li {
@@ -520,8 +530,43 @@ footer {
 
 		.redes_img {
 			width: 20%;
+			position: relative;
 			height: 30px;
 			margin: 10px 0px 10px;
+
+			.fcbk-icon,
+			.fcbk-icon-hover,
+			.x-icon,
+			.x-icon-hover,
+			.ytb-icon,
+			.ytb-icon-hover,
+			.inst-icon,
+			.inst-icon-hover {
+				position: absolute;
+			}
+
+			.fcbk-icon-hover,
+			.x-icon-hover,
+			.ytb-icon-hover,
+			.inst-icon-hover {
+				display: none;
+			}
+
+			&:hover {
+				.fcbk-icon,
+				.x-icon,
+				.ytb-icon,
+				.inst-icon {
+					display: none;
+				}
+
+				.fcbk-icon-hover,
+				.x-icon-hover,
+				.ytb-icon-hover,
+				.inst-icon-hover {
+					display: block;
+				}
+			}
 		}
 
 		img {
@@ -566,6 +611,11 @@ footer {
 			color: #ff540a;
 			margin: 0px 4px;
 			font-size: 1.5rem;
+			transition-duration: 0.4s;
+
+			&:hover {
+				color: #fff;
+			}
 		}
 
 		.headerTop .comment {
@@ -677,7 +727,7 @@ footer {
 				a {
 					font-size: 1rem;
 					border-radius: 5px;
-					background: #E6E6E6;
+					background: #e6e6e6;
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -687,11 +737,11 @@ footer {
 				}
 
 				a:hover {
-					background-color: #FF540A;
+					background-color: #ff540a;
 				}
 
 				.fa-solid {
-					color: #FF540A;
+					color: #ff540a;
 					background-color: transparent;
 					border-radius: 5px;
 					width: 30px;
@@ -704,7 +754,7 @@ footer {
 				}
 
 				.fa-solid:hover {
-					color: white;
+					color: #fff;
 					background-color: transparent;
 				}
 			}

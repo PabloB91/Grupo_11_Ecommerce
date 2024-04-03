@@ -6,14 +6,17 @@
         <main>
 
             <div class="barra-titulo" id="titulo">
+                <p class="titulo-ordenador" id="titulo-ordenador">Filtrar:
+                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                </p>
                 <h2 class="titulo">Todos Los Productos</h2>
             </div>
-            <section class="ordenador">
-                <h2 class="titulo-ordenador">Filtrar:
-                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                </h2>
+            <div class="closeDropDown">
+                <span>filtrar:</span>
+                <p>x</p>
+            </div>
+            <section class="ordenador" id="ordenador">
                 <section class="dropdown-ordenador">
-
                     <div id="slide-item" class="filtrar-plata">
                         <div class="filtro-presupuesto">
                             <input type="range">
@@ -195,22 +198,22 @@
                                 </div>
                                 <div class="face back">
                                     <div class="face-back-child">
-                                        <h3>
+                                        <h3 class="marca_nombre">
                                             <%= product.name%>
                                         </h3>
-                                        <p class="marca-descripcion">
+                                        <p class="marca_marca">
                                             <%= product.brand.brand_name %>
                                         </p>
-                                        <p class="marca-categoria">
+                                        <p class="marca_categoria">
                                             <%= product.category.category %>
                                         </p>
-                                        <p class="marca-descripcion">
+                                        <p class="marca_descripcion">
                                             <%= product.description %>
                                         </p>
-                                        <p class="marca-estado">
+                                        <p class="marca_estado">
                                             <%= product.state.state %>
                                         </p>
-                                        <p class="marca-descripcion">
+                                        <p class="mrca_color">
                                             <%= product.color_name %>
                                         </p>
                                         <p>Color/es:
@@ -221,7 +224,7 @@
                                                         <% } %>
                                                             <% }) %>
                                         </p>
-                                        <p class="price">$<%= product.price %>
+                                        <p class="marca_price">$<%= product.price %>
                                         </p>
                                         <p>
                                             <%= product.discount %>%
@@ -234,7 +237,7 @@
 
                 </div>
             </section>
-
         </main>
+            <script src="/scripts/allProducts.js"></script>
 
         <%- include("../partials/footer") %>

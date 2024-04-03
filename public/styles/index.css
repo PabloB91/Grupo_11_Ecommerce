@@ -101,6 +101,7 @@
 	background: #fff;
 	border-radius: 8px;
 	overflow: hidden;
+	padding-bottom: 1.5em;
 
 	.title-section {
 		width: 100%;
@@ -142,9 +143,9 @@
 		margin: 0px 5px;
 		border-radius: 7px;
 		overflow: hidden;
-		width: 110px;
+		width: 30%;
 		border: 1px solid #000;
-		border-radius: 7px;
+		border-radius: 5px;
 	}
 
 	.card {
@@ -156,7 +157,7 @@
 		overflow: hidden;
 		border-bottom: 1px solid #7a7c7d;
 		width: 100%;
-		height: 125px;
+		/*height: 125px; ¿por qué estas medidas?*/
 		/* 	height: 280px; */
 
 		img {
@@ -169,6 +170,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
+		padding: 7px;
 
 		p {
 			display: block;
@@ -177,7 +179,7 @@
 
 		.nameProduct {
 			width: 100%;
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 		}
 
 		.qualification {
@@ -235,9 +237,10 @@
 }
 
 /* ------------------------------------------------------------------ */
-/*CARDS PROM*/
+/*SERVICES BANNERS SECTION*/
 .main__section-cards-prom {
 	width: 100%;
+	background-color: white;
 	height: auto;
 	display: flex;
 	justify-content: center;
@@ -252,120 +255,21 @@
 	}
 
 	.cardProm {
-		background: #E6E6E6;
-		/*border: 1px solid #333333;*/
-		border-radius: 15px;
-		height: 115px;
-		color: #ff540a;
-		fill: #ff540a;
+		border-radius: 8px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		cursor: pointer;
 
-		h2 {
-			color: #000;
-			font-size: 1.9rem;
-			height: 32px;
-		}
-
-		p {
-			color: #000;
-			font-size: 0.7rem;
-		}
-
-		a {
-			color: #fff;
-			height: 100%;
-			width: 100%;
-			font-size: 0.63rem;
-		}
-	}
-
-	.card1 {
-		h2 {
-			font-size: 2.3rem;
-		}
-
-		p {
-			color: #000;
-			font-size: 0.8rem;
-		}
-	}
-
-	.card2 {
-		h2 {
-			height: 30px;
-		}
-
-		p {
-			font-size: 0.86rem;
-		}
-	}
-
-	.card3 {
-		h2 {
-			height: 30px;
-		}
-
-		p {
-			font-size: 0.90rem;
-		}
-	}
-
-
-	.picture-prom {
-		margin-right: 10px;
-		display: block;
-		width: 60px;
-		height: 60px;
-		position: relative;
-
 		img {
 			width: 100%;
 			height: 100%;
+			border-radius: 8px;
 		}
-	}
-
-	.box-black{
-		background: #000;
-	}
-
-	.picture-prom span {
-		display: block;
-		width: 100%;
-		height: 100%;
-		font-size: 5rem;
-		position: absolute;
-		left: -16%;
-		top: -10%;
-	}
-
-	.picture-prom svg {
-		width: 130%;
-		height: 115%;
-
-		g {
-			width: 100%;
-			height: 100%;
-		}
-	}
-
-	.picture-prom.svg {
-		width: 60px;
-		height: 60px;
-	}
-
-	.border-orange {
-		border: 4px solid #ff540a;
-		border-radius: 4px;
-		width: 100%;
-		height: 107%;
 	}
 }
 
-/* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */
 /*SECTION BRANDS*/
 
@@ -382,7 +286,7 @@
 		margin: auto;
 		white-space: nowrap;
 		position: relative;
-		border-radius: 5px;
+		border-radius: 8px 8px 0px 0px;
 		background-color: black;
 	}
 
@@ -428,6 +332,7 @@
 		width: calc(200px * 14);
 		/* Para activar la animación infinita */
 	}
+
 	.a__content-image {
 		width: 200px;
 		height: 60px;
@@ -463,7 +368,7 @@
 /*-----CATEGORIES-----*/
 .main__content-categories {
 	width: 100%;
-	background: #949494;
+	background-color: #fff;
 
 	.dropdown-content-category_title {
 		width: 100%;
@@ -519,15 +424,27 @@
 		filter: brightness(0.5);
 	}
 
-	.div__footer-category {
+	.categories-button {
 		display: flex;
-		justify-content: end;
-		align-items: center;
-		height: 20px;
-		a {
-			color: #ff540a;
-			margin-right: 1.5%;
-			font-size: 0.7rem;
+		justify-content: center;
+		margin-top: 1em;
+		margin-bottom: 3em;
+
+		button {
+			font-family: "Montserrat";
+			font-weight: bold;
+			font-size: 10px;
+			color: white;
+			background-color: black;
+			padding: 1rem 2rem;
+			border-radius: 8px;
+			border-style: hidden;
+			cursor: pointer;
+			transition-duration: 0.4s;
+
+			&:hover {
+				background-color: #ff540a;
+			}
 		}
 	}
 }
@@ -542,19 +459,19 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* overflow: hidden; */
 
 	.container-boxes {
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
 		width: 100%;
 		padding: 20px;
-		overflow: hidden;
 	}
 
 	.box {
 		width: 230px;
-		height: auto;
+		max-height: 250px;
+		overflow: hidden;
 
 		picture {
 			width: 30%;
@@ -573,12 +490,12 @@
 	.promo-container_cards {
 		display: flex;
 		flex-wrap: wrap;
-		/* overflow-y: scroll; */
-		border: 2px red solid;
+		/* border: 2px red solid; */
 		grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+		grid-gap: 30px;
 	}
 
-	#promo-container-third {
+	#promo-container-three {
 		max-height: 100px;
 	}
 
@@ -620,7 +537,7 @@
 	}
 
 	.nameProduct {
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 	}
 
 	.form-qualification {
@@ -665,6 +582,15 @@
 /* ------------------------------------------------------------------ */
 /*---MEDIA QUERIES---*/
 
+/* @media screen and (min-width: 576px) {
+	/*cards*
+	.main__container-cards {
+		.card-outline {
+			width: 182px;
+		}
+	}
+} */
+
 @media screen and (min-width: 768px) {
 	.main__section--margin-bottom {
 		margin-bottom: 30px;
@@ -700,13 +626,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 85%;
-		height: 65vh;
-		max-height: 400px;
+		height: 430px;
 		position: relative;
+		padding-bottom: revert;
 
 		.card-outline {
 			margin: 0px 35px;
-			width: 200px;
+			width: 147px;
 			height: 97%;
 
 			&:hover {
@@ -714,18 +640,21 @@
 			}
 		}
 
-		.card {
+		.cards {
+			padding-bottom: 20px;
+		}
+
+		/* .card {
 			display: block;
 			width: 100%;
 			height: 100%;
-		}
+		} */
 
-		.img-product {
+		/* .img-product {
 			width: 200px;
-			height: 280px;
-		}
+		} */
 
-		.product-info {
+		/* .product-info {
 			.qualification {
 				width: 100%;
 			}
@@ -733,7 +662,7 @@
 			.price {
 				width: 50%;
 			}
-		}
+		} */
 
 		.form-qualification {
 			width: 50%;
@@ -756,10 +685,14 @@
 			opacity: 0.3;
 
 			/* para evitar que selexionen el texto */
-			-webkit-user-select: none; /* Safari */
-			-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* Internet Explorer */
-			user-select: none; /* Standard syntax */
+			-webkit-user-select: none;
+			/* Safari */
+			-moz-user-select: none;
+			/* Firefox */
+			-ms-user-select: none;
+			/* Internet Explorer */
+			user-select: none;
+			/* Standard syntax */
 
 			&:hover {
 				opacity: 1;
@@ -800,9 +733,13 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
+
+	.main__content-categories {
+		background-color: #cac7ba;
+	}
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
 	.cards-prom {
 		.center_cards-prom {
 			width: 85%;
@@ -818,6 +755,26 @@
 
 		.img_sliderSection--min-with-768 {
 			display: none;
+		}
+	}
+
+	/*cards*/
+	.main__container-cards {
+		.card-outline {
+			width: 220px;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	/*CATEGORIES*/
+	.main__content-categories {
+		background-color: #cac7ba;
+	}
+	/*cards*/
+	.main__container-cards {
+		.card-outline {
+			width: 202px;
 		}
 	}
 }
