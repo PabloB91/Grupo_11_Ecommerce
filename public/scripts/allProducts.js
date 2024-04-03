@@ -1,17 +1,17 @@
 
-let closeDropdown = document.getElementById('closeDropdown');
 
 const tituloContainer = document.querySelector('.barra-titulo');
 let tituloOrdenador = document.getElementById("titulo-ordenador");
 let ordenador = document.querySelector(".dropdown-ordenador");
-let tituloFiltrar = document.querySelector(".titulo-filtrar");
-
 
 tituloOrdenador.addEventListener("click", () => {
-    tituloOrdenador.style.animation = " 1.3s titleAnimation ease-in";
-    ordenador.style.display = "flex";
-    closeDropdown.style.display = "flex";
-    tituloFiltrar.style.display = "none"
+    tituloOrdenador.style.animation = " 1.2s titleAnimation ease"
+    if (ordenador.style.display === "block") {
+        ordenador.style.display = "none";
+    } else {
+        ordenador.style.display = "block";
+
+    }
 });
 
 window.addEventListener('scroll', function () {
@@ -27,10 +27,3 @@ window.addEventListener('scroll', function () {
     }
 });
 
-closeDropdown.addEventListener("click", () => {
-
-    closeDropdown.style.display = "none";
-    ordenador.style.display = "none";
-
-
-});

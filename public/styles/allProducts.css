@@ -13,11 +13,11 @@ main {
 	bottom: 0px;
 	left: 0px;
 	z-index: 1;
-	border-radius: 18px;
+	border-radius:0 18px 18px 0;
 }
 
 .titulo-ordenador {
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 18px;
 	border: 2px solid white;
 	padding: 15px;
@@ -26,16 +26,13 @@ main {
 	color: white;
 	text-align: center;
 	cursor: pointer;
-
-	
-	#closeDropdown {
-
-		display: none;
-		
-	}
 }
 
 /* animacion de javascript*/
+
+.appear {
+	display: flex;
+}
 
 @keyframes titleAnimation {
 	0% {
@@ -224,7 +221,7 @@ input:checked+.slider:before {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 999;
+	z-index: 1;
 }
 
 .titulo {
@@ -255,8 +252,10 @@ input:checked+.slider:before {
 	display: none;
 	flex-wrap: nowrap;
 	overflow-y: scroll;
+	scrollbar-width: none;
 	flex-direction: column;
 	backdrop-filter: blur(15px);
+	border-radius: 18px;
 }
 
 /*tageta add*/
@@ -416,8 +415,6 @@ a:active {
 
 @media (max-width: 1024px) {
 
-
-
 	.todasLasCards {
 		margin: auto;
 		width: 90%;
@@ -447,8 +444,6 @@ a:active {
 		grid-auto-rows: minmax(100px, auto);
 
 	}
-
-
 
 }
 
