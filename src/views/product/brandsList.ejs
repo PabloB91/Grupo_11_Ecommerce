@@ -1,37 +1,32 @@
-<!-- ADAPTAR EN 'brandsList.ejs', APLICAR DINÁMICA JS Y LUEGO BORRAR ESTE ARCHIVO -->
-<!-- ESTE ARCHIVO ES SIMPLEMENTE UNA GUÍA PARA ADAPTAR LA VISTA DE TODAS LAS MARCAS SOUNDBOX -->
-
-    <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
     <link href="/styles/brands.css" rel="stylesheet">
 
     <%- include('../partials/header.ejs') %>
 
-     <!-- Lo siguiente es el código HTML base / guía para aplicar código dinámico JS en archivo brandsList.ejs -->
+        <main>
 
-     <main>
+            <section class="allBrands">
 
-        <section class="allBrands">
+                <h3>NUESTRAS MARCAS</h3>
 
-            <h3>NUESTRAS MARCAS</h3>
+                <div class="brands-list"> 
+                    <% brands.forEach(brand => { %>
+                
+                        <article class="brandCard">
 
-            <div class="brands-list"> 
-                <% brands.forEach(brand => { %>
-            
-                    <article class="brandCard">
+                            <div>
+                                <a href="/brands/<%= brand.brand_name %>"><img src="/img/brands/SOUNDBOX-BRAND-BOSS.png" alt="BOSS"></a><!-- Pendiente dinámica para que se vean las imágenes de las otras 6 marcas en orden alfabético -->
+                            </div>
+                            <div>
+                                <a href="#">VER PRODUCTOS</a>
+                            </div>
+        
+                        </article>
+                    <% }) %>
+        
+            </section>
 
-                        <div>
-                            <a href="/brands/<%= brand.brand_name %>"><img src="/img/brands/SOUNDBOX-BRAND-BOSS.png" alt="BOSS"></a>
-                        </div>
-                        <div>
-                            <a href="#">VER PRODUCTOS</a>
-                        </div>
-    
-                    </article>
-                <% }) %>
-    
-        </section>
-
-    </main> 
+        </main> 
     
     <!-- Cierre del archivo brandsList.ejs -->
 
