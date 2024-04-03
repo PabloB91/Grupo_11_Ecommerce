@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 
     // que nombre tendra el archivo nuevo
     filename : function(req, file, cb){
-        cb(null, 'SOUNDBOX-BRAND'+file.fieldname + " - " + Date.now() + path.extname(file.originalname));
+        cb(null, 'SOUNDBOX-BRAND-'+file.fieldname + " - " + Date.now() + path.extname(file.originalname));
     }
 
 });
