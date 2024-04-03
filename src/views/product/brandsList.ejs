@@ -1,32 +1,38 @@
+<!-- ADAPTAR EN 'brandsList.ejs', APLICAR DINÁMICA JS Y LUEGO BORRAR ESTE ARCHIVO -->
+<!-- ESTE ARCHIVO ES SIMPLEMENTE UNA GUÍA PARA ADAPTAR LA VISTA DE TODAS LAS MARCAS SOUNDBOX -->
 
     <%- include('../partials/head.ejs') %>
-    <link href="/styles/home.css" rel="stylesheet">
+    <link href="/styles/brands.css" rel="stylesheet">
 
     <%- include('../partials/header.ejs') %>
 
-    <main>
-    
-        <div class="items-mas-vendidos">
-        <% brands.forEach(brand => { %>
+     <!-- Lo siguiente es el código HTML base / guía para aplicar código dinámico JS en archivo brandsList.ejs -->
+
+     <main>
+
+        <section class="allBrands">
+
+            <h3>NUESTRAS MARCAS</h3>
+
+            <div class="brands-list"> 
+                <% brands.forEach(brand => { %>
             
-            <article class="producto">
-                <!-- <a href="/products/brandDetail"> -->
-                <!-- <img src= imagen alt="Imagen"> -->
-                <div class="detalle-producto">
-                    <p class="descripciones"><strong><%= brand.brand_name %></strong></p>
-                </div>
-                </a>
-            </article>
-        <% }) %>
-                
-        </div>
-        
-        <hr class="separador">
-        
-        <hr class="separador">
-        
-    </main>
+                    <article class="brandCard">
+
+                        <div>
+                            <a href="/brands/<%= brand.brand_name %>"><img src="/img/brands/SOUNDBOX-BRAND-BOSS.png" alt="BOSS"></a>
+                        </div>
+                        <div>
+                            <a href="#">VER PRODUCTOS</a>
+                        </div>
+    
+                    </article>
+                <% }) %>
+    
+        </section>
+
+    </main> 
+    
+    <!-- Cierre del archivo brandsList.ejs -->
 
     <%- include('../partials/footer.ejs') %>
-
-

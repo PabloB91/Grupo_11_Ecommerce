@@ -30,7 +30,7 @@ VALUES ('Rojo'),('Amarillo'),('Azul'),('Negro');
 
 INSERT INTO brand 
 (brand_name)
-VALUES ('Marshall'),('Zildjian'),('Gibson'),('Yamaha');
+VALUES ('BOSS'),('DAddario'),('Epiphone'),('Gibson'),('Marshall'),('Yamaha'),('Zildjian');
 
 INSERT INTO category
 (category)
