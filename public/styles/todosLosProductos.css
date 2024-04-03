@@ -13,13 +13,12 @@ main {
 }
 
 .ordenador {
-
 	background-color: rgba(0, 0, 0, 0.4);
 	color: #fff;
 	position: fixed;
 	bottom: 0px;
 	left: 1px;
-	z-index: 999;
+	z-index: 1;
 	border-radius: 18px;
 }
 
@@ -87,13 +86,15 @@ main {
 @keyframes dropdownTituloAnimation {
 	0% {
 		opacity: 0;
+		width: 0;
+	}
+
+	25% {
+		opacity: 0;
 
 	}
 
-	25% {}
-
 	75% {
-		opacity: 0;
 	}
 
 	100% {
@@ -102,6 +103,7 @@ main {
 }
 
 .closeDropDown {
+
 	width: 60vh;
 	display: none;
 	justify-content: space-around;
@@ -114,7 +116,7 @@ main {
 	border-radius: 18px;
 	border: 3px solid white;
     text-shadow: #ff540a 0 2px 0px;
-	animation: 2s dropdownTituloAnimation ease;
+	animation: 2.5s dropdownTituloAnimation ease;
 
 
 	span {
