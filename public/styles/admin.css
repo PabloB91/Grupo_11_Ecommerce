@@ -1,4 +1,3 @@
-
 main {
 	max-width: 1555px;
 	margin: auto;
@@ -26,7 +25,6 @@ main {
 	&:hover {
 		border-radius: 15%;
 		transition-duration: 0.8s;
-
 	}
 }
 
@@ -64,7 +62,7 @@ main {
 		scale: 1.1;
 		transition-duration: 0.5s;
 		a {
-			color: #ff540a;
+			color: var(--orange-color);
 			transition-duration: 0.5s;
 		}
 	}

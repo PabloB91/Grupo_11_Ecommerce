@@ -1,32 +1,33 @@
-
-    <%- include('../partials/head.ejs') %>
-    <link href="/styles/home.css" rel="stylesheet">
+<%- include('../partials/head.ejs') %>
+    <link href="/styles/brands.css" rel="stylesheet">
 
     <%- include('../partials/header.ejs') %>
 
-    <main>
-    
-        <div class="items-mas-vendidos">
-        <% brands.forEach(brand => { %>
-            
-            <article class="producto">
-                <!-- <a href="/products/brandDetail"> -->
-                <!-- <img src= imagen alt="Imagen"> -->
-                <div class="detalle-producto">
-                    <p class="descripciones"><strong><%= brand.brand_name %></strong></p>
-                </div>
-                </a>
-            </article>
-        <% }) %>
+        <main>
+
+            <section class="allBrands">
+
+                <h3>NUESTRAS MARCAS</h3>
+
+                <div class="brands-list"> 
+                    <% brands.forEach(brand => { %>
                 
-        </div>
+                        <article class="brandCard">
+
+                            <div>
+                                <a href="/brands/<%= brand.brand_name %>"><img src="/img/brands/SOUNDBOX-BRAND-BOSS.png" alt="BOSS"></a><!-- Pendiente dinámica para que se vean las imágenes de las otras 6 marcas en orden alfabético -->
+                            </div>
+                            <div>
+                                <a href="#">VER PRODUCTOS</a>
+                            </div>
         
-        <hr class="separador">
+                        </article>
+                    <% }) %>
         
-        <hr class="separador">
-        
-    </main>
+            </section>
+
+        </main> 
+    
+    <!-- Cierre del archivo brandsList.ejs -->
 
     <%- include('../partials/footer.ejs') %>
-
-

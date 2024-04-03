@@ -23,7 +23,7 @@ a {
 
 .precio-producto {
 	margin: 0 5px;
-	color: #ff540a;
+	color: var(--orange-color);;
 }
 
 .descripcion-producto {
@@ -57,7 +57,7 @@ a {
 .boton-agregar-carrito {
 	border: none;
 	border-radius: 7px;
-	background-color: #ff540a;
+	background-color: var(--orange-color);;
 	color: white;
 	width: 180px;
 	height: 30px;
@@ -160,7 +160,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .boton-accion-borrar {
 	border-radius: 5px;
 	border: none;
-	background-color: #ff540a;
+	background-color: var(--orange-color);;
 	color: white;
 	height: 32px;
 }
@@ -168,7 +168,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .boton-accion-editar {
 	border-radius: 7px;
 	border: none;
-	background-color: #ff540a;
+	background-color: var(--orange-color);;
 	color: white;
 	height: 32px;
 }
@@ -199,7 +199,7 @@ a:hover {
 	display: flex;
     backdrop-filter: blur(4px);
     background-color: rgba(211, 211, 211, 0.551);
-    border: #ff540a solid 3px;
+    border: var(--orange-color); solid 3px;
     padding: 5px;
     flex-direction: column;
     align-items: center;

@@ -1,15 +1,9 @@
-body {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 400;
-	font-size: 12px;
-	font-style: normal;
-	margin: auto;
-}
 
 main {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
 }
 
 .ordenador {
@@ -17,14 +11,13 @@ main {
 	color: #fff;
 	position: fixed;
 	bottom: 0px;
-	left: 1px;
+	left: 0px;
 	z-index: 1;
 	border-radius: 18px;
 }
 
 .titulo-ordenador {
-	font-size: 22px;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: black;
 	border-radius: 18px;
 	border: 2px solid white;
 	padding: 15px;
@@ -32,7 +25,14 @@ main {
 	left: 0;
 	color: white;
 	text-align: center;
+	cursor: pointer;
 
+	
+	#closeDropdown {
+
+		display: none;
+		
+	}
 }
 
 /* animacion de javascript*/
@@ -102,37 +102,6 @@ main {
 	}
 }
 
-.closeDropDown {
-
-	width: 60vh;
-	display: none;
-	justify-content: space-around;
-    align-items: center;
-	position: fixed;
-	top: 0vh;
-	left: 0;
-	background: rgba(0, 0, 0, 0.305);
-	z-index: 1001;
-	border-radius: 18px;
-	border: 3px solid white;
-    text-shadow: #ff540a 0 2px 0px;
-	animation: 2.5s dropdownTituloAnimation ease;
-
-
-	span {
-		
-		color: white;
-		font-size: 25px
-
-	}
-
-	p {
-		color: white;
-		padding: 5px;
-		font-size: 50px;
-	}
-}
-
 .filtro-presupuesto {
 	display: flex;
 	flex-direction: column;
@@ -181,6 +150,7 @@ main {
 	right: 0;
 	bottom: 0;
 	background-color: #ccc;
+	border-radius: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
@@ -193,16 +163,17 @@ main {
 	left: 4px;
 	bottom: 4px;
 	background-color: white;
+	border-radius: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
 
 input:checked+.slider {
-	background-color: #2196F3;
+	background-color: #FF540A;
 }
 
 input:focus+.slider {
-	box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #FF540A;
 }
 
 input:checked+.slider:before {
@@ -248,7 +219,7 @@ input:checked+.slider:before {
 	position: fixed;
 	border-radius: 18px;
 	width: 85vw;
-	background-color: #ff540a;
+	background-color: var(--orange-color);;
 	height: 4rem;
 	display: flex;
 	justify-content: center;
@@ -257,8 +228,9 @@ input:checked+.slider:before {
 }
 
 .titulo {
-	font-family: "Montserrat", sans-serif;
-	font-size: 26px;
+	font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
 	text-shadow: 0px 1.7px 0px black;
 	color: white;
 
@@ -285,31 +257,7 @@ input:checked+.slider:before {
 	overflow-y: scroll;
 	flex-direction: column;
 	backdrop-filter: blur(15px);
-	animation: 2s dropdownOrdenadorAnimation ease;
 }
-
-@keyframes dropdownOrdenadorAnimation {
-0% {
-	height: 0vh;
-	opacity: 0;
-	backdrop-filter: blur(0px);
-	top: 0;
-
-}
-25% {
-}
-50% {
-}
-75% {
-}
-100% {
-	top: 0;
-	backdrop-filter: blur(15px);
-	opacity: 1;
-	height: 90vh;
-}
-}
-
 
 /*tageta add*/
 
@@ -323,7 +271,6 @@ input:checked+.slider:before {
 /* animaciones carta*/
 
 .todasLasCards {
-
 	width: 90%;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -361,12 +308,6 @@ a:active {
 /****************************/
 /*      media queryes */
 /****************************/
-
-@media (min-width: 1024px) {
-	.closeDropDown {
-		width: 53vh;
-	}
-}
 
 @media (max-width: 4000px) {
 	.todasLasCards {
@@ -411,7 +352,7 @@ a:active {
 
 	.card .back {
 		transform: perspective(600px) rotateY(180deg);
-		background-color: #ff540a;
+		background-color: var(--orange-color);;
 		padding: 15px;
 		color: black;
 		display: flex;
@@ -521,5 +462,5 @@ a:active {
 	}
 
 
-
 }
+

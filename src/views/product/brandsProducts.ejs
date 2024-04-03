@@ -1,20 +1,22 @@
+<!-- VISTA DE LOS PRODUCTOS DE CADA MARCA EN PROCESO -->
+
 <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/styles/allProducts.css">
+    <link rel="stylesheet" href="/styles/todosLosProductos.css">
 
     <%- include("../partials/header") %>
 
         <main>
 
             <div class="barra-titulo" id="titulo">
-                <div class="titulo-ordenador" id="titulo-ordenador" onclick="">
-                    <p class="titulo-filtrar">Filtrar</p>
-                    <div class="closeDropdown" id="closeDropdown">
-                        <i class="fa-sharp fa-solid fa-x" ></i>
-                    </div>
-                </div>
+                <p class="titulo-ordenador" id="titulo-ordenador">Filtrar
+                    <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                </p>
                 <h2 class="titulo">NUESTROS PRODUCTOS</h2>
             </div>
-
+            <div class="closeDropDown">
+                <span>filtrar:</span>
+                <p>x</p>
+            </div>
             <section class="ordenador" id="ordenador">
                 <section class="dropdown-ordenador">
                     <div id="slide-item" class="filtrar-plata">
@@ -204,25 +206,8 @@
                                         <p class="marca-descripcion">
                                             <%= product.brand.brand_name %>
                                         </p>
-                                        <p class="marca-categoria">
-                                            <%= product.category.category %>
-                                        </p>
                                         <p class="marca-descripcion">
                                             <%= product.description %>
-                                        </p>
-                                        <p class="marca-estado">
-                                            <%= product.state.state %>
-                                        </p>
-                                        <p class="marca-descripcion">
-                                            <%= product.color_name %>
-                                        </p>
-                                        <p>Color/es:
-                                            <% product.Colores.forEach(color=> { %>
-                                                <%= color.color_name %>
-                                                    <% if (color !==product.Colores[product.Colores.length - 1]) { %>
-                                                        , <!-- Añade una coma si no es el último color -->
-                                                        <% } %>
-                                                            <% }) %>
                                         </p>
                                         <p class="price">$<%= product.price %>
                                         </p>
