@@ -10,20 +10,25 @@ window.addEventListener("load", function(){
         /* Array que contendra errores */
         errores = [];
 
+        
         /* Validaciones */
         const name = document.getElementById("user-name");
         if(name.value === ""){
             errores.push("El nombre no puede estar vacío.");
         }
-
+        
         const last_name = document.getElementById("last-name");
         if(last_name.value === ""){
             errores.push("El apellido no puede estar vacío.");
         }
-
+        
+        
         const email = document.getElementById("e-mail");
+        const validEmails = /@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|icloud\.com|email\.com)$/;
         if(email.value === ""){
             errores.push("El email no puede estar vacío.");
+        } else if (!validEmails.test(email.value)){
+            errores.push("El email debe pertenecer a @gmail, @hotmail, @outlook, @icloud o @yahoo");
         }
 
         const password = document.getElementById("password");

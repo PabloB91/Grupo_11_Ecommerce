@@ -316,6 +316,7 @@ label {
 .errores {
 	color: crimson;
 	font-size: 12px;
+	text-align: center;
 }
 
 /* MEDIA QUERIES */
