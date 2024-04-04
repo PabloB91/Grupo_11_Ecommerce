@@ -46,14 +46,18 @@
 	width: 100%;
 	overflow: hidden;
 	padding-bottom: 1.5em;
+	background-color: white;
 
 	.title-section {
 		width: 100%;
 		text-align: center;
 		padding: 15px 0px;
+		background-color: white;
 
 		h3 {
 			font-size: 1.4rem;
+			padding-top: 0em;
+   			padding-bottom: 0em;
 		}
 	}
 
@@ -269,7 +273,7 @@
 	}
 
 	.a__content-image {
-		width: 200px;
+		width: 200px; 
 		height: 60px;
 		margin: 0 40px;
 
@@ -366,6 +370,7 @@
 		grid-gap: 0px 3px;
 		justify-content: center;
 		width: 100%;
+		background-color: #fff;
 	}
 
 	.box {
@@ -504,6 +509,8 @@
 
 	.main__content-categories {
 		background: var(--LightTan-color);
+		margin-top: 0em;
+		margin-bottom: 0em;
 	}
 
 	/*cards*/
@@ -513,6 +520,7 @@
 		width: 85%;
 		position: relative;
 		padding-bottom: revert;
+		margin-bottom: 0em;
 
 		.card-outline {
 			margin: 0px 35px;
@@ -581,6 +589,9 @@
 	.main__section-brands-prom {
 		display: grid;
 		justify-items: center;
+    	margin-bottom: 0em;
+		background-color: white;
+		padding-top: 5px;
 
 		.main__section-brands-slider {
 			margin-top: 25px;
