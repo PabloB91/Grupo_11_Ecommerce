@@ -1,9 +1,14 @@
 window.addEventListener("load", function(){
-    const form = document.querySelector(".main-login_form")
+
+    let form = document.querySelector(".main-login_form");
+    let errores = [];
+    let ulErrores = document.querySelector("div.errores ul"); // Movemos la definición fuera del event listener
 
     form.addEventListener("submit", function(e){
+        e.preventDefault(); // Prevenimos el envío del formulario por defecto
+
         /* Array que contendra errores */
-        const errores = [];
+        errores = [];
 
         /* Validacion de Email */
         const email = document.getElementById("email");
@@ -23,16 +28,12 @@ window.addEventListener("load", function(){
 
         /* Condicional errores */
         if(errores.length > 0){
-            e.preventDefault();
-
-            const ulErrores = document.querySelector("div.errores ul")
-
-            ulErrores.innerHTML = "";
+            ulErrores.innerHTML = ""; // Limpiamos los errores anteriores
 
             for(let i = 0; i < errores.length; i++){
-                ulErrores.innerHTML += "<li> " + errores[i] + "</li>"
+                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"; // Agregamos los nuevos errores
             }
-        };
+        }
 
 
     })

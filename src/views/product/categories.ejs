@@ -9,7 +9,7 @@
         <div class="items-mas-vendidos">
         <% category.forEach(product => { %>
             <article class="producto">
-                <a href="/products/productDetail">
+                <a href="/products/productDetail/<%= product.id %>">
                 <img src="/img/home/categoria-guitarras.jpg" alt="Imagen">
                 <div class="detalle-producto">
                     <p class="descripciones"><strong><%= product.nombre %></strong></p>

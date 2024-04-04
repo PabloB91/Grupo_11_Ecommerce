@@ -313,21 +313,9 @@ label {
 	display: none;
 }
 
-<<<<<<< HEAD
-.register-method-change{
-	text-align: center;
-}
-
-.errores{
-	color: crimson;
-	font-size: 12px;
-	text-align: center;
-
-=======
 .errores {
 	color: crimson;
 	font-size: 12px;
->>>>>>> a675fdcf93350534968c0408b239e6c7ea6c4e05
 }
 
 /* MEDIA QUERIES */
