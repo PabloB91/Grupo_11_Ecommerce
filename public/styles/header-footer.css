@@ -345,7 +345,7 @@ footer {
 		.redes_img {
 			position: relative;
 			height: 30px;
-			margin: 10px 0px 10px;
+			margin: 10px 5px 10px;
 
 			.fcbk-icon-hover,
 			.x-icon-hover,
@@ -378,6 +378,7 @@ footer {
 
 		p {
 			font-size: 0.9em;
+			color: #ADADAD;
 		}
 	}
 
