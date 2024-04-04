@@ -25,7 +25,7 @@ main {
 
 .titulo-ordenador {
 	font-size: 22px;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: black;
 	border-radius: 18px;
 	border: 2px solid white;
 	padding: 15px;
@@ -33,6 +33,7 @@ main {
 	left: 0;
 	color: white;
 	text-align: center;
+	cursor: pointer;
 
 }
 
@@ -113,7 +114,7 @@ main {
 	z-index: 1001;
 	border-radius: 18px;
 	border: 3px solid white;
-    text-shadow: #ff540a 0 2px 0px;
+    text-shadow: var(--orange-color); 0 2px 0px;
 	animation: 2s dropdownTituloAnimation ease;
 
 
@@ -179,6 +180,7 @@ main {
 	right: 0;
 	bottom: 0;
 	background-color: #ccc;
+	border-radius: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
@@ -191,16 +193,17 @@ main {
 	left: 4px;
 	bottom: 4px;
 	background-color: white;
+	border-radius: 20px;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
 
 input:checked+.slider {
-	background-color: #2196F3;
+	background-color: #FF540A;
 }
 
 input:focus+.slider {
-	box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #FF540A;
 }
 
 input:checked+.slider:before {
@@ -246,7 +249,7 @@ input:checked+.slider:before {
 	position: fixed;
 	border-radius: 18px;
 	width: 85vw;
-	background-color: #ff540a;
+	background-color: var(--orange-color);;
 	height: 4rem;
 	display: flex;
 	justify-content: center;
@@ -255,8 +258,9 @@ input:checked+.slider:before {
 }
 
 .titulo {
-	font-family: "Montserrat", sans-serif;
-	font-size: 26px;
+	font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
 	text-shadow: 0px 1.7px 0px black;
 	color: white;
 
@@ -409,7 +413,7 @@ a:active {
 
 	.card .back {
 		transform: perspective(600px) rotateY(180deg);
-		background-color: #ff540a;
+		background-color: var(--orange-color);;
 		padding: 15px;
 		color: black;
 		display: flex;

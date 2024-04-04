@@ -1,3 +1,23 @@
+:root {
+	/* Paleta primaria */
+	--orange-color: #ff540a;
+	--black-color: #000;
+	--curuba-color: #ffd4c2;
+	/* Paleta secundaria */
+	--DarkBlue-color: #03254e;
+	--RedWine-color: #550c18;
+	--BlueGray-color: #404e5c;
+	--OlivenGreen-color: #545643;
+	--Tan-color: #b7b3a1;
+	--LightGray-color: #e6e6e6;
+	/* Otros colores */
+	--Gray-color: #7a7c7d;
+	--white-color: #ffffff;
+	--white-color-hover: #f1f1f1;
+	--LightTan-color: #cac7ba;
+	--transparent-color: #00000000;
+}
+
 /* ETIQUETAS UNIVERSALES */
 * {
 	text-decoration: none;
@@ -9,7 +29,7 @@
 	min-width: 0;
 
 	/* se lo aplique al scroll de todas las vistas si quieren ver cambios sobre alguna sona especifica en su vista entoncen pongan estas propiedades y modifiquenlas como quieran en la vista necesaria, se modifica segun que tenga la propiedad de overflow*/
-	scrollbar-color: #ff540a #0000; /* el primer color seria el de la barra el segundo el fondo de la barra  */
+	scrollbar-color: var(--orange-color) var(--transparent-color); /* el primer color seria el de la barra el segundo el fondo de la barra  */
 	scrollbar-width: thin; /* con esta propiedad manejamos el ancho de la barra tenemos tres propiedades thin, auto y none */
 	&::-webkit-scrollbar {
 		width: 7px;
@@ -26,8 +46,7 @@ body {
 	min-height: 100dvh;
 	font-family: "Montserrat", sans-serif;
 	font-size: 0.875rem;
-	background: #fff;
-	background: #e3e3e3;
+	background: var(--white-color);
 }
 
 img {
@@ -36,8 +55,9 @@ img {
 	height: 100%;
 }
 
-ul {
-	list-style-type: none;
+ul,
+ol {
+	list-style: none;
 }
 
 /* ETIQUETAS DE TEXTO */
@@ -99,15 +119,9 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-	color: #000;
+	color: var(--black-color);
 }
 
-.T-color {
-	color: #000;
-}
-.orange-T-color {
-	color: #ff540a;
-}
 /* Properties */
 
 .property-TNotSelect {
@@ -118,11 +132,231 @@ a:active {
 	user-select: none; /* Standard syntax */
 }
 
-span.bar-bottom::after {
+span.bar-top::before {
 	content: "";
 	display: block;
 	width: 90%;
 	height: 2px;
 	margin: 10px 0px 10px 0px;
-	background: #ff540a;
+	background: var(--orange-color);
+}
+span.bar-right::after {
+	content: "";
+	display: inline-block;
+	width: 90%;
+	height: 2px;
+	margin: 10px 0px 10px 0px;
+	background: var(--orange-color);
+}
+span.bar-bottom::after {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 0.9px;
+	margin: 10px 0px 10px 0px;
+	background: var(--orange-color);
+}
+span.bar-left::before {
+	content: "";
+	display: inline-block;
+	width: 90%;
+	height: 2px;
+	margin: 10px 0px 10px 0px;
+	background: var(--orange-color);
+}
+
+span.triangle {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 10px solid var(--white-color);
+}
+
+a.button-orange {
+	color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+	height: 30px;
+	width: fit-content;
+	max-width: 200px;
+	font-family: "Montserrat";
+	background: var(--orange-color);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+
+	&:hover {
+		background: var(--RedWine-color);
+	}
+}
+
+a.button-black {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+	height: 30px;
+	width: fit-content;
+	max-width: 200px;
+	font-family: "Montserrat";
+	font-weight: bold;
+	font-size: 10px;
+	color: var(--white-color);
+	background-color: var(--black-color);
+	border-radius: 8px;
+	transition-duration: 0.4s;
+
+	&:hover {
+		background-color: var(--orange-color);
+	}
+}
+
+.max-width-1365px {
+	max-width: 1365px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.width-full {
+	width: 100%;
+}
+.width-1_1 {
+	width: 10%;
+}
+.width-1_2 {
+	width: 20%;
+}
+.width-1_3 {
+	width: 30%;
+}
+.width-1_4 {
+	width: 40%;
+}
+.width-1_5 {
+	width: 50%;
+}
+.width-1_6 {
+	width: 60%;
+}
+.width-1_7 {
+	width: 70%;
+}
+.width-1_8 {
+	width: 80%;
+}
+.width-1_9 {
+	width: 90%;
+}
+
+.margin-30-y {
+	margin: 30px 0px;
+}
+
+.margin-60-y {
+	margin: 60px 0px;
+}
+
+.flex {
+	display: flex;
+}
+
+.block {
+	display: block;
+}
+
+.center-x {
+	justify-content: center;
+}
+
+.center-y {
+	align-items: center;
+}
+
+.flxCenter {
+	justify-content: center;
+	align-items: center;
+}
+
+.between {
+	justify-content: space-between;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.i-width {
+	font-size: 0.9rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		background: var(--LightGray-color);
+	}
+
+	.i-width {
+		font-size: 1.2rem;
+	}
+
+	.mW-768-hidden {
+		display: none;
+	}
+
+	.mW-768-show {
+		display: block;
+	}
+
+	.mW-768-margin-30-y {
+		margin: 30px 0px;
+	}
+
+	.mW-768-margin-60-y {
+		margin: 60px 0px;
+	}
+
+	.mW-768-flex {
+		display: flex;
+	}
+
+	.mW-768-width-1_9 {
+		width: 90%;
+	}
+
+	.mW-768-width-1_85 {
+		width: 85%;
+	}
+
+	.mW-768-wrap {
+		flex-wrap: wrap;
+	}
+	.mW-768-noWrap {
+		flex-wrap: nowrap;
+	}
+
+	.main__section--margin-bottom {
+		margin-bottom: 30px;
+	}
+
+	.main__section--bgColor {
+		border-radius: 8px;
+		background: var(--LightGray-color);
+		box-shadow: -5px 5px 16px var(--Tan-color);
+	}
+
+	.mW-768-W-85 {
+		width: 85%;
+	}
 }

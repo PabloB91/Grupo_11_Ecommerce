@@ -30,7 +30,7 @@ header {
 	width: 100%;
 	justify-content: center;
 	align-items: center;
-	color: #ff540a;
+	color: var(--orange-color);
 	margin: auto;
 	height: 10%;
 
@@ -58,7 +58,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #ff540a;
+	color: var(--orange-color);
 
 	h2 {
 		font-size: 25px;
@@ -124,7 +124,7 @@ header {
 	padding: 1px 0px;
 	border: none;
 	border-image: initial;
-	border-bottom: 2px inset #ff540a;
+	border-bottom: 2px inset var(--orange-color);
 	padding-block: 2px;
 	padding-inline: 5px;
 	width: 80%;
@@ -138,7 +138,7 @@ header {
 	}
 }
 
-.country{
+.country {
 	position: relative;
 	left: 10%;
 }
@@ -188,7 +188,7 @@ header {
 
 .two-login .paragraph a {
 	font-family: "Montserrat";
-	color: #ff540a;
+	color: var(--orange-color);
 	font-size: 16px;
 
 	margin: 0px auto;
@@ -206,7 +206,7 @@ header {
 	align-items: center;
 
 	&:hover {
-		color: #ff540a;
+		color: var(--orange-color);
 	}
 }
 
@@ -219,7 +219,7 @@ input#remember {
 	display: none;
 
 	&:checked ~ span {
-		box-shadow: 0px 0px 5px 0px #ff540a;
+		box-shadow: 0px 0px 5px 0px var(--orange-color);
 	}
 }
 
@@ -236,7 +236,7 @@ span#check {
 	&:after {
 		content: " ";
 		position: absolute;
-		border: solid #ff540a;
+		border: solid var(--orange-color);
 		border-width: 0 0.2em 0.2em 0;
 		transform: rotate(45deg);
 		width: 0.25em;
@@ -267,7 +267,7 @@ label {
 	color: #000;
 
 	&:hover {
-		color: #ff540a;
+		color: var(--orange-color);
 	}
 }
 
@@ -278,7 +278,7 @@ label {
 	input {
 		border: none;
 		border-radius: 5px;
-		background: #ff540a;
+		background: var(--orange-color);
 		color: #fff;
 		height: 30px;
 		width: 100px;
@@ -303,16 +303,17 @@ label {
 	background-color: lightcoral;
 }
 
-.fa-brands{
+.fa-brands {
 	padding: 8px 16px;
 	font-size: 30px;
 	text-align: center;
 }
 
 .right-menu-container {
-    display: none;
+	display: none;
 }
 
+<<<<<<< HEAD
 .register-method-change{
 	text-align: center;
 }
@@ -322,6 +323,11 @@ label {
 	font-size: 12px;
 	text-align: center;
 
+=======
+.errores {
+	color: crimson;
+	font-size: 12px;
+>>>>>>> a675fdcf93350534968c0408b239e6c7ea6c4e05
 }
 
 /* MEDIA QUERIES */
@@ -354,20 +360,21 @@ label {
 		flex-wrap: wrap;
 		height: 390px;
 		right: 15px;
-        z-index: 10;
-        animation: normal registerForm 1s ease-in-out;
+		z-index: 10;
+		animation: normal registerForm 1s ease-in-out;
 	}
 
-    @keyframes registerForm {
-        0%{opacity: 1;
-            right: 50%;
-        }
+	@keyframes registerForm {
+		0% {
+			opacity: 1;
+			right: 50%;
+		}
 
-        100% {
-            opacity: 1;
-            right: 15px;
-        }
-    }
+		100% {
+			opacity: 1;
+			right: 15px;
+		}
+	}
 
 	.one-login .label {
 		width: 100%;
@@ -386,22 +393,22 @@ label {
 		align-items: center;
 		justify-content: center;
 		width: 50%;
-        animation: normal 1.5s appear ease-in-out;
+		animation: normal 1.5s appear ease-in-out;
 	}
 
-    @keyframes appear {
-        0%{
+	@keyframes appear {
+		0% {
 			opacity: 0;
-        }
+		}
 
-        50%{
+		50% {
 			opacity: 0;
-        }
+		}
 
-        100% {
-            opacity: 1;
-        }
-    }
+		100% {
+			opacity: 1;
+		}
+	}
 
 	.two-login .paragraph {
 		flex-direction: column;
@@ -441,7 +448,7 @@ label {
 		input {
 			border: none;
 			border-radius: 5px;
-			background: #ff540a;
+			background: var(--orange-color);
 			color: #fff;
 			height: 30px;
 			width: 100px;

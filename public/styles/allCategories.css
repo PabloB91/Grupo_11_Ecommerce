@@ -84,15 +84,15 @@ section {
 }
 
 .dropdown-content-category_title {
-	background: whitesmoke;
+	/*background: whitesmoke;*/
 	text-align: center;
-	border-radius: 0 0 50% 50%;
+	/*border-radius: 0 0 50% 50%;
 	border-bottom: 1px solid black;
-	box-shadow: inset 0px 10px 20px gray;
+	box-shadow: inset 0px 10px 20px gray;*/
 
 	i {
-	font-size: 45px;
-color: green;
+		font-size: 45px;
+		color: green;
 	}
 }
 

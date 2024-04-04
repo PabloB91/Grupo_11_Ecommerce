@@ -1,0 +1,55 @@
+/*==== Hoja de estilo Marcas SOUNDBOX */
+
+.allBrands {
+    width: 85%;
+    margin-top: 1rem;
+    margin: auto;
+    padding: 2em;
+    margin-bottom: 3em;
+
+    h3 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        text-align: center;
+        color: #FF540A;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.brands-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.brandCard {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #8F8F8F;
+        font-size: 11px;
+        font-weight: 600;
+        transition-duration: 0,5s;
+
+        &:hover {
+            color: #FF540A;
+        }
+    }
+}

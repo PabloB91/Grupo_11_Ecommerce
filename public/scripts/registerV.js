@@ -32,25 +32,15 @@ window.addEventListener("load", function(){
             const hasLowercase = /[a-z]/;
 
         if(password.value === ""){
-            
             errores.push("La contraseña no puede estar vacía.");
-
         }else if(password.length < 8){
-            
             errores.push("La contraseña debe tener al menos 8 caracteres");
-        
         }else if(!password.value.includes(hasUppercase)){
-        
             errores.push("La contraseña debe tener un al menos una mayuscula.")
-        
         }else if(!password.value.includes(hasLowercase)){
-        
             errores.push("La contraseña debe tener un al menos una minuscula.")
-        
         }else if(!password.value.includes(hasSpecialCharacter)){
-        
             errores.push("La contraseña debe tener un al menos un caracter especial.")
-        
         };
 
         /* Validacion Confirmacion de Contraseña */

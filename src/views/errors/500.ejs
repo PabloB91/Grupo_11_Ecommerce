@@ -1,0 +1,36 @@
+<%- include("../partials/head") %>
+    <link rel="stylesheet" href="/styles/errors.css">
+
+    <%- include("../partials/header") %>
+
+        <main class="main flex center-x">
+            <section class="main__section main__section--bgColor max-width-1365px flex flex-wrap width-1_7">
+                <div class="div__img-error-500 width-1_5">
+                    <img src="/img/svg/Errors/Error-500.svg" alt="SoundBox-Error-500">
+                </div>
+                <div class="informative-paragrap width-1_5">
+                    <ul>
+                        <li>
+                            <h3>
+                                Posibles causas:
+                            </h3>
+                        <li>
+                            <p>
+                                Problemas en el servidor que impiden completar la solicitud del usuario.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Errores en el código del servidor.
+                            </p>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div__botton width-full flex center-x">
+                    <a class="botton" href="/">VOLVER AL INICIO</a>
+                </div>
+            </section>
+        </main>
+
+        <%- include("../partials/footer") %>
