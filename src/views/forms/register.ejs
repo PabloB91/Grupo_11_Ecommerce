@@ -43,13 +43,13 @@
                         
                         <div class="fieldset names">
                             <div class="label">
-                                <label for="Nombres"></label>
+                                <label for="user-name"></label>
                             </div>
                                 <div class="fa-onda fa-logo">
                                     <img src="/img/svg/simbolequalizer.svg" alt="">
                                 </div>
                             <div class="input">                              
-                                <input id="user-name" name="name" type="text" placeholder="Nombres" value="<%= locals.old && old.name ? old.name : '' %>">
+                                <input id="user-name" name="name" type="text" placeholder="Nombres" value="<%= locals.old && old.name ? old.name : '' %>" autocomplete="given-name">
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@
                                 <img src="/img/svg/simbolequalizer.svg" alt="">
                             </div>
                             <div class="input">
-                                <input id="last-name" name="lastName" type="text" placeholder="Apellidos" value="<%= locals.old && old.lastName ? old.lastName : '' %>">
+                                <input id="last-name" name="lastName" type="text" placeholder="Apellidos" value="<%= locals.old && old.lastName ? old.lastName : '' %>" autocomplete="given-name">
                             </div>
                         </div>
         
@@ -73,7 +73,7 @@
                                 <img src="/img/svg/simbolequalizer.svg" alt="">
                             </div>
                             <div class="input">
-                                <input id="e-mail" name="email" type="e-mail" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : '' %>">
+                                <input id="e-mail" name="email" type="e-mail" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : '' %>" autocomplete="given-name">
                             </div>
                         </div>
                         
@@ -127,7 +127,7 @@
                                 <img src="/img/svg/simbolequalizer.svg" alt="">
                             </div>
                             <div class="input">
-                                <input id="password" name="password" type="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : '' %>">
+                                <input id="password" name="password" type="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : '' %>" autocomplete="given-name">
                             </div>
 
                         </div>
@@ -140,7 +140,7 @@
                                 <img src="/img/svg/simbolequalizer.svg" alt="">
                             </div>
                             <div class="input">
-                            <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirmar contraseña">
+                            <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirmar contraseña" autocomplete="given-name">
                             </div>
                         </div>
 
@@ -177,7 +177,7 @@
                                 <p>¿Ya eres parte de SoundBox?</p>
                                 
                                 <div class="a-crear-cuenta">
-                                    <a href="/login">Ingresar</a>
+                                    <a href="/users/login">Ingresar</a>
                                 </div>
                                 
                             </div>
@@ -200,7 +200,7 @@
             
         </main>
 
-        <script src="../scripts/forms.js"></script>
+        <script src="../scripts/registerV.js"></script>
 <!-- =========================================================================================================== -->
         
         <!-- FOOTER / PIE DE PAGINA -->

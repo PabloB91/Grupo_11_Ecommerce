@@ -87,7 +87,8 @@ h3 {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	font-size: 1.4rem;
-	padding-top: 1rem;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 h4 {
@@ -353,7 +354,7 @@ a.button-black {
 	.main__section--bgColor {
 		border-radius: 8px;
 		background: var(--LightGray-color);
-		box-shadow: -5px 5px 16px var(--Tan-color);
+		box-shadow: -5px 5px 16px rgba(0, 0, 0, 0.2);
 	}
 
 	.mW-768-W-85 {

@@ -294,8 +294,9 @@ label {
 }
 
 .error {
-	color: white;
-	background-color: lightcoral;
+	color: crimson;
+	font-size: 12px;
+	text-align: center;
 }
 
 .fa-brands {
@@ -306,6 +307,20 @@ label {
 .right-menu-container {
 	display: none;
 }
+
+.register-method-change{
+	text-align: centerr;
+}
+
+.errores{
+	color: crimson;
+	font-size: 12px;
+	text-align: center;
+}
+
+.container{
+	overflow: hidden;
+  }
 
 /*----------------------------------------------------------------------------------------------------------------*/
 /* MEDIA QUERIES */

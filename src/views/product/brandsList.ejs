@@ -3,7 +3,7 @@
 
     <%- include('../partials/header.ejs') %>
 
-        <main>
+        <main class="brands-background">
 
             <section class="allBrands">
 
@@ -14,11 +14,16 @@
                 
                         <article class="brandCard">
 
-                            <div>
-                                <a href="/brands/<%= brand.brand_name %>"><img src="/img/brands/SOUNDBOX-BRAND-BOSS.png" alt="BOSS"></a><!-- Pendiente dinámica para que se vean las imágenes de las otras 6 marcas en orden alfabético -->
+                            <div>   <!-- Se renderizan de manera dinámica las imágenes de cada marca y sus links -->
+                                <a href="/brands/<%= brand.brand_name %>">
+                                    <% images.forEach(image => { %>
+                                        <% if (image.match(brand.brand_name)) { %>
+                                            <img src="/img/brands/<%= image %>" alt="BOSS"></a>
+                                        <% } %>
+                                    <% }) %> 
                             </div>
                             <div>
-                                <a href="#">VER PRODUCTOS</a>
+                                <a href="#"><strong>VER PRODUCTOS</strong></a>
                             </div>
         
                         </article>

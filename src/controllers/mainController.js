@@ -65,15 +65,15 @@ const mainController = {
 
 	categories: async (req, res) => {
 		try {
-			const category = await db.Productos.findByPk({
+			const category = await db.Productos.findAll({
 				where: {
-					category: { name: req.params.nombre },
+					"$category.category$": req.params.nombre,
 				},
-				include: [{ association: "category" }],
+				include: [{ association: "category", attributes: ["category"] }],
 			});
 			res.render("product/categories.ejs", { category });
 		} catch (err) {
-			c;
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
@@ -82,7 +82,6 @@ const mainController = {
 		try {
 			res.render("product/allCategories.ejs");
 		} catch (err) {
-			c;
 			res.render("errors/404.ejs");
 		}
 	},

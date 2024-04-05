@@ -34,7 +34,7 @@ VALUES ('BOSS'),('DAddario'),('Epiphone'),('Gibson'),('Marshall'),('Yamaha'),('Z
 
 INSERT INTO category
 (category)
-VALUES ('Guitarra'),('Orquesta'),('Grabación'),('Efectos'),('Accesorios'),('Amplificación'), ('Segunda Mano'), ('Teclados & Pianos');
+VALUES ('Guitarras'),('Orquestas'),('Grabaciones'),('Efectos'),('Accesorios'),('Amplificadores'), ('Segunda Mano'), ('Pianos');
 
 INSERT INTO state
 (state)

@@ -12,7 +12,7 @@ const authMiddleware = require("../middlewares/authMiddleware"); //--> Requerimo
 
 router.get("/", mainController.index);
 
-router.get("/category/:nombre", mainController.categories);
+router.get("/categories/:nombre", mainController.categories);
 
 router.get("/productCart", authMiddleware.common_user, mainController.carrito); //--> Se aplica el método 'common_user' del 'authMiddleware' ('authMiddleware.common_user'),
 //--si el usuario está logueado como usuario común, continúa con el controlador, si no, lo redirige al login)

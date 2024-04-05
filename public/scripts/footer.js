@@ -1,4 +1,4 @@
-
+/* 
 
 const goTopBtn = document.getElementById("goTop")
 
@@ -20,4 +20,4 @@ function scrollFunction() {
 goTopBtn.addEventListener('click', function () {
     window.scrollTo(0, 0);
 })
-
+ */
