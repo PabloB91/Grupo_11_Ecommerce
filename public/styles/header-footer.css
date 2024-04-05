@@ -375,6 +375,8 @@ footer {
 	.copyright {
 		text-align: center;
 		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
 
 		p {
 			font-size: 0.9em;
@@ -619,7 +621,6 @@ footer {
 
 		.copyright {
 			width: 100%;
-			padding-top: 30px;
 		}
 
 		.redes {
