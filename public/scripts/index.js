@@ -1,12 +1,18 @@
-/* ========================================================================= */
-/* Botones del index slider */
-const slider = document.querySelector("#slider--inner");
-let sliderSection = document.querySelectorAll(".img_sliderSection");
-let sliderSectionLast = sliderSection[sliderSection.length - 1];
-const btnLeft = document.querySelector("#btn-left");
-const btnRight = document.querySelector("#btn-right");
-const btnStop = document.querySelector("#div__btn-pause-play span");
-slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+document.addEventListener("DOMContentLoaded", function(){
+	const slider = document.querySelector("#slider--inner");
+	if(!slider){
+		console.log("No se encontró el elemento #slider--inner en el DOM.");
+		return; // salir de la función si el elemento no se encontró
+	}
+
+	let sliderSection = document.querySelectorAll(".img_sliderSection");
+	let sliderSectionLast = sliderSection[sliderSection.length - 1];
+
+	const btnLeft = document.querySelector("#btn-left");
+	const btnRight = document.querySelector("#btn-right");
+	const btnStop = document.querySelector("#div__btn-pause-play span");
+
+	slider.insertAdjacentElement("afterbegin", sliderSectionLast);
 function nextLeft() {
 	let sliderSectionFirst = document.querySelectorAll(".img_sliderSection")[0];
 	slider.style.marginLeft = "-200%";
@@ -64,3 +70,5 @@ leftBtnSliderCards.addEventListener("click", () => {
 });
 
 /* ========================================================================= */
+
+})

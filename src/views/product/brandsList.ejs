@@ -1,32 +1,38 @@
-
-    <%- include('../partials/head.ejs') %>
-    <link href="/styles/home.css" rel="stylesheet">
+<%- include('../partials/head.ejs') %>
+    <link href="/styles/brands.css" rel="stylesheet">
 
     <%- include('../partials/header.ejs') %>
 
-    <main>
-    
-        <div class="items-mas-vendidos">
-        <% brands.forEach(brand => { %>
-            
-            <article class="producto">
-                <!-- <a href="/products/brandDetail"> -->
-                <!-- <img src= imagen alt="Imagen"> -->
-                <div class="detalle-producto">
-                    <p class="descripciones"><strong><%= brand.brand_name %></strong></p>
-                </div>
-                </a>
-            </article>
-        <% }) %>
+        <main class="brands-background">
+
+            <section class="allBrands">
+
+                <h3>NUESTRAS MARCAS</h3>
+
+                <div class="brands-list"> 
+                    <% brands.forEach(brand => { %>
                 
-        </div>
+                        <article class="brandCard">
+
+                            <div>   <!-- Se renderizan de manera dinámica las imágenes de cada marca y sus links -->
+                                <a href="/brands/<%= brand.brand_name %>">
+                                    <% images.forEach(image => { %>
+                                        <% if (image.match(brand.brand_name)) { %>
+                                            <img src="/img/brands/<%= image %>" alt="BOSS"></a>
+                                        <% } %>
+                                    <% }) %> 
+                            </div>
+                            <div>
+                                <a href="#"><strong>VER PRODUCTOS</strong></a>
+                            </div>
         
-        <hr class="separador">
+                        </article>
+                    <% }) %>
         
-        <hr class="separador">
-        
-    </main>
+            </section>
+
+        </main> 
+    
+    <!-- Cierre del archivo brandsList.ejs -->
 
     <%- include('../partials/footer.ejs') %>
-
-

@@ -7,16 +7,16 @@
             <section id="categories"
                     class="main__content-categories main__section--margin-bottom main__section--bgColor mnw-768px--w-85">
 
-                    <div class="dropdown-content-category_title">
-                        <br>
-                        <h3 >Categorías</h3>
-                        <% if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
-                        <a href=""><i class="fa-solid fa-user-tie"></i></a>
-                        <% } else {
-                        } %>
-                        <br>
-                    </div>
-                    <div class="overflow__container">
+                    <div class="allCategories_container">
+                        <div class="dropdown-content-category_title">
+                            <br>
+                            <h3 >Categorías</h3>
+                            <% if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
+                            <a href=""><i class="fa-solid fa-user-tie"></i></a>
+                            <% } else {
+                            } %>
+                            <br>
+                        </div>
                         <div class="div__items-categories div__items-categories--grid">
 
                             <article class="categoria">

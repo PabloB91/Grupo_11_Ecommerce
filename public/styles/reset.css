@@ -91,7 +91,8 @@ h3 {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	font-size: 1.4rem;
-	padding-top: 1rem;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 h4 {

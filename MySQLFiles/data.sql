@@ -1,5 +1,4 @@
-/* Script para poblar las tablas correspondientes a Usuarios */
-
+/* ---------------------- USUARIOS ---------------------- */
 INSERT INTO user_type
 (user_type)
 VALUES ('admin'),('common_user');
@@ -8,8 +7,6 @@ INSERT INTO country
 (country)
 VALUES 
 ('Antigua y Barbuda'),('Argentina'),('Bahamas'),('Barbados'),('Belice'),('Bolivia'),('Brasil'),('Canada'),('Chile'),('Colombia'),('Costa Rica'),('Cuba'),('Dominicana'),('El Salvador'),('Estados Unidos'),('Granada'),('Guatemala'),('Guyana'),('Haiti'),('Honduras'),('Jamaica'),('Mexico'),('Nicaragua'),('Panama'),('Paraguay'),('Peru'),('Republica Dominicana'),('San Cristobal y Nieves'),('Santa Lucia'),('Surinam'),('Trinidad y Tobago'),('Uruguay'),('Venezuela');
-/* Antes de crear cualquier usuario, las tablas anteriores tienen que tener registros, ya que existen relaciones */
-/* Si no, tira error de 'CONSTRAINTS'*/
 
 INSERT INTO soundbox.user
 (id, first_name, last_name, password, e_mail, image, registered_date, user_type_id, country_id)
@@ -23,18 +20,19 @@ VALUES
 (7, 'Phonix', 'Alvares Capullo', '$2a$10$m0HHT0Oz8f4hrqlTMWRhs.2I65kimtZt1s/9lSqsrmkhfGzNb8ta6', 'mateoac@gmail.com', 'user-1709672974782.jpg',  '2024-03-05', 2, 2),
 (8, 'Francisco', 'Espejo Castro', '$2a$10$wiVOwFOWyX.dlWrHnjttDurhNjXIfsWB3myCk8/Gq1.g9I4gweKhG', 'phonixec@gmail.com', 'user-1709673066028.jpg',  '2024-03-05', 2, 2);
 
---------------------> PRODUCTOS  <----------------------
+
+/* ---------------------- PRODUCTO ---------------------- */
 INSERT INTO color  
 (color_name)
 VALUES ('Rojo'),('Amarillo'),('Azul'),('Negro');
 
 INSERT INTO brand 
 (brand_name)
-VALUES ('Marshall'),('Zildjian'),('Gibson'),('Yamaha');
+VALUES ('BOSS'),('DAddario'),('Epiphone'),('Gibson'),('Marshall'),('Yamaha'),('Zildjian');
 
 INSERT INTO category
 (category)
-VALUES ('Guitarra'),('Orquesta'),('Grabación'),('Efectos'),('Accesorios'),('Amplificación'), ('Segunda Mano'), ('Teclados & Pianos');
+VALUES ('Guitarras'),('Orquestas'),('Grabaciones'),('Efectos'),('Accesorios'),('Amplificadores'), ('Segunda Mano'), ('Pianos');
 
 INSERT INTO state
 (state)
@@ -43,27 +41,57 @@ VALUES ('Mas Vendido'),('Ultimo Visto'),('Recien Agregado');
 INSERT INTO soundbox.product
 (id, name, description, image, quantity, price, discount, brand_id, category_id, state_id)
 VALUES
-(1,'Guitarra clásica','hola','IMG_DEFAULT.svg',15,100,10, 4, 6, 3),
-(2, 'Guitarr6a Electrica','hola', 'IMG_DEFAULT.svg', 8, 20,NULL, 2, 1, 3),
-(3, 'Guitarr654a','hola', 'IMG_DEFAULT.svg', 100, 250,NULL, 3, 8, 3),
-(4, 'Guitarra acústica7','hola', 'IMG_DEFAULT.svg', 87, 3000,15, 3, 3, 3),
-(5, 'Guitarra renacen7979tista','hola', 'IMG_DEFAULT.svg', 14, 4000,80, 1, 2, 1),
-(6, 'Guitarra clásic7864a','hola', 'IMG_DEFAULT.svg', 135, 5000,NULL, 3, 7, 1),
-(7, 'Guitarra italia2562na','hola', 'IMG_DEFAULT.svg', 186, 5000,NULL, 3, 6, 2),
-(8, 'Guitarra italia52na','hola', 'IMG_DEFAULT.svg', 12, 6000,NULL, 2, 7, 3),
-(9, 'Guitarra clásic52a','hola', 'IMG_DEFAULT.svg', 151, 6500,15, 2, 8, 3),
-(10, 'Guitarra electro47acústica','hola', 'IMG_DEFAULT.svg', 65, 7000,19, 4, 1, 2),
-(11, 'Guitarra renace74ntista','hola', 'IMG_DEFAULT.svg', 32, 75000,35, 3, 1, 1),
-(12, 'Guitarra elect574roacústica','hola', 'IMG_DEFAULT.svg', 76, 800,NULL, 4, 4, 1),
-(13, 'Guitarra clásica47','hola', 'IMG_DEFAULT.svg', 153, 8500,NULL, 2, 6, 1),
-(14, 'Guitarra flamen52ca','hola', 'IMG_DEFAULT.svg', 765, 9000,NULL, 2, 3, 1),
-(15, 'Guitarra eléctr31ica','hola', 'IMG_DEFAULT.svg', 1, 50000,15, 1, 2, 3),
-(16, 'Guitarra acúsdawtica','hola', 'IMG_DEFAULT.svg', 11, 100,25, 3, 7, 3),
-(17, 'Guitarra MIdawDI','hola', 'IMG_DEFAULT.svg', 10, 10,NULL, 3, 5, 2),
-(18, 'Guitarra cladwásica','hola', 'IMG_DEFAULT.svg', 2, 200,NULL, 4, 1, 3),
-(19, 'Guitarra MIDadI','hola', 'IMG_DEFAULT.svg', 78, 2500,15, 3, 2, 2),
-(20, 'Guitarra clásideca','hola', 'IMG_DEFAULT.svg', 0, 300,75, 1, 1, 2);
+(1, 'Guitarra Acústica Roja', 'Guitarra acústica de color rojo vibrante', 'guitarra-3.jpg', 10, 299.99, 10, 4, 1, 3),
+(2, 'Batería Yamaha Negra', 'Set de batería profesional en color negro', 'persecucion-1.jpg', 5, 799.99, 30, 6, 2, 3),
+(3, 'Piano de Cola Azul', 'Elegante piano de cola azul con acabado brillante', 'piano-azul.jpg', 2, 4999.99, 40, 7, 8, 2),
+(4, 'Pedal de Efectos Amarillo', 'Pedal de efectos para guitarra en color amarillo brillante', 'pedal-efectos.jpg', 15, 99.99, 90, 4, 4, 3),
+(5, 'Amplificador Marshall Clásico', 'Amplificador icónico de la marca Marshall', 'amplificador-clasico.jpg', 8, 399.99, 5, 5, 6, 3),
+(6, 'Violín Negro', 'Violín profesional en color negro elegante', 'orquesta-3.jpg', 3, 499.99, 0, 2, 1, 3),
+(7, 'Saxofón Azul', 'Saxofón de alta calidad en tono azul brillante', 'saxofone-azul.jpg', 4, 699.99, 0, 2, 1, 3),
+(8, 'Micrófono de Estudio Negro', 'Micrófono de condensador para grabaciones en color negro', 'microfono-negro.jpg', 12, 149.99, 0, 3, 3, 3),
+(9, 'Cuerdas para Guitarra Amarillas', 'Set de cuerdas para guitarra eléctrica en color amarillo', 'cuerdas-gibson.jpg', 20, 19.99, 0, 4, 5, 3),
+(10, 'Teclado Yamaha Rojo', 'Teclado electrónico Yamaha en rojo llamativo', 'piano-yamaha-rojo.jpg', 6, 299.99, 25, 6, 8, 2),
+(11, 'Trompeta Dorada', 'Trompeta profesional en tono dorado brillante', 'trompeta-dorada.jpg', 3, 399.99, 55, 2, 1, 1),
+(12, 'Caja de Batería Zildjian', 'Caja de batería de alta calidad de la marca Zildjian', 'platillos-zildjian.jpg', 7, 129.99, 15, 7, 2, 2),
+(13, 'Guitarra Eléctrica Azul', 'Guitarra eléctrica en azul metálico', 'guitarra-clasica.jpg', 10, 349.99, 0, 3, 1, 1),
+(14, 'Pandereta Amarilla', 'Pandereta profesional en color amarillo brillante', 'pandereta-amarilla.jpg', 5, 29.99, 0, 2, 1, 1),
+(15, 'Bajo Negro', 'Bajo eléctrico en color negro clásico', 'guitarra-1.jpg', 4, 299.99, 0, 3, 1, 1),
+(16, 'Acordeón Rojo', 'Acordeón de alta calidad en rojo intenso', 'acordeon-rojo.jpg', 2, 799.99, 21, 2, 7, 1),
+(17, 'Piano Digital Azul', 'Piano digital en azul moderno', 'piano-azul.jpg', 3, 999.99, 44, 7, 8, 1),
+(18, 'Pedal de Distorsión Amarillo', 'Pedal de distorsión en amarillo llamativo', 'pedal-efectos.jpg', 8, 79.99, 95, 4, 4, 1),
+(19, 'Amplificador Marshall Rojo', 'Amplificador clásico en rojo vibrante', 'amplificador-rojo.jpg', 6, 499.99, 0, 5, 4, 1),
+(20, 'Flauta Negra', 'Flauta profesional en negro elegante', 'clarinete-negro.jpg', 4, 199.99, 20, 2, 2, 1),
+(21, 'Trombón Azul', 'Trombón de alta calidad en azul brillante', 'trombon-azul.jpg', 3, 349.99, 0, 2, 7, 1),
+(22, 'Interfaz de Audio Negra', 'Interfaz de audio profesional en negro mate', 'interfaz-audio.jpg', 10, 249.99, 0, 3, 5, 2),     
+(23, 'Cuerdas para Bajo Amarillas', 'Set de cuerdas para bajo en amarillo brillante', 'cuerdas-gibson.jpg', 15, 24.99, 0, 2, 5, 3),
+(24, 'Sintetizador Yamaha Rojo', 'Sintetizador Yamaha en rojo intenso', 'teclado-rojo.jpg', 5, 599.99, 0, 6, 5, 1),
+(25, 'Clarinete Negro', 'Clarinete profesional en negro clásico', 'clarinete-negro.jpg', 3, 299.99, 0, 2, 2, 3),
 
 INSERT INTO product_color
-(id, product_id, color_id)
-VALUES (DEFAULT,1,1)
+(product_id, color_id)
+VALUES 
+(1,1),
+(2,4),
+(3,3),
+(4,2),
+(5,4),
+(6,3),
+(7,3),
+(8,4),
+(9,2),
+(10,1),
+(11,2),
+(12,2),
+(13,3),
+(14,1),
+(15,4),
+(16,1),
+(17,3),
+(18,2),
+(19,2),
+(20,4),
+(21,3),
+(22,4),
+(23,2),
+(24,1),
+(25,4)

@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 
     // que nombre tendra el archivo nuevo
     filename : function(req, file, cb){
-        cb(null, 'SOUNDBOX-BRAND'+file.fieldname + " - " + Date.now() + path.extname(file.originalname));
+        cb(null, 'SOUNDBOX-BRAND-'+file.fieldname + " - " + Date.now() + path.extname(file.originalname));
     }
 
 });
@@ -34,10 +34,10 @@ const upload = multer({storage});
 // Devolver todas las marcas
 router.get('/allbrands', brandsController.listBrands);
 
-/* // Devolver una marca
-router.get('/brandDetail/:id', brandsController.detail);
+// Devolver todos los productos de una marca
+router.get('/:brand_name', brandsController.brandProducts);
 
-// Crear una marca
+/*// Crear una marca
 router.get('/createBrand', authMiddleware ,brandsController.create);// --> Se aplica el 'authMiddleware' (si el usuario está logueado, continúa con el controlador,
                                                                 // si no, lo redirige al login) //
 router.post('/createBrand', upload.array('form-imagen'), brandsController.processCreate);
@@ -51,5 +51,5 @@ router.put('/editBrand/:id', upload.array('form-imagen'), brandsController.proce
 // Eliminar una marca 
 router.delete('/delete/:brandId', authMiddleware,brandsController.destroy);  //--> Se aplica el 'authMiddleware' (si el usuario está logueado, continúa con el controlador,
                                                                              // si no, lo redirige al login) 
- */
+*/
 module.exports = router;

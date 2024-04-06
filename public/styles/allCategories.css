@@ -1,22 +1,32 @@
 main {
 	display: flex;
 	align-items: center;
-	background: #cac7ba;
-
+	
 }
 
 section {
+	background: #cac7ba;
+	margin: auto;
+
 	a {
 		display: block;
 		height: 30px;
 	}
 }
 
+.overflow__container {
+	margin: auto;
+	width: 85vw;
+	overflow-x: scroll;
+
+}
 
 .div__items-categories--grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 
@@ -95,3 +105,4 @@ section {
 		color: green;
 	}
 }
+

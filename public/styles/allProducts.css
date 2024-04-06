@@ -1,31 +1,23 @@
-body {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 400;
-	font-size: 12px;
-	font-style: normal;
-	margin: auto;
-}
 
 main {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
 }
 
 .ordenador {
-
 	background-color: rgba(0, 0, 0, 0.4);
 	color: #fff;
 	position: fixed;
 	bottom: 0px;
-	left: 1px;
-	z-index: 999;
-	border-radius: 18px;
+	left: 0px;
+	z-index: 1;
+	border-radius:0 18px 18px 0;
 }
 
 .titulo-ordenador {
-	font-size: 22px;
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 18px;
 	border: 2px solid white;
 	padding: 15px;
@@ -34,10 +26,13 @@ main {
 	color: white;
 	text-align: center;
 	cursor: pointer;
-
 }
 
 /* animacion de javascript*/
+
+.appear {
+	display: flex;
+}
 
 @keyframes titleAnimation {
 	0% {
@@ -88,47 +83,19 @@ main {
 @keyframes dropdownTituloAnimation {
 	0% {
 		opacity: 0;
+		width: 0;
+	}
+
+	25% {
+		opacity: 0;
 
 	}
 
-	25% {}
-
 	75% {
-		opacity: 0;
 	}
 
 	100% {
 		opacity: 1;
-	}
-}
-
-.closeDropDown {
-	width: 60vh;
-	display: none;
-	justify-content: space-around;
-    align-items: center;
-	position: fixed;
-	top: 0vh;
-	left: 0;
-	background: rgba(0, 0, 0, 0.305);
-	z-index: 1001;
-	border-radius: 18px;
-	border: 3px solid white;
-    text-shadow: var(--orange-color); 0 2px 0px;
-	animation: 2s dropdownTituloAnimation ease;
-
-
-	span {
-		
-		color: white;
-		font-size: 25px
-
-	}
-
-	p {
-		color: white;
-		padding: 5px;
-		font-size: 50px;
 	}
 }
 
@@ -254,7 +221,7 @@ input:checked+.slider:before {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 999;
+	z-index: 1;
 }
 
 .titulo {
@@ -285,33 +252,11 @@ input:checked+.slider:before {
 	display: none;
 	flex-wrap: nowrap;
 	overflow-y: scroll;
+	scrollbar-width: none;
 	flex-direction: column;
 	backdrop-filter: blur(15px);
-	animation: 2s dropdownOrdenadorAnimation ease;
+	border-radius: 18px;
 }
-
-@keyframes dropdownOrdenadorAnimation {
-0% {
-	height: 0vh;
-	opacity: 0;
-	backdrop-filter: blur(0px);
-	top: 0;
-
-}
-25% {
-}
-50% {
-}
-75% {
-}
-100% {
-	top: 0;
-	backdrop-filter: blur(15px);
-	opacity: 1;
-	height: 90vh;
-}
-}
-
 
 /*tageta add*/
 
@@ -325,7 +270,6 @@ input:checked+.slider:before {
 /* animaciones carta*/
 
 .todasLasCards {
-
 	width: 90%;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -363,12 +307,6 @@ a:active {
 /****************************/
 /*      media queryes */
 /****************************/
-
-@media (min-width: 1024px) {
-	.closeDropDown {
-		width: 53vh;
-	}
-}
 
 @media (max-width: 4000px) {
 	.todasLasCards {
@@ -477,8 +415,6 @@ a:active {
 
 @media (max-width: 1024px) {
 
-
-
 	.todasLasCards {
 		margin: auto;
 		width: 90%;
@@ -509,8 +445,6 @@ a:active {
 
 	}
 
-
-
 }
 
 @media (max-width: 425px) {
@@ -523,5 +457,5 @@ a:active {
 	}
 
 
-
 }
+

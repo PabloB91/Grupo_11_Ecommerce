@@ -15,7 +15,7 @@ const mainController = {
 			const topSeller = await db.Productos.findAll({
 				where: {
 					price: {
-						[Op.gt]: 1500,
+						[Op.gt]: 120,
 					},
 				},
 				limit: 10,
@@ -23,7 +23,7 @@ const mainController = {
 			const newsComments = await db.Productos.findAll({
 				where: {
 					price: {
-						[Op.gt]: 1500,
+						[Op.gt]: 80,
 					},
 				},
 				limit: 3,
@@ -31,7 +31,7 @@ const mainController = {
 			const newsAdd = await db.Productos.findAll({
 				where: {
 					price: {
-						[Op.gt]: 1500,
+						[Op.gt]: 200,
 					},
 				},
 				limit: 3,
@@ -65,15 +65,15 @@ const mainController = {
 
 	categories: async (req, res) => {
 		try {
-			const category = await db.Productos.findByPk({
+			const category = await db.Productos.findAll({
 				where: {
-					category: { name: req.params.nombre },
+					"$category.category$": req.params.nombre,
 				},
-				include: [{ association: "category" }],
+				include: [{ association: "category", attributes: ["category"] }],
 			});
 			res.render("product/categories.ejs", { category });
 		} catch (err) {
-			c;
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
@@ -82,7 +82,6 @@ const mainController = {
 		try {
 			res.render("product/allCategories.ejs");
 		} catch (err) {
-			c;
 			res.render("errors/404.ejs");
 		}
 	},
