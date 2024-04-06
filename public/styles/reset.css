@@ -49,6 +49,10 @@ body {
 	background: var(--white-color);
 }
 
+main {
+	position: relative;
+}
+
 img {
 	display: block;
 	width: 100%;
@@ -214,6 +218,45 @@ a.button-black {
 	}
 }
 
+a.button-gray {
+	color: var(--orange-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+	height: 30px;
+	width: fit-content;
+	max-width: 200px;
+	font-family: "Montserrat";
+	background: var(--LightGray-color);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+
+	&:hover {
+		background: var(--orange-color);
+		color: var(--white-color);
+	}
+}
+div.button-gray {
+	color: var(--orange-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+	height: 30px;
+	width: fit-content;
+	max-width: 200px;
+	font-family: "Montserrat";
+	background: var(--LightGray-color);
+	border-radius: 5px;
+	transition-duration: 0.4s;
+
+	&:hover {
+		background: var(--orange-color);
+		color: var(--white-color);
+	}
+}
+
 .max-width-1365px {
 	max-width: 1365px;
 	display: flex;
@@ -286,6 +329,14 @@ a.button-black {
 	justify-content: space-between;
 }
 
+.flx-column {
+	flex-direction: column;
+}
+
+.flx-end {
+	justify-content: end;
+}
+
 .flex-wrap {
 	flex-wrap: wrap;
 }
@@ -302,60 +353,52 @@ a.button-black {
 	display: block;
 }
 
+.discount {
+	color: var(--DarkBlue-color);
+}
+
 @media screen and (min-width: 768px) {
 	body {
 		background: var(--LightGray-color);
 	}
-
 	.i-width {
 		font-size: 1.2rem;
 	}
-
 	.mW-768-hidden {
 		display: none;
 	}
-
 	.mW-768-show {
 		display: block;
 	}
-
 	.mW-768-margin-30-y {
 		margin: 30px 0px;
 	}
-
 	.mW-768-margin-60-y {
-		margin: 60px 0px;
+		margin: 20px 0px;
 	}
-
 	.mW-768-flex {
 		display: flex;
 	}
-
 	.mW-768-width-1_9 {
 		width: 90%;
 	}
-
 	.mW-768-width-1_85 {
 		width: 85%;
 	}
-
 	.mW-768-wrap {
 		flex-wrap: wrap;
 	}
 	.mW-768-noWrap {
 		flex-wrap: nowrap;
 	}
-
 	.main__section--margin-bottom {
 		margin-bottom: 30px;
 	}
-
 	.main__section--bgColor {
 		border-radius: 8px;
-		background: var(--LightGray-color);
+		background: var(--white-color);
 		box-shadow: -5px 5px 16px var(--Tan-color);
 	}
-
 	.mW-768-W-85 {
 		width: 85%;
 	}
