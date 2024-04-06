@@ -15,7 +15,7 @@ const mainController = {
 			const topSeller = await db.Productos.findAll({
 				where: {
 					price: {
-						[Op.gt]: 1500,
+						[Op.gt]: 120,
 					},
 				},
 				limit: 10,
@@ -23,7 +23,7 @@ const mainController = {
 			const newsComments = await db.Productos.findAll({
 				where: {
 					price: {
-						[Op.gt]: 1500,
+						[Op.gt]: 80,
 					},
 				},
 				limit: 3,
@@ -31,7 +31,7 @@ const mainController = {
 			const newsAdd = await db.Productos.findAll({
 				where: {
 					price: {
-						[Op.gt]: 1500,
+						[Op.gt]: 200,
 					},
 				},
 				limit: 3,

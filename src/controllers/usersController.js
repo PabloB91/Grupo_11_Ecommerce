@@ -22,9 +22,9 @@ const usersControllers = {
 			// console.log(errores);
 
 			let country_registro; //--> Esto es para tomar el valor de país del input de usuario y guardarlo con el Id correspondiente
-			if (req.body.country == "Argentina") {
+			if (req.body.country == "Antigua y Barbuda") {
 				country_registro = 1;
-			} else if (req.body.country == "Colombia") {
+			} else if (req.body.country == "Argentina") {
 				country_registro = 2;
 			}
 
@@ -35,6 +35,7 @@ const usersControllers = {
 					errores: errores.array(),
 					old: req.body,
 				});
+
 			} else {
 				const passwordToValidate = req.body.password; //-->Se trae el password ingresado por el usuario, para su posterior hasheo
 				//--> Se llama al método de Sequelize 'create' para crear un registro en la DB
@@ -51,14 +52,14 @@ const usersControllers = {
 
 					user_type_id: 2, //--> En este caso el Id debería ser siempre '2', porque es el que corresponde a 'common_user'
 					//--Definir cómo vamos a crear el usuario 'admin', que debería ser creado una sola vez.
-					country_id: country_registro,
+					country_id: 1,
 				});
 				/* console.log("usuario a crear: ", CreateUser); */ //--> Muestra por consola cómo quedó el registro que se inserta en la BD
 				return res.redirect("login"); //--> Una vez creado el registro en la DB. se redirige a la página de logueo
 			}
 		} catch (err) {
 			//--Hay que usar 'return' para evitar el error de '[ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client'
-			return; /* console.log(err); */ //--> Esto nos muestra en la consola si es que hubo algún error en el proceso
+			return; /* res.send(err) */ //--> Esto nos muestra en la consola si es que hubo algún error en el proceso
 		}
 	},
 	// (GET) Formulario de Login
