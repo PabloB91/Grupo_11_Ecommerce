@@ -21,12 +21,6 @@ const usersControllers = {
 			const errores = validationResult(req); //--->Traemos las validaciones
 			// console.log(errores);
 
-			let country_registro; //--> Esto es para tomar el valor de país del input de usuario y guardarlo con el Id correspondiente
-			if (req.body.country == "Antigua y Barbuda") {
-				country_registro = 1;
-			} else if (req.body.country == "Argentina") {
-				country_registro = 2;
-			}
 
 			if (!errores.isEmpty()) {
 				//-->Si existen errores, se renderizan y además se renderizan los input de usuario que sean correctos en el objeto 'old'
@@ -52,7 +46,7 @@ const usersControllers = {
 
 					user_type_id: 2, //--> En este caso el Id debería ser siempre '2', porque es el que corresponde a 'common_user'
 					//--Definir cómo vamos a crear el usuario 'admin', que debería ser creado una sola vez.
-					country_id: 1,
+					country_id: req.body.country,
 				});
 				/* console.log("usuario a crear: ", CreateUser); */ //--> Muestra por consola cómo quedó el registro que se inserta en la BD
 				return res.redirect("login"); //--> Una vez creado el registro en la DB. se redirige a la página de logueo
