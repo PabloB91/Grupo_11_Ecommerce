@@ -17,7 +17,7 @@ const registerValidations = [
     body('name').notEmpty(),
     body('lastName').notEmpty(),
     body('email').trim().notEmpty().isEmail(),
-    body('password').notEmpty().isLength({min: 8, max: 16 }),
+    body('password').notEmpty().isLength({min: 8, max: 24}),
     body('password').matches(/[A-Z]/),
     body('password').matches(/[a-z]/),
     body('password').matches(/[!@#$%^&/_*]/),

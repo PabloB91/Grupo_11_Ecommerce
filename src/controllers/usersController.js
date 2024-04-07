@@ -21,6 +21,22 @@ const usersControllers = {
 			const errores = validationResult(req); //--->Traemos las validaciones
 			// console.log(errores);
 
+			let validateUniqueEmailR = await db.Usuarios.findAll({
+					attributes: ["e_mail"]
+			});
+
+			validateUniqueEmailR.forEach(element => {
+				if(element.dataValues.e_mail == req.body.email){
+
+					return res.render("forms/register.ejs", {
+						errors: [
+							{ msg: "No se puede crear una cuenta con un email ya registrado." },
+						],
+						old: req.body,
+					})
+				}
+				
+			});
 
 			if (!errores.isEmpty()) {
 				//-->Si existen errores, se renderizan y además se renderizan los input de usuario que sean correctos en el objeto 'old'
@@ -36,7 +52,7 @@ const usersControllers = {
 				let CreateUser = await db.Usuarios.create({
 					first_name: req.body.name, //-->Los nombres de los campos tienen que ser iguales a los nombres del modelo 'Usuario' de DB
 					last_name: req.body.lastName,
-					e_mail: req.body.email,
+					e_mail: validateUniqueEmailR,
 					password: bcrypt.hashSync(passwordToValidate, 10),
 					image:
 						req.file == undefined
