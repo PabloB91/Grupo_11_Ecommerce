@@ -27,15 +27,15 @@ const usersControllers = {
 
 			validateUniqueEmailR.forEach(element => {
 				if(element.dataValues.e_mail == req.body.email){
-
 					return res.render("forms/register.ejs", {
 						errors: [
-							{ msg: "No se puede crear una cuenta con un email ya registrado." },
+							{ 
+								msg: "No se puede crear una cuenta con un email ya registrado." 
+							},
 						],
 						old: req.body,
 					})
 				}
-				
 			});
 
 			if (!errores.isEmpty()) {
@@ -52,7 +52,7 @@ const usersControllers = {
 				let CreateUser = await db.Usuarios.create({
 					first_name: req.body.name, //-->Los nombres de los campos tienen que ser iguales a los nombres del modelo 'Usuario' de DB
 					last_name: req.body.lastName,
-					e_mail: validateUniqueEmailR,
+					e_mail: req.body.email,
 					password: bcrypt.hashSync(passwordToValidate, 10),
 					image:
 						req.file == undefined

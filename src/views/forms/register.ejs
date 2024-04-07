@@ -36,6 +36,13 @@
                                 <p class="error"> <%= error.msg %> </p>
                             <%  }); 
                         }%>
+
+                        <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+                            <!-- Iterar sobre los errores y mostrar mensajes -->
+                            <% for (let error = 0; error < errors.length; error++) { %>
+                                <p class="error"> <%= errors[error].msg %> </p>
+                            <% } %>
+                        <% } %>
                         
                         <div class="errores">
                             <ul></ul>    

@@ -319,6 +319,13 @@ label {
 	text-align: center;
 }
 
+.error {
+	color: crimson;
+	font-size: 12px;
+	text-align: center;
+	background-color: white;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
