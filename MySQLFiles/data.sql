@@ -6,7 +6,7 @@ VALUES ('admin'),('common_user');
 INSERT INTO country
 (country)
 VALUES 
-('Antigua y Barbuda'),('Argentina'),('Bahamas'),('Barbados'),('Belice'),('Bolivia'),('Brasil'),('Canada'),('Chile'),('Colombia'),('Costa Rica'),('Cuba'),('Dominicana'),('El Salvador'),('Estados Unidos'),('Granada'),('Guatemala'),('Guyana'),('Haiti'),('Honduras'),('Jamaica'),('Mexico'),('Nicaragua'),('Panama'),('Paraguay'),('Peru'),('Republica Dominicana'),('San Cristobal y Nieves'),('Santa Lucia'),('Surinam'),('Trinidad y Tobago'),('Uruguay'),('Venezuela');
+('Antigua y Barbuda'),('Argentina'),('Bahamas'),('Barbados'),('Belice'),('Bolivia'),('Brasil'),('Canada'),('Chile'),('Colombia'),('Costa Rica'),('Cuba'),('Dominicana'),('El Salvador'),('Estados Unidos'),('Granada'),('Guatemala'),('Guyana'),('Haiti'),('Honduras'),('Jamaica'),('Mexico'),('Nicaragua'),('Panama'),('Paraguay'),('Peru'),('Republica Dominicana'),('San Cristobal y Nieves'),('Santa Lucia'),('Surinam'),('Trinidad y Tobago'),('Uruguay'),('Venezuela'),("Sin Definir");
 
 INSERT INTO soundbox.user
 (id, first_name, last_name, password, e_mail, image, registered_date, user_type_id, country_id)
