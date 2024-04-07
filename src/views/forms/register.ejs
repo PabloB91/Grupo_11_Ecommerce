@@ -36,6 +36,13 @@
                                 <p class="error"> <%= error.msg %> </p>
                             <%  }); 
                         }%>
+
+                        <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+                            <!-- Iterar sobre los errores y mostrar mensajes -->
+                            <% for (let error = 0; error < errors.length; error++) { %>
+                                <p class="error"> <%= errors[error].msg %> </p>
+                            <% } %>
+                        <% } %>
                         
                         <div class="errores">
                             <ul></ul>    
@@ -80,43 +87,42 @@
                         <div class="fieldset country">
                             
                             <select name="country" id="country" class="fieldset-input estado-producto">
-                                <option value="choose">Elegir país</option>
-                                <option value="Antigua y Barbuda">Antigua y Barbuda</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Bahamas">Bahamas</option>
-                                <option value="Barbados">Barbados</option>
-                                <option value="Belice">Belice</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Brasil">Brasil</option>
-                                <option value="Canada">Canadá</option>
-                                <option value="Chile">Chile</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Costa Rica">Costa Rica</option>
-                                <option value="Cuba">Cuba</option>
-                                <option value="Dominicana">Dominicana</option>
-                                <option value="El Salvador">El Salvador</option>
-                                <option value="Estados Unidos">Estados Unidos</option>
-                                <option value="Granada">Granada</option>
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Guyana">Guyana</option>
-                                <option value="Haiti">Haití</option>
-                                <option value="Honduras">Honduras</option>
-                                <option value="Jamaica">Jamaica</option>
-                                <option value="Mexico">México</option>
-                                <option value="Nicaragua">Nicaragua</option>
-                                <option value="Panama">Panamá</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Perú</option>
-                                <option value="Republica Dominicana">República Dominicana</option>
-                                <option value="San Cristóbal y Nieves">San Cristóbal y Nieves</option>
-                                <option value="San Vicente y las Granadinas">San Vicente y la Granadinas</option>
-                                <option value="Santa Lucia">Santa Lucía</option>
-                                <option value="Surinam">Surinam</option>
-                                <option value="Trinidad y Tobago">Trinidad y Tobago</option>
-                                <option value="Uruguay">Uruguay</option>
-                                <option value="Venezuela">Venezuela</option>
-                            </select>
-
+                                <option value="34" selected>Sin Definir </option>
+                                <option value="1">Antigua y Barbuda</option>
+                                <option value="2">Argentina</option>
+                                <option value="3">Bahamas</option>
+                                <option value="4">Barbados</option>
+                                <option value="5">Belice</option>
+                                <option value="6">Bolivia</option>
+                                <option value="7">Brasil</option>
+                                <option value="8">Canadá</option>
+                                <option value="9">Chile</option>
+                                <option value="10">Colombia</option>
+                                <option value="11">Costa Rica</option>
+                                <option value="12">Cuba</option>
+                                <option value="13">Dominicana</option>
+                                <option value="14">El Salvador</option>
+                                <option value="15">Estados Unidos</option>
+                                <option value="16">Granada</option>
+                                <option value="17">Guatemala</option>
+                                <option value="18">Guyana</option>
+                                <option value="19">Haití</option>
+                                <option value="20">Honduras</option>
+                                <option value="21">Jamaica</option>
+                                <option value="22">México</option>
+                                <option value="23">Nicaragua</option>
+                                <option value="24">Panamá</option>
+                                <option value="25">Paraguay</option>
+                                <option value="26">Perú</option>
+                                <option value="27">República Dominicana</option>
+                                <option value="28">San Cristóbal y Nieves</option>
+                                <option value="29">San Vicente y la Granadinas</option>
+                                <option value="30">Santa Lucía</option>
+                                <option value="31">Surinam</option>
+                                <option value="31">Trinidad y Tobago</option>
+                                <option value="32">Uruguay</option>
+                                <option value="33">Venezuela</option>
+                            </select> 
                         </div>
         
                         <div class="fieldset password">

@@ -167,6 +167,13 @@ h3 {
 	transition: all 0.5s ease;
 }
 
+
+.errores {
+	color: crimson;
+	font-size: 12px;
+	text-align: center;
+}
+
 /************************************************************************************/
 
 /* MEDIA TABLET */

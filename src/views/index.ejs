@@ -206,7 +206,7 @@
                                             <div class="price">
                                                 <p>$ <%= product.price %>
                                                 </p>
-                                                <p style="color: green;">
+                                                <p class="discount">
                                                     <% if (product.discount==null ) {%>
 
                                                         <% } else {%>
@@ -352,7 +352,7 @@
                                             <div class="price">
                                                 <p>$ <%= product.price %>
                                                 </p>
-                                                <p style="color: green;">
+                                                <p class="discount">
                                                     <% if (product.discount==null ) {%>
 
                                                         <% } else {%>
@@ -432,7 +432,7 @@
                                             <div class="price">
                                                 <p>$ <%= product.price %>
                                                 </p>
-                                                <p style="color: green;">
+                                                <p class="discount">
                                                     <% if (product.discount==null ) {%>
 
                                                         <% } else {%>
@@ -669,6 +669,7 @@
 
             </div>
 
+            <%- include('./partials/aside.ejs') %>
         </main>
 
         <script src="../scripts/index.js"></script>

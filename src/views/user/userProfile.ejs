@@ -57,16 +57,21 @@
                         <% } else if (locals.userIsLogged==true && locals.userIsAdmin==true) { %>
                             <form action="/admin/userProfile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/x-www-form-urlencoded">
                         <% } %>
+
+                        <div class="errores">
+                            <ul></ul>    
+                        </div>
+                        
                             <label for=""><p>Name</p>
-                                <input name="first_name" type="text" value="<%= user.first_name %>" >
+                                <input id="user-name" name="first_name" type="text" value="<%= user.first_name %>" >
                             </label>
                             <label for="">
                                 <p>Last name</p>
-                                <input name="last_name" type="text" value="<%= user.last_name %>">
+                                <input id="last-name" name="last_name" type="text" value="<%= user.last_name %>">
                             </label>
                             <label for="">
                                 <p>Email</p>
-                                <input name="e_mail" type="text" value="<%= user.e_mail %>" >
+                                <input id="e-mail" name="e_mail" type="text" value="<%= user.e_mail %>" >
                             </label>
                             
                             <div>

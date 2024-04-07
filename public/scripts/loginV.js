@@ -33,10 +33,11 @@ window.addEventListener("load", function(){
             for(let i = 0; i < errores.length; i++){
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"; // Agregamos los nuevos errores
             }
+        }else{
+            form.submit();
         }
 
 
     })
 })
-
 
