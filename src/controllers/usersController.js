@@ -54,7 +54,7 @@ const usersControllers = {
 					password: bcrypt.hashSync(passwordToValidate, 10),
 					image:
 						req.file == undefined
-							? "alvaro.jpg"
+							? "user-1709672844054.jpg"
 							: req.file.filename, //--> Acá guardamos el NOMBRE del archivo en la BD, y después se renderiza la ruta completa con EJS
 					registered_date: Date.now(), //--> Esta función trae la fecha actual
 
@@ -185,16 +185,13 @@ const usersControllers = {
 	// (PUT) Editar Usuario
 	//--> A este método pueden acceder tanto el admin como los usuarios comunes, con sus rutas particulares y luego de ejecutarse los middlewares
 	editUser: async (req, res) => {
-		/* console.log("Edit User"); */
 		try {
-			let e_mail = await req.body.e_mail;
-			/* console.log(e_mail); */
 			let userToEdit = await db.Usuarios.update(
 				{
-					first_name: req.body.name,
-					last_name: req.body.lastName,
+					first_name: req.body.first_name,
+					last_name: req.body.last_name,
 					/* password: req, */
-					e_mail: req.body.email,
+					e_mail: req.body.e_mail,
 					/* country:,  */
 				},
 				{
@@ -206,7 +203,7 @@ const usersControllers = {
 
 			return res.redirect(req.params.id);
 		} catch (err) {
-			/* console.log(err); */
+			console.log(err)
 			return res.render("errors/404.ejs");
 		}
 	},

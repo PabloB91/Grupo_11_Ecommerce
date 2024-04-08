@@ -178,7 +178,11 @@ h3 {
 
 /* MEDIA TABLET */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+	#profile-title {
+	width: 75%;
+	}
+
 	.primary-section {
 		width: 75%;
 		display: flex;
@@ -187,7 +191,7 @@ h3 {
 		background: #fff;
 
 		.first-section {
-			width: 90%;
+			width: 100%;
 		}
 	}
 

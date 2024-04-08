@@ -81,7 +81,7 @@ const apiProductsController = {
                     'Id': product.id,
                     'name': product.name,
                     'description': product.description,
-                    'image': `/public/img/products/${product.image}`,
+                    'image': `http://localhost:3020/img/products/${product.image}`, //-->Esta ruta es la correcta para pasar las imágenes a través de la API
                     'quantity': product.quantity,
                     'price': product.price,
                     'discount': product.discount,
