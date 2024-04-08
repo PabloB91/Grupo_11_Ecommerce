@@ -1,0 +1,27 @@
+
+Menú del perfil en el header:
+    .Es difícil saber por dónde pasar el mouse para que no desaparezca
+    .Sacarle el link de 'ajustes'
+    .Mejorar el diseño
+
+Menú hamburguesa en todas las vistas responsive está rotísimo
+Vista de Categorías está incompleta
+
+Vista tamaño celular del listado de Usuarios:
+    . Las tarjetas se ven estiradas
+
+Vista tamaño celular del listado de Marcas:
+    .  Las imágenes se ven chicas y el texto grandes
+
+El diseño de la vista del Carrito está incompleto
+
+Vista de Contáctanos (ver si es necesario o lo dejamos sin funcionalidad)
+Banner principal del index debería funcionar automáticamente
+
+Completar la funcionalidad de todos los links del idex
+
+Ventana Modal de Categorías la dejé comentada porque no funciona en otros tamaños
+La barra de filtrado de productos no tiene funcionalidad y no tiene diseño responsive
+
+DESPUÉS DEL CURSO:
+Subir base de datos a chatbot y crear tabla para guardar la info que solicite el usuario al chatbot (generación de ticket e info del mismo)
