@@ -4,8 +4,13 @@ Menú del perfil en el header:
     .Sacarle el link de 'ajustes'
     .Mejorar el diseño
 
+Crear producto:
+    . Borrar la vista previa
+
 Menú hamburguesa en todas las vistas responsive está rotísimo
-Vista de Categorías está incompleta
+
+Vista de Categorías está incompleta:
+    .arreglar categorías y aumentarlas
 
 Vista tamaño celular del listado de Usuarios:
     . Las tarjetas se ven estiradas
