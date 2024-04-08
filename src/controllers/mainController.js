@@ -29,11 +29,7 @@ const mainController = {
 				limit: 3,
 			});
 			const newsAdd = await db.Productos.findAll({
-				where: {
-					price: {
-						[Op.gt]: 200,
-					},
-				},
+				order: [['id', 'DESC']],
 				limit: 3,
 			});
 			const offerts = await db.Productos.findAll({
@@ -47,7 +43,7 @@ const mainController = {
 
 			res.render("index", { topSeller, offerts, products, newsComments,newsAdd });
 		} catch (err) {
-			/* console.log(err); */
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
@@ -58,7 +54,7 @@ const mainController = {
 			const products = await db.Productos.findAll();
 			res.render("admin.ejs", { users, products });
 		} catch (err) {
-			/* console.log(err); */
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
@@ -92,7 +88,7 @@ const mainController = {
 
 			res.render("product/productCart.ejs", { products });
 		} catch (err) {
-			/* console.log(err); */
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
