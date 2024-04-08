@@ -158,7 +158,11 @@ header {
 
 	.fixed {
 		position: fixed;
+		height: 50px;
 		z-index: 990;
+		background: var(--white-color);
+		box-shadow: 0px 5px 12px 0px var(--OlivenGreen-color);
+		transform: translate(0px,-100px);
 	}
 
 	.headerBottom {
