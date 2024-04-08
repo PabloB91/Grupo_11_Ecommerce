@@ -128,7 +128,7 @@
                                 </div>
                                 
                                 <div class="fieldset-colores colores-disponibles">
-                                    <label for="colores">Colores</label>
+                                    <label for="colores">Color/es: </label>
                                     <% availableColors.forEach(color => { %>
                                         <input type="checkbox" name="colors" value="<%= color.id %>" class="fieldset-input colors-form" >
                                         <label for="color" class="fieldset-lbl lbl-productColor"><%= color.color_name %></label>
@@ -137,10 +137,10 @@
                                 <div class="botones crear-carta-borrar-carta">
 
                                     <label for="send-form"></label>
-                                    <input type="submit" value="Crear" class="send-form" name="send-form">
+                                    <input type="submit" value="Crear" class="button-orange" name="send-form">
 
                                     <label for="restar-form"></label>
-                                    <input type="reset" value="Reiniciar" class="restar-form" name="restar-form">
+                                    <input type="reset" value="Reiniciar" class="button-orange" id="button" name="restar-form">
 
                                 </div>
                             </div>
@@ -295,8 +295,8 @@
                                                             <%= %>
                                                         </p>
                                                     </div>
-                                                    <span class="precios">$</span>
-                                                    <span class="descuentos">% off</span>
+                                                    <span class="precios"></span>
+                                                    <span class="descuentos"></span>
                                                 </div>
 
                                             </div>

@@ -59,13 +59,13 @@
                                 <span class="texto-color">Color</span>
                                 <div class="caja-seleccion-colores">
                                     <form action="">
-                                    
+                                        <select id="colores-seleccion">
                                             <% product.Colores.forEach(color => { %>
                                                 <option value="<%= color.color_name %>">
                                                     <%= color.color_name %>
                                                 </option>
                                                 <% }) %>
-                                        <!-- SELECT FALTA -->
+                                        </select>
                                     </form>
                                 </div>
                             </div>

@@ -347,7 +347,6 @@
 
 	.categoria p {
 		display: block;
-		background-color: rgba(0, 0, 0, 0.115);
 		color: var(--white-color);
 		font-family: "Bebas Neue", sans-serif;
 		font-size: 1.5em;
