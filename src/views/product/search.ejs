@@ -1,69 +1,73 @@
-    <!---------------- HEAD ---------------->
+<!---------------- HEAD ---------------->
 
-    <%- include ("../partials/head") %>
+<%- include ("../partials/head") %>
     <link href="/styles/search.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/971bd64f71.js" crossorigin="anonymous"></script>
 
-    <!---------------- HEADER ---------------->
+    <body>
+        <!---------------- HEADER ---------------->
 
-    <%- include ("../partials/header") %>
+        <%- include ("../partials/header") %>
 
-    <!---------------- BODY ---------------->
-<body>
-    <div class="search-modal_window">
+            <!---------------- BODY ---------------->
+            <div class="search-modal_window">
 
-        <div class="title-Wmodal">
+                <div class="title-Wmodal">
 
-            <h2>¿QUÉ BUSCAS HOY?</h2>
-        </div>
+                    <h2>¿QUÉ BUSCAS HOY?</h2>
+                </div>
 
-        <form action="/search" method="GET">
+                <form action="/search" method="GET">
 
-            <div class="search-bar_input">
-                <input name="search" type="search" id="buscador" placeholder="   filtrá según el nombre 'Guitarra eléctrica', por precio '1500' o según el descuento '10'">
+                    <div class="search-bar_input">
+                        <input name="search" type="search" id="buscador"
+                            placeholder="   filtrá según el nombre 'Guitarra eléctrica', por precio '1500' o según el descuento '10'">
+                    </div>
+
+                    <button type="submit" name="search" class="btn-search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form>
+                <br>
+                <br>
+                <div class="cards-container">
+                    <% productsSearch.forEach(product=> { %>
+                        <a href="/products/productDetail/<%= product.id %>" class="product">
+                            <div class="cardTosearch">
+                                <picture class="img-product">
+                                    <img loading="lazy" src="/img/products/<%= product.image %>"
+                                        alt="<%= product.category, product.name, product.brand_id %>">
+                                </picture>
+
+                                <section class="product-info">
+
+                                    <div class="nameProduct">
+                                        <p class="nameProduct">
+                                            <%= product.name%>
+                                        </p>
+                                    </div>
+
+                                    <div class="price">
+                                        <p>$ <%= product.price %>
+                                        </p>
+                                        <p style="color: green;">
+                                            <% if (product.discount==null ) {%>
+
+                                                <% } else {%>
+                                                    -<%= product.discount %> %
+                                                        <% } %>
+                                        </p>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </a>
+                        <% })%>
+                </div>
+
             </div>
 
-            <button type="submit" name="search" class="btn-search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-
-        </form>
-        <br>
-        <br>
-        <div class="cards-container">
-            <% productsSearch.forEach(product => { %>
-                    <a href="/products/productDetail/<%= product.id %>" class="product">
-                        <div class="cardTosearch">
-                            <picture class="img-product">
-                                <img loading="lazy" src="/img/products/<%= product.image %>"
-                                    alt="<%= product.category, product.name, product.brand_id %>">
-                            </picture>
-
-                            <section class="product-info">
-
-                                <div class="nameProduct">
-                                    <p class="nameProduct">
-                                        <%= product.name%>
-                                    </p>
-                                </div>
-
-                                <div class="price">
-                                    <p>$ <%= product.price %>
-                                    </p>
-                                    <p style="color: green;"><% if (product.discount == null ) {%>
-                        
-                                        <% } else {%>
-                                            -<%= product.discount %> %
-                                            <% } %></p>
-                                </div>
-
-                            </section>
-                        </div>
-                    </a>
-            <% })%>
-        </div>
-
-    </div>
-</body>
-<script src="/scripts/search.js"></script>
-<%- include ("../partials/footer") %>
+        <script src="/scripts/search.js"></script>
+           <%- include ("../partials/footer") %>
+    </body>
