@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const db = require("../database/models");
+const { log } = require("console");
 
 const adminController = {
 	listUsers: async (req, res) => {
@@ -44,7 +45,7 @@ const adminController = {
             const colorName = products[3]['dataValues'].Colores[0]['dataValues'].color_name;
             console.log("Color Name: ", colorName);
             console.log("products: ",products.length); */
-
+			console.log(products);
 			res.render("product/allTheProducts.ejs", { products });
 		} catch (err) {
 			/* console.log(err); */
