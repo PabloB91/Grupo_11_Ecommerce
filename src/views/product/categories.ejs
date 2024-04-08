@@ -1,34 +1,244 @@
 
     <%- include('../partials/head.ejs') %>
-    <link href="/styles/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/allProducts.css">
 
     <%- include('../partials/header.ejs') %>
 
     <main>
-    
-        <div class="items-mas-vendidos">
-        <% category.forEach(product => { %>
-            <article class="producto">
-                <a href="/products/productDetail/<%= product.id %>">
-                <img src="/img/home/categoria-guitarras.jpg" alt="Imagen">
-                <div class="detalle-producto">
-                    <p class="descripciones"><strong><%= product.nombre %></strong></p>
-                    <div class="container-detalle">
-                        <p class="calificacion">Estrellas</p>
-                        <p class="precios">$<%= product.precio %></p>
+
+        <div class="barra-titulo" id="titulo">
+            <p class="titulo-ordenador" id="titulo-ordenador">Filtrar
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+            </p>
+            <h2 class="titulo">NUESTROS PRODUCTOS</h2>
+        </div>
+
+        <section class="ordenador" id="ordenador">
+            <section class="dropdown-ordenador">
+                <div id="slide-item" class="filtrar-plata">
+                    <div class="filtro-presupuesto">
+                        <input type="range">
+                        <h6>desde 0$ hasta 1.000.000$ </h6>
+                    </div>
+                    <div class="barra-filtro"></div>
+                </div>
+
+                <div id="slide-item" class="primer-seccion">
+                    <span class="titulo-filtros">Filtros Populares:</span>
+                    <div class="populares-1">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                          </label>
+                        <span> Instrumentos
+                            Electricos</span>
+                        <span>8</span>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Instrumentos
+                            Criollos</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Efectos</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Grabación</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p>
+                            amplificadores</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Accesorios</p>
+                        <p>8</p>
                     </div>
                 </div>
-                </a>
-            </article>
-        <% }) %>
-                
-        </div>
-        
-        <hr class="separador">
-        
-        <hr class="separador">
-        
+
+                <div id="slide-item" class="segunda-seccion">
+                    <p class="titulo-filtros">Condición del instrumento:</p>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Nuevo</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Segunda Mano</p>
+                        <p>8</p>
+                    </div>
+                </div>
+
+                <div id="slide-item" class="tercer-seccion">
+                    <p class="titulo-filtros">Categorías:</p>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Instrumentos
+                            Electricos</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Instrumentos
+                            Electricos</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Instrumentos
+                            Electricos</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Instrumentos
+                            Electricos</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Instrumentos
+                            Electricos</p>
+                        <p>8</p>
+                    </div>
+                </div>
+
+                <div id="slide-item" class="cuarta-seccion">
+                    <p class="titulo-filtros">Por Marca:</p>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Marshall</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Gibson</p>
+                        <p>8</p>
+                    </div>
+                    <div class="populares-1"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        <p> Zildjian</p>
+                        <p>8</p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <section class="seccion-general">
+            <div class="todasLasCards">
+                <% if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
+                <!-- carta de creacion del admin -->
+                <article class="container-producto" id="creationCard">
+                    <a href="/products/create" class="card">
+                        <div class="face front">
+                            <img src="/img/products/IMG_DEFAULT.svg" alt="soundBox">
+                        </div>
+                        <div class="face back">
+                            <div class="img_card-add">
+                                <i id="add-icon" class="fa-solid fa-plus"></i>
+                            </div>
+                            <h3>Crear producto</h3>
+                        </div>
+                    </a>
+                </article>
+                <% }  %>
+
+                <% category.forEach(product=> { %>
+
+                    <article class="container-producto">
+                        <a href="/products/productDetail/<%= product.id %>" class="card">
+                            <div class="face front">
+                                <img src="/img/products/<%= product.image %> " alt=<%=product.name %> >
+                                <h3>
+                                    <%= product.name%>
+                                        <%= product.brand.brand_name %>
+                                </h3>
+                            </div>
+                            <div class="face back">
+                                <div class="face-back-child">
+                                    <h3 class="product-name">
+                                        <%= product.name%>
+                                    </h3>
+                                    <p class="product-brand">
+                                        - Marca: <%= product.brand.brand_name %>
+                                    </p>
+                                    <p class="product-category">
+                                        - Categoria: <%= product.category.category %>
+                                    </p>
+                                    <p class="product-state">
+                                        - Estado: <%= product.state.state %>
+                                    </p>
+                                    <div class="price-back">
+                                        <span class="text-price">Precio:</span>
+                                        <p class="product-price">
+                                            $<%= product.price %>
+                                        </p>
+                                    </div>
+                                    <% if(product.discount != 0) {%>
+
+                                        <p class="product-with-discount">
+                                            <%= product.discount %>
+                                            <span>%OFF</span>
+                                        </p>
+                                        
+                                    <% }else{ %>
+
+                                        <p class="product-without-discount">
+                                            Sin Descuento
+                                        </p>
+
+                                    <% } %>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                <% }); %>
+
+            </div>
+        </section>
     </main>
+
+    <script src="/scripts/allProducts.js"></script>
 
     <%- include('../partials/footer.ejs') %>
 

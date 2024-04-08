@@ -65,7 +65,11 @@ const mainController = {
 				where: {
 					"$category.category$": req.params.nombre,
 				},
-				include: [{ association: "category", attributes: ["category"] }],
+				include: [
+					{ association: "category", attributes: ["category"] },
+					{ association: "brand", attributes: ["brand_name"] },
+					{ association: "state", attributes: ["state"] }
+			],
 			});
 			res.render("product/categories.ejs", { category });
 		} catch (err) {
