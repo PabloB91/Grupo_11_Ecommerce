@@ -45,7 +45,7 @@
 /*cards*/
 .main__container-cards {
 	width: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	padding-bottom: 1.5em;
 	background-color: white;
 
@@ -100,6 +100,9 @@
 	}
 
 	.card {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		width: 100%;
 	}
 
@@ -108,20 +111,12 @@
 		overflow: hidden;
 		border-bottom: 1px solid var(--Gray-color);
 		width: 100%;
-
-		img {
-			width: 100%;
-			height: 100%;
-		}
 	}
 
 	.product-info {
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
-		padding-top: 4px;
-		padding-bottom: 12px;
-		padding-left: 8px;
+		width: 90%;
 
 		p {
 			display: block;
@@ -130,6 +125,9 @@
 
 		.nameProduct {
 			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 			font-size: 0.8rem;
 		}
 
@@ -496,9 +494,7 @@
 /* ------------------------------------------------------------------ */
 /*---MEDIA QUERIES---*/
 
-@media screen and (min-width: 576px) {
-
-	/*cards*/
+/* @media screen and (min-width: 576px) {
 	.main__container-cards {
 		.card-outline {
 			margin: 0px 22.5px;
@@ -506,7 +502,7 @@
 			height: 260px;
 		}
 	}
-}
+} */
 
 @media screen and (min-width: 768px) {
 
@@ -544,13 +540,11 @@
 		flex-wrap: wrap;
 		width: 85%;
 		position: relative;
-		padding-bottom: revert;
-		margin-bottom: 0em;
 
 		.card-outline {
 			margin: 0px 35px;
 			width: 147px;
-			height: 97%;
+			height: 225px;
 
 			&:hover {
 				box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.15);
@@ -562,13 +556,35 @@
 			padding-bottom: 30px;
 		}
 
-		.div-qualification {
-			width: 50%;
+		.img-product {
+			height: 190px;
 		}
 
-		.div-qualification p {
-			font-size: 0.1rem;
+		
+		.product-info{
+
+			p {
+				display: block;
+				font-size: 0.6rem;
+			}
+
+			.qualification{
+				width: auto;
+			}
+
+			.div-qualification {
+				width: 50%;
+			}
+
+			.price{
+				width: 50%;
+			}
+	
+			.div-qualification p {
+				font-size: 0.5rem;
+			}
 		}
+
 
 		.btnsCards {
 			display: block;
@@ -658,7 +674,12 @@
 	/*cards*/
 	.main__container-cards {
 		.card-outline {
-			width: 220px;
+			width: 200px;
+			height: 310px;
+		}
+
+		.img-product {
+			height: 275px;
 		}
 	}
 
@@ -670,11 +691,87 @@
 			);
 		}
 	} */
+
+	.dd-modalWindow1 {
+		display: none;
+		width: 10rem;
+		height: 7.5rem;
+		right: 0%;
+		top: -135%;
+		position: absolute;
+		background-color: var(--orange-color);
+		box-shadow: 0px 0px 5px 1px white;
+		border-radius: 10px;
+		overflow: hidden;
+	
+		p {
+			color: white;
+			letter-spacing: 2px;
+			font-size: 12px;
+			padding: 5px;
+		}
+	}
+	
+	dd {
+		position: absolute;
+		right: 10%;
+		margin: auto;
+		background: var(--orange-color);
+		padding: 0 5px;
+		border-radius: 50%;
+		color: white;
+		font-size: 18px;
+	
+	}
+	
+	@keyframes ddAnimation {
+		0% {
+			height: 0;
+			display: none;
+			transform: translateY(100px);
+			background: white;
+		}
+	
+		25% {}
+	
+		50% {
+		}
+	
+		75% {}
+	
+		100% {
+			height: 7.5rem;
+			box-shadow: 0px 0px 5px 1px white;
+	
+		}
+	}
+	
+	@keyframes ddHideAnimation {
+		0% {
+			height: 7.5rem;
+			display: flex;
+	
+		}
+		
+		25% {}
+		
+		50% {
+		}
+		
+		75% {}
+		
+		100% {
+			transform: translateY(100px);
+			height: 0;
+			display: none;
+			background: white;
+	
+		}
+	}
+	
 }
 
-@media screen and (min-width: 1200px) {
-
-	/*cards*/
+/* @media screen and (min-width: 1200px) {
 	.main__container-cards {
 		.card-outline {
 			width: 202px;
@@ -682,79 +779,4 @@
 	}
 }
 
-.dd-modalWindow1 {
-	display: none;
-	width: 10rem;
-	height: 7.5rem;
-	right: 0%;
-	top: -135%;
-	position: absolute;
-	background-color: var(--orange-color);
-	box-shadow: 0px 0px 5px 1px white;
-	border-radius: 10px;
-	overflow: hidden;
-
-	p {
-		color: white;
-		letter-spacing: 2px;
-		font-size: 12px;
-		padding: 5px;
-	}
-}
-
-dd {
-	position: absolute;
-	right: 10%;
-	margin: auto;
-	background: var(--orange-color);
-	padding: 0 5px;
-	border-radius: 50%;
-	color: white;
-	font-size: 18px;
-
-}
-
-@keyframes ddAnimation {
-	0% {
-		height: 0;
-		display: none;
-		transform: translateY(100px);
-		background: white;
-	}
-
-	25% {}
-
-	50% {
-	}
-
-	75% {}
-
-	100% {
-		height: 7.5rem;
-		box-shadow: 0px 0px 5px 1px white;
-
-	}
-}
-
-@keyframes ddHideAnimation {
-	0% {
-		height: 7.5rem;
-		display: flex;
-
-	}
-	
-	25% {}
-	
-	50% {
-	}
-	
-	75% {}
-	
-	100% {
-		transform: translateY(100px);
-		height: 0;
-		display: none;
-		background: white;
-
-	}
-}
+*/

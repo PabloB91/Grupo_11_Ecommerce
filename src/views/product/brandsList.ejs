@@ -3,33 +3,39 @@
 
     <%- include('../partials/header.ejs') %>
 
-        <main class="brands-background">
+        <main class="main flex center-x">
 
-            <section class="allBrands">
+            <div class="div__main max-width-1365px height-full" >
 
-                <h3>NUESTRAS MARCAS</h3>
 
-                <div class="brands-list"> 
-                    <% brands.forEach(brand => { %>
+                <section class="allBrands">
+    
+                    <h3>NUESTRAS MARCAS</h3>
+    
+                    <div class="brands-list"> 
+                        <% brands.forEach(brand => { %>
+                    
+                            <article class="brandCard">
+    
+                                <div>   <!-- Se renderizan de manera dinámica las imágenes de cada marca y sus links -->
+                                    <a href="/brands/<%= brand.brand_name %>">
+                                        <% images.forEach(image => { %>
+                                            <% if (image.match(brand.brand_name)) { %>
+                                                <img src="/img/brands/<%= image %>" alt="BOSS"></a>
+                                            <% } %>
+                                        <% }) %> 
+                                </div>
+                                <div>
+                                    <a href="#"><strong>VER PRODUCTOS</strong></a>
+                                </div>
+            
+                            </article>
+                        <% }) %>
+            
+                </section>
                 
-                        <article class="brandCard">
+            </div>
 
-                            <div>   <!-- Se renderizan de manera dinámica las imágenes de cada marca y sus links -->
-                                <a href="/brands/<%= brand.brand_name %>">
-                                    <% images.forEach(image => { %>
-                                        <% if (image.match(brand.brand_name)) { %>
-                                            <img src="/img/brands/<%= image %>" alt="BOSS"></a>
-                                        <% } %>
-                                    <% }) %> 
-                            </div>
-                            <div>
-                                <a href="#"><strong>VER PRODUCTOS</strong></a>
-                            </div>
-        
-                        </article>
-                    <% }) %>
-        
-            </section>
 
         </main> 
     
