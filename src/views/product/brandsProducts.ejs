@@ -200,25 +200,43 @@
                                 </div>
                                 <div class="face back">
                                     <div class="face-back-child">
-                                        <h3>
+                                        <h3 class="product-name">
                                             <%= product.name%>
                                         </h3>
-                                        <p class="marca-descripcion">
-                                            <%= product.brand.brand_name %>
+                                        <p class="product-brand">
+                                            Marca: <%= product.brand.brand_name %>
                                         </p>
-                                        <p class="marca-descripcion">
-                                            <%= product.description %>
+                                        <p class="product-category">
+                                            Categoria: <%= product.category %>
                                         </p>
-                                        <p class="price">$<%= product.price %>
+                                        <p class="product-state">
+                                            Estado: <%= product.state %>
                                         </p>
-                                        <p>
-                                            <%= product.discount %>%
-                                        </p>
+                                        <div class="price-back">
+                                            <span class="text-price">Precio:</span>
+                                            <p class="product-price">
+                                                $<%= product.price %>
+                                            </p>
+                                        </div>
+                                        <% if(product.discount != 0) {%>
+
+                                            <p class="product-with-discount">
+                                                <%= product.discount %>
+                                                <span>%OFF</span>
+                                            </p>
+                                            
+                                        <% }else{ %>
+
+                                            <p class="product-without-discount">
+                                                Sin Descuento
+                                            </p>
+
+                                        <% } %>
                                     </div>
                                 </div>
                             </a>
                         </article>
-                        <% }); %>
+                    <% }); %>
 
                 </div>
             </section>

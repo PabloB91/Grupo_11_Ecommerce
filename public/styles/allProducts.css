@@ -304,6 +304,44 @@ a:active {
 	color: black;
 }
 
+.product-name,
+.product-brand,
+.product-category,
+.product-state,
+.product-color{
+	text-align: start;
+	font-size: 13px;
+	padding: 2px 0 2px 0;
+	margin: 0 8px 0 8px;
+}
+
+.product-price{
+	color: green;
+	font-size: 20px;
+}
+
+.product-with-discount{
+	color: red;
+	font-size: 15px;
+}
+
+.product-without-discount{
+	color: red;
+	font-size: 10px;
+}
+
+.text-price{
+	color: black;
+	font-size: 14;
+}
+
+.price-back{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 8px 0 8px;
+}
+
 /****************************/
 /*      media queryes */
 /****************************/
@@ -351,8 +389,8 @@ a:active {
 
 	.card .back {
 		transform: perspective(600px) rotateY(180deg);
-		background-color: var(--orange-color);;
-		padding: 15px;
+		background: linear-gradient(#ff2f00, #ff912aa9);
+		padding: 9px;
 		color: black;
 		display: flex;
 		flex-direction: column;
@@ -362,7 +400,7 @@ a:active {
 
 		.face-back-child {
 			height: 100%;
-			background-color: whitesmoke;
+			background-color: rgba(255, 255, 255, 0.637);
 
 		}
 	}
@@ -370,11 +408,13 @@ a:active {
 	.card .back h3 {
 		font-size: 14px;
 		letter-spacing: 2px;
-		color: white;
-		background-color: rgba(0, 0, 0, 0.4);
+		color: rgb(255, 255, 255);
+		background-color: rgba(255, 151, 53, 0.445);
 		border: 2px solid black;
-		border-radius: 8px;
+		-webkit-text-stroke: 0.2px white;
+		border-radius: 0 0 4px 4px;
 		padding: 8px;
+		margin: 1.3px;
 	}
 
 	.card .back p {
