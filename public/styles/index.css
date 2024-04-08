@@ -40,6 +40,7 @@
 		margin: 0px 15%;
 	}
 }
+
 /* ------------------------------------------------------------------ */
 /*cards*/
 .main__container-cards {
@@ -49,6 +50,7 @@
 	background-color: white;
 
 	.title-section {
+		position: relative;
 		width: 100%;
 		text-align: center;
 		padding: 15px 0px;
@@ -136,6 +138,7 @@
 		.price {
 			display: flex;
 			align-items: center;
+			justify-content: space-around;
 			width: 100%;
 			color: var(--orange-color);
 		}
@@ -171,6 +174,7 @@
 		display: none;
 	}
 }
+
 /* ------------------------------------------------------------------ */
 /*SERVICES BANNERS SECTION*/
 .main__section-cards-prom {
@@ -203,6 +207,7 @@
 		}
 	}
 }
+
 /* ------------------------------------------------------------------ */
 /*SECTION BRANDS*/
 .main__section-brands-slider {
@@ -236,21 +241,17 @@
 	.div__brands-box:before {
 		left: 0;
 		border-radius: 8px;
-		background: linear-gradient(
-			to left,
-			var(--transparent-color),
-			var(--black-color)
-		);
+		background: linear-gradient(to left,
+				var(--transparent-color),
+				var(--black-color));
 	}
 
 	.div__brands-box:after {
 		right: 0;
 		border-radius: 8px;
-		background: linear-gradient(
-			to right,
-			var(--transparent-color),
-			var(--black-color)
-		);
+		background: linear-gradient(to right,
+				var(--transparent-color),
+				var(--black-color));
 	}
 
 	/*----- Detener la animación -----*/
@@ -288,6 +289,7 @@
 		}
 	}
 }
+
 /*----- Animación en el eje X (horizontal) -----*/
 @keyframes slide {
 	from {
@@ -300,10 +302,12 @@
 		transform: translateX(calc(-200px * 7));
 	}
 }
+
 /* ------------------------------------------------------------------ */
 /*-----CATEGORIES-----*/
 .main__content-categories {
 	.dropdown-content-category_title {
+		position: relative;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -360,6 +364,7 @@
 		margin: 30px 0px;
 	}
 }
+
 /* ------------------------------------------------------------------ */
 /*PROM CONTAINER AND COMMENTS*/
 .main__promo-container {
@@ -485,6 +490,7 @@
 		}
 	}
 }
+
 /* ------------------------------------------------------------------ */
 /*---MEDIA QUERIES---*/
 
@@ -499,6 +505,7 @@
 } */
 
 @media screen and (min-width: 768px) {
+
 	/*slider*/
 	.slider--inner {
 		height: 90%;
@@ -507,8 +514,10 @@
 	.slider-buttons {
 		height: 3em;
 	}
+
 	.slider--btns {
 		opacity: 0.5;
+
 		&:hover {
 			opacity: 1;
 		}
@@ -641,6 +650,7 @@
 		}
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.cards-prom {
 		.center_cards-prom {
@@ -681,6 +691,84 @@
 			);
 		}
 	} */
+
+	.dd-modalWindow1 {
+		display: none;
+		width: 10rem;
+		height: 7.5rem;
+		right: 0%;
+		top: -135%;
+		position: absolute;
+		background-color: var(--orange-color);
+		box-shadow: 0px 0px 5px 1px white;
+		border-radius: 10px;
+		overflow: hidden;
+	
+		p {
+			color: white;
+			letter-spacing: 2px;
+			font-size: 12px;
+			padding: 5px;
+		}
+	}
+	
+	dd {
+		position: absolute;
+		right: 10%;
+		margin: auto;
+		background: var(--orange-color);
+		padding: 0 5px;
+		border-radius: 50%;
+		color: white;
+		font-size: 18px;
+	
+	}
+	
+	@keyframes ddAnimation {
+		0% {
+			height: 0;
+			display: none;
+			transform: translateY(100px);
+			background: white;
+		}
+	
+		25% {}
+	
+		50% {
+		}
+	
+		75% {}
+	
+		100% {
+			height: 7.5rem;
+			box-shadow: 0px 0px 5px 1px white;
+	
+		}
+	}
+	
+	@keyframes ddHideAnimation {
+		0% {
+			height: 7.5rem;
+			display: flex;
+	
+		}
+		
+		25% {}
+		
+		50% {
+		}
+		
+		75% {}
+		
+		100% {
+			transform: translateY(100px);
+			height: 0;
+			display: none;
+			background: white;
+	
+		}
+	}
+	
 }
 
 /* @media screen and (min-width: 1200px) {
@@ -689,4 +777,6 @@
 			width: 202px;
 		}
 	}
-} */
+}
+
+*/

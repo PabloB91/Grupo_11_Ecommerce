@@ -1,12 +1,9 @@
-const config = require("../nodemailer/config");
 const nodemailer = require("nodemailer");
-const crypto = require("crypto");
-const token = require("../nodemailer/tokenResetPassword");
-
 const path = require("path");
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const db = require("../database/models");
 
 const resetPasswordController = {
 	getSendMail: (req, res) => {
@@ -18,67 +15,67 @@ const resetPasswordController = {
 			const storeOwnerEmail = "soundboxmusicstore@gmail.com";
 
 			const transporter = nodemailer.createTransport({
-				host: config.MAIL_HOST,
-				port: config.MAIL_PORT,
+				host: "smtp.gmail.com",
+				port: 465,
 				secure: true,
 				auth: {
-					user: config.MAIL_USER,
-					pass: config.MAIL_PASS,
+					user: storeOwnerEmail,
+					pass: "5t0r3mus1c2023",
 				},
 			});
 
 			const userResetLink =
-				"http://localhost:3020/reset/password/" + token;
+				"http://localhost:3020/reset/password/";
 
 			const userInfo = await transporter.sendMail({
-				from: `"SoundBox Music Store" <${config.MAIL_USER}>`,
+				from: `"SoundBox Music Store" <${storeOwnerEmail}>`,
 				to: userEmail,
 				subject: "Reset your password",
 				html: `<p>Click the link below to reset your password:</p><a href="${userResetLink}">Reset Password</a>`,
 			});
 
 			const storeOwnerInfo = await transporter.sendMail({
-				from: `"SoundBox Music Store" <${config.MAIL_USER}>`,
+				from: `"SoundBox Music Store" <${storeOwnerEmail}>`,
 				to: storeOwnerEmail,
 				subject: "Password Reset Request",
 				html: `<p>A user requested to reset their password. Here's the user's email:</p><p>${userEmail}</p><p>And here's the reset link:</p><p>${userResetLink}</p>`,
 			});
 
-			/* console.log("User message sent", userInfo.messageId);
-            console.log("Store owner message sent", storeOwnerInfo.messageId); */
-
 			res.redirect("/");
 		} catch (err) {
 			res.render("errors/404.ejs");
-			/* console.log(err); */
+			console.log(err);
 		}
 	},
-	validateStoreDeleteToken: (req, res) => {
-		function storeResetToken(token, expiresAt) {
-			const tokens = JSON.parse(fs.readFileSync("tokens.json", "utf8"));
-			tokens.push({ token, expiresAt });
-			fs.writeFileSync("tokens.json", JSON.stringify(tokens), "utf8");
+	resetPassword: async (req, res) => {
+		try {
+/* Traer la contraseña de la db */
+
+/* Validar que el mail / id sea el mismo del usuario */
+
+/* Si el id / email es el mismo. que se importe la contraseña de la db */
+
+/* Despues de importar la contraseña que se valide si la contraseña q esta ingresando */
+			/* const passwordConfirmBefore = await db.Usuarios.findByPk(req.params.e_mail, {
+				
+			})
+
+			let userToEdit = await db.Usuarios.update(
+				{
+					password: 
+				},
+				{
+					where: {
+						id: req.params.id,
+					},
+				}
+			);
+
+			return res.redirect(req.params.id); */
+		} catch (err) {
+			return res.render("errors/404.ejs");
 		}
-
-		function isValidResetToken(token) {
-			const tokens = JSON.parse(fs.readFileSync("tokens.json", "utf8"));
-			const tokenIndex = tokens.findIndex((t) => t.token === token);
-
-			if (tokenIndex === -1) {
-				return false;
-			}
-
-			const tokenData = tokens[tokenIndex];
-			const isExpired = tokenData.expiresAt < new Date();
-			return !isExpired;
-		}
-
-		function removeResetToken(token) {
-			const tokens = JSON.parse(fs.readFileSync("tokens.json", "utf8"));
-			const newTokens = tokens.filter((t) => t.token !== token);
-			fs.writeFileSync("tokens.json", JSON.stringify(newTokens), "utf8");
-		}
-	},
+	}
 };
 
 module.exports = resetPasswordController;

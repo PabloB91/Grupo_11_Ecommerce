@@ -191,25 +191,19 @@
                                 </div>
                                 <div class="face back">
                                     <div class="face-back-child">
-                                        <h3 class="marca_nombre">
+                                        <h3 class="product-name">
                                             <%= product.name%>
                                         </h3>
-                                        <p class="marca_marca">
-                                            <%= product.brand.brand_name %>
+                                        <p class="product-brand">
+                                            Marca: <%= product.brand.brand_name %>
                                         </p>
-                                        <p class="marca_categoria">
-                                            <%= product.category.category %>
+                                        <p class="product-category">
+                                            Categoria: <%= product.category.category %>
                                         </p>
-                                        <p class="marca_descripcion">
-                                            <%= product.description %>
+                                        <p class="product-state">
+                                            Estado: <%= product.state.state %>
                                         </p>
-                                        <p class="marca_estado">
-                                            <%= product.state.state %>
-                                        </p>
-                                        <p class="mrca_color">
-                                            <%= product.color_name %>
-                                        </p>
-                                        <p>Color/es:
+                                        <p class="product-color">Color/es:
                                             <% product.Colores.forEach(color=> { %>
                                                 <%= color.color_name %>
                                                     <% if (color !== product.Colores[product.Colores.length - 1]) { %>
@@ -217,11 +211,26 @@
                                                         <% } %>
                                                             <% }) %>
                                         </p>
-                                        <p class="marca_price">$<%= product.price %>
-                                        </p>
-                                        <p>
-                                            <%= product.discount %>%
-                                        </p>
+                                        <div class="price-back">
+                                            <span class="text-price">Precio:</span>
+                                            <p class="product-price">
+                                                $<%= product.price %>
+                                            </p>
+                                        </div>
+                                        <% if(product.discount != 0) {%>
+
+                                            <p class="product-with-discount">
+                                                <%= product.discount %>
+                                                <span>%OFF</span>
+                                            </p>
+                                            
+                                        <% }else{ %>
+
+                                            <p class="product-without-discount">
+                                                Sin Descuento
+                                            </p>
+
+                                        <% } %>
                                     </div>
                                 </div>
                             </a>

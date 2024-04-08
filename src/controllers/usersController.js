@@ -21,6 +21,20 @@ const usersControllers = {
 			const errores = validationResult(req); //--->Traemos las validaciones
 			// console.log(errores);
 
+			let validateUniqueEmailR = await db.Usuarios.findAll({
+					attributes: ["e_mail"]
+			});
+
+			for (const user of validateUniqueEmailR) {
+				if (user.dataValues.e_mail === req.body.email) {
+
+					return res.render("forms/register.ejs", {
+						errors: [{ msg: "No se puede crear una cuenta con un email ya registrado." }],
+						old: req.body,
+					});
+				}
+			}
+
 
 			if (!errores.isEmpty()) {
 				//-->Si existen errores, se renderizan y además se renderizan los input de usuario que sean correctos en el objeto 'old'
@@ -53,7 +67,7 @@ const usersControllers = {
 			}
 		} catch (err) {
 			//--Hay que usar 'return' para evitar el error de '[ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client'
-			return; /* res.send(err) */ //--> Esto nos muestra en la consola si es que hubo algún error en el proceso
+			return res.send(err); //--> Esto nos muestra en la consola si es que hubo algún error en el proceso
 		}
 	},
 	// (GET) Formulario de Login
@@ -177,10 +191,10 @@ const usersControllers = {
 			/* console.log(e_mail); */
 			let userToEdit = await db.Usuarios.update(
 				{
-					first_name: req.body.first_name,
-					last_name: req.body.last_name,
+					first_name: req.body.name,
+					last_name: req.body.lastName,
 					/* password: req, */
-					e_mail: req.body.e_mail,
+					e_mail: req.body.email,
 					/* country:,  */
 				},
 				{
