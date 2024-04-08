@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
 	const slider = document.querySelector("#slider--inner");
+
 	if (!slider) {
 		console.log("No se encontró el elemento #slider--inner en el DOM.");
 		return; // salir de la función si el elemento no se encontró
@@ -13,11 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	const btnStop = document.querySelector("#div__btn-pause-play span");
 
 	slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+	
 	function nextLeft() {
-		let sliderSectionFirst = document.querySelectorAll(".img_sliderSection")[0];
+		let sliderSectionFirst =
+			document.querySelectorAll(".img_sliderSection")[0];
 		slider.style.marginLeft = "-200%";
 		slider.style.transition = " 800ms";
-		setTimeout(function () {
+		setTimeout(()=>{
 			slider.style.transition = "none";
 			slider.insertAdjacentElement("beforeend", sliderSectionFirst);
 			slider.style.marginLeft = "-100%";
@@ -28,32 +32,34 @@ document.addEventListener("DOMContentLoaded", function () {
 		let sliderSectionLast = sliderSection[sliderSection.length - 1];
 		slider.style.marginLeft = "0";
 		slider.style.transition = " 800ms";
-		setTimeout(function () {
+		setTimeout(()=>{
 			slider.style.transition = "none";
 			slider.insertAdjacentElement("afterbegin", sliderSectionLast);
 			slider.style.marginLeft = "-100%";
 		}, 800);
 	}
-	btnStop.addEventListener("click", function () {
-		const id = btnStop.getAttribute("data-id");
 
-		//llamar a un servcio
-		//toggleLike(id)
-		if (btnStop.classList.contains("paused")) {
-			btnStop.classList.toggle("paused");
-			btnStop.innerText = "play_arrow";
-		} else {
-			setInterval(nextLeft(), 5000);
-			btnStop.classList.add("paused");
-			btnStop.innerText = "pause";
-
-		}
-	});
 	btnRight.addEventListener("click", function () {
 		nextLeft();
 	});
 	btnLeft.addEventListener("click", function () {
 		nextRight();
+	});
+
+	let play = setInterval(()=>{
+		nextLeft();
+	}, 5000);
+
+	btnStop.addEventListener("click", function () {
+		const id = btnStop.getAttribute("data-id");
+		btnStop.classList.toggle("paused");
+		clearInterval(play);
+
+		if(btnStop.classList){
+
+		}
+
+		btnStop.innerText = "play_arrow";
 	});
 
 	/* ========================================================================= */
@@ -71,21 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	/* ========================================================================= */
 
-})
+	let dd1 = document.getElementById("dd-onclick-modalWindow1");
+	let ddModalWindow1 = document.querySelector(".dd-modalWindow1");
 
-
-let dd1 = document.getElementById("dd-onclick-modalWindow1");
-let ddModalWindow1 = document.querySelector(".dd-modalWindow1");
-
-dd1.addEventListener("click", () => {
-	ddModalWindowFunction()
-});
-function ddModalWindowFunction() {
-	if (ddModalWindow1.style.display === "flex") {
-		ddModalWindow1.style.display = "none";
-		ddModalWindow1.style.animation = ".5s ddHideAnimation linear";
-	} else {
-		ddModalWindow1.style.display = "flex";
-		ddModalWindow1.style.animation = ".5s ddAnimation linear";
+	dd1.addEventListener("click", () => {
+		ddModalWindowFunction();
+	});
+	function ddModalWindowFunction() {
+		if (ddModalWindow1.style.display === "flex") {
+			ddModalWindow1.style.display = "none";
+			ddModalWindow1.style.animation = ".5s ddHideAnimation linear";
+		} else {
+			ddModalWindow1.style.display = "flex";
+			ddModalWindow1.style.animation = ".5s ddAnimation linear";
+		}
 	}
-}
+});
