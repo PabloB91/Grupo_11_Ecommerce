@@ -297,6 +297,10 @@ div.button-gray {
 	width: 90%;
 }
 
+.height-full{
+	height: 100%;
+}
+
 .margin-30-y {
 	margin: 30px 0px;
 }
