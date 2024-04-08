@@ -74,9 +74,6 @@ main {
 			}
 		}
 
-		/* .fieldset-input {
-		} */
-
 		textarea {
 			width: 100%;
 			color: #000;
@@ -138,6 +135,23 @@ main {
 footer {
 	display: none;
 }
+
+.button-orange{
+	background: var(--orange-color);
+	padding: 7px;
+	border-radius: 5px;
+	margin: 15px;
+	color: #fff;
+}
+
+#button{
+	margin-left: 100px;
+}
+
+.crear-carta-borrar-carta{
+	display: flex;
+}
+
 /* media query */
 
 @media screen and (min-width: 768px) {

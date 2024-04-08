@@ -9,8 +9,10 @@
 
                     <div class="allCategories_container">
                         <div class="dropdown-content-category_title">
-                            <br>
-                            <h3 >Categorías</h3>
+                            <div class="container-title-allCategories">
+                                <h3>Categorías</h3>
+                            </div>
+                            
                             <% if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
                             <a href=""><i class="fa-solid fa-user-tie"></i></a>
                             <% } else {
@@ -25,9 +27,6 @@
                                 <a href="/categories/Guitarras">
                                     <p class="category-name">Guitarras</p>
                                     <img src="/img/home/categoria-guitarras.jpg" alt="Guitarras">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
@@ -35,9 +34,6 @@
                                 <a href="/categories/Accesorios">
                                     <p class="category-name">Accesorios</p>
                                     <img src="/img/home/categoria-accesorios.jpg" alt="Accesorios">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
@@ -45,9 +41,6 @@
                                 <a href="/categories/Efectos">
                                     <p class="category-name">Efectos</p>
                                     <img src="/img/home/categoria-efectos.jpg" alt="Efectos">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
@@ -55,9 +48,6 @@
                                 <a href="/categories/Pianos">
                                     <p class="category-name">Teclados & Pianos</p>
                                     <img src="/img/home/categoria-pianos-teclados.jpg" alt="Teclados&Pianos">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
@@ -65,20 +55,13 @@
                                 <a href="/categories/Orquesta">
                                     <p class="category-name">Orquesta</p>
                                     <img src="/img/home/categoria-orquesta.jpg" alt="Orquesta">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
                             <article class="categoria">
                                 <a href="/categories/Amplificacion">
                                     <p class="category-name">Amplificación</p>
-                                    <img src="/img/home/categoria-amplificacion.jpg" alt="Amplificación">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
-                                    
+                                    <img src="/img/home/categoria-amplificacion.jpg" alt="Amplificación">          
                                 </a>
                             </article>
 
@@ -87,9 +70,6 @@
                                     <p>Segunda Mano</p>
                                     <p class="category-name" class="category-z-index-text">Segunda Mano</p>
                                     <img src="/img/home/categoria-segundamano.jpg" alt="Segunda Mano">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
@@ -97,9 +77,6 @@
                                 <a href="/categories/Grabacion">
                                     <p class="category-name">Grabación</p>
                                     <img src="/img/home/categoria-grabacion.jpg" alt="Grabación">
-                                    <div class="category-explanation">
-                                        <span>this is a category!</span>
-                                    </div>
                                 </a>
                             </article>
 
