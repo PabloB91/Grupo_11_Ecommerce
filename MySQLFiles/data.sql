@@ -42,7 +42,7 @@ INSERT INTO soundbox.product
 (id, name, description, image, quantity, price, discount, brand_id, category_id, state_id)
 VALUES
 (1, 'Guitarra Acústica Roja', 'Guitarra acústica de color rojo vibrante', 'guitarra-3.jpg', 10, 299.99, 10, 4, 1, 3),
-(2, 'Batería Yamaha Negra', 'Set de batería profesional en color negro', 'persecucion-1.jpg', 5, 799.99, 30, 6, 2, 3),
+(2, 'Batería Yamaha Negra', 'Set de batería profesional en color negro', 'tambor-nigga.jpg', 5, 799.99, 30, 6, 2, 3),
 (3, 'Piano de Cola Azul', 'Elegante piano de cola azul con acabado brillante', 'piano-azul.jpg', 2, 4999.99, 40, 7, 8, 2),
 (4, 'Pedal de Efectos Amarillo', 'Pedal de efectos para guitarra en color amarillo brillante', 'pedal-efectos.jpg', 15, 99.99, 90, 1, 4, 3),
 (5, 'Amplificador Marshall Clásico', 'Amplificador icónico de la marca Marshall', 'amplificador-clasico.jpg', 8, 399.99, 5, 5, 6, 3),
@@ -65,7 +65,7 @@ VALUES
 (22, 'Interfaz de Audio Negra', 'Interfaz de audio profesional en negro mate', 'interfaz-audio.jpg', 10, 249.99, 0, 3, 5, 2),     
 (23, 'Cuerdas para Bajo Amarillas', 'Set de cuerdas para bajo en amarillo brillante', 'cuerdas-gibson.jpg', 15, 24.99, 0, 4, 5, 3),
 (24, 'Sintetizador Yamaha Rojo', 'Sintetizador Yamaha en rojo intenso', 'teclado-rojo.jpg', 5, 599.99, 0, 6, 5, 1),
-(25, 'Clarinete Negro', 'Clarinete profesional en negro clásico', 'clarinete-negro.jpg', 3, 299.99, 0, 2, 2, 3),
+(25, 'Clarinete Negro', 'Clarinete profesional en negro clásico', 'clarinete-negro.jpg', 3, 299.99, 0, 2, 2, 3);
 
 INSERT INTO product_color
 (product_id, color_id)
@@ -94,4 +94,4 @@ VALUES
 (22,4),
 (23,2),
 (24,1),
-(25,4)
+(25,4);
