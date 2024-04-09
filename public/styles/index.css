@@ -46,15 +46,13 @@
 .main__container-cards {
 	width: 100%;
 	/* overflow: hidden; */
-	padding-bottom: 1.5em;
-	background-color: white;
+	padding-bottom: 1.5em;		
 
 	.title-section {
 		position: relative;
 		width: 100%;
 		text-align: center;
 		padding: 15px 0px;
-		background-color: white;
 
 		h3 {
 			font-size: 1.4rem;
@@ -109,7 +107,7 @@
 	.img-product {
 		display: block;
 		overflow: hidden;
-		border-bottom: 1px solid var(--Gray-color);
+		border-bottom : 1px solid var(--Gray-color);
 		width: 100%;
 	}
 
@@ -369,7 +367,6 @@
 		grid-gap: 0px 3px;
 		justify-content: center;
 		width: 100%;
-		background-color: #fff;
 		border-radius: 8px;
 	}
 
@@ -628,7 +625,6 @@
 		display: grid;
 		justify-items: center;
 		margin-bottom: 0em;
-		background-color: white;
 		padding-top: 5px;
 
 		.main__section-brands-slider {
@@ -683,7 +679,6 @@
 
 		.product-info{
 			p {
-				display: block;
 				font-size: 0.896rem;
 			}
 
@@ -698,83 +693,6 @@
 			);
 		}
 	} */
-
-	.dd-modalWindow1 {
-		display: none;
-		width: 10rem;
-		height: 7.5rem;
-		right: 0%;
-		top: -135%;
-		position: absolute;
-		background-color: var(--orange-color);
-		box-shadow: 0px 0px 5px 1px white;
-		border-radius: 10px;
-		overflow: hidden;
-	
-		p {
-			color: white;
-			letter-spacing: 2px;
-			font-size: 12px;
-			padding: 5px;
-		}
-	}
-	
-	dd {
-		position: absolute;
-		right: 10%;
-		margin: auto;
-		background: var(--orange-color);
-		padding: 0 5px;
-		border-radius: 50%;
-		color: white;
-		font-size: 18px;
-	
-	}
-	
-	@keyframes ddAnimation {
-		0% {
-			height: 0;
-			display: none;
-			transform: translateY(100px);
-			background: white;
-		}
-	
-		25% {}
-	
-		50% {
-		}
-	
-		75% {}
-	
-		100% {
-			height: 7.5rem;
-			box-shadow: 0px 0px 5px 1px white;
-	
-		}
-	}
-	
-	@keyframes ddHideAnimation {
-		0% {
-			height: 7.5rem;
-			display: flex;
-	
-		}
-		
-		25% {}
-		
-		50% {
-		}
-		
-		75% {}
-		
-		100% {
-			transform: translateY(100px);
-			height: 0;
-			display: none;
-			background: white;
-	
-		}
-	}
 	
 }
 

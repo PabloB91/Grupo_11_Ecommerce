@@ -361,7 +361,6 @@ div.button-gray {
 .discount {
 	color: var(--DarkBlue-color);
 }
-
 @media screen and (min-width: 768px) {
 	body {
 		background: var(--LightGray-color);
@@ -405,6 +404,45 @@ div.button-gray {
 		box-shadow: -5px 5px 16px var(--Tan-color);
 	}
 	.mW-768-W-85 {
+		width: 85%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		background: var(--LightGray-color);
+	}
+	.i-width {
+		font-size: 1.2rem;
+	}
+	.mW-1024-hidden {
+		display: none;
+	}
+	.mW-1024-show {
+		display: block;
+	}
+	.mW-1024-margin-30-y {
+		margin: 30px 0px;
+	}
+	.mW-1024-margin-60-y {
+		margin: 20px 0px;
+	}
+	.mW-1024-flex {
+		display: flex;
+	}
+	.mW-1024-width-1_9 {
+		width: 90%;
+	}
+	.mW-1024-width-1_85 {
+		width: 85%;
+	}
+	.mW-1024-wrap {
+		flex-wrap: wrap;
+	}
+	.mW-1024-noWrap {
+		flex-wrap: nowrap;
+	}
+	.mW-1024-W-85 {
 		width: 85%;
 	}
 }
