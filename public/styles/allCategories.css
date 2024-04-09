@@ -2,17 +2,7 @@ main {
 	display: flex;
 	align-items: center;
 	
-}
-
-section {
-	background: #cac7ba;
-	margin: auto;
-
-	a {
-		display: block;
-		height: 30px;
-	}
-}
+} 
 
 .overflow__container {
 	margin: auto;
