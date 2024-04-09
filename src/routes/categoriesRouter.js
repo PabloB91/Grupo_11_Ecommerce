@@ -29,10 +29,14 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage});
 
-/*
-// Devolver una categoría
-router.get('/categoryDetail/:id', categoriesController.detail);
 
+// Devolver todas las marcas
+router.get('/categories', categoriesController.listCategories);
+
+// Devolver todos los productos de una marca
+router.get('/categories/:category', categoriesController.categoryProduct);
+
+/* 
 // Crear una categoría
 router.get('/createCategory', authMiddleware ,categoriesController.create); --> Se aplica el 'authMiddleware' (si el usuario está logueado, continúa con el controlador,
                                                                 // si no, lo redirige al login)
@@ -47,6 +51,6 @@ router.put('/editCategory/:id', upload.array('form-imagen'), categoriesControlle
 // Eliminar una categoría
 router.delete('/delete/:categoryId', authMiddleware,categoriesController.destroy); // --> Se aplica el 'authMiddleware' (si el usuario está logueado, continúa con el controlador(si no, lo redirige al login)
 
-*/
+ */
 
 module.exports = router;

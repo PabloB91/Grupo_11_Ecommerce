@@ -30,7 +30,9 @@ const brandsController = {
 		try {
 			let products = await db.Productos.findAll({
 				include: [
-					{ association: "brand", attributes: ["brand_name"] }, //-->Vamos a buscar la marca a través de la relación entre tablas, especificando que solo queremos el nombre de la marca
+					{ association: "brand", attributes: ["brand_name"] },  //-->Vamos a buscar la marca a través de la relación entre tablas, especificando que solo queremos el nombre de la marca
+					{ association: "category", attributes: ["category"] },
+					{ association: "state", attributes: ["state"] }
 				],
 				where: {'$brand.brand_name$':req.params.brand_name } //-->La sintaxis '$brand.brand_name$' indica que estamos haciendo referencia a la tabla asociada 'brand'
 			});

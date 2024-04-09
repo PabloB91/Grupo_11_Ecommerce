@@ -16,5 +16,23 @@ const brandsController = {
 			res.render("errors/404.ejs");
 		}
 	},
+
+	categoryProduct: async (req, res) => {
+		try {
+			let products = await db.Productos.findAll({
+				include: [
+					{ association: "category", attributes: ["category"] }, //-->Vamos a buscar la marca a través de la relación entre tablas, especificando que solo queremos el nombre de la marca
+				],
+				where: {'$category.category$':req.params.category } //-->La sintaxis '$brand.brand_name$' indica que estamos haciendo referencia a la tabla asociada 'brand'
+			});
+			res.render(
+				"product/categories.ejs",
+				{ products }
+			);
+		} catch (err) {
+			/* console.log(err);  */
+			res.render("errors/404.ejs");
+		}
+	},
 };
 module.exports = brandsController;
