@@ -73,19 +73,17 @@
                                                                     <%= locals.userLoggedIn.last_name%>
                                                             </div>
 
-                                                            <span class="width-full block">Mi perfil</span>
-
                                                         </a>
 
-                                                        <a href="#" class="flex width-full">
+                                                        <a href="users/userProfile/<%=locals.userLoggedIn.id%>" class="flex width-full">
                                                             <i class="fa-solid fa-gear"></i>
                                                             <p>Ajustes</p>
                                                         </a>
 
-                                                        <a href="#" class="flex width-full">
+                                                        <!-- <a href="#" class="flex width-full">
                                                             <i class="fa-solid fa-pen-to-square"></i>
                                                             <p>Editar</p>
-                                                        </a>
+                                                        </a> -->
 
                                                         <a href="/users/logOut" class="flex width-full">
                                                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -121,10 +119,10 @@
 
                                                 <p><a href="/admin/profile/<%=locals.userLoggedIn.id%>"><img
                                                             src="/img/users/<%=locals.userLoggedIn.image%>"
-                                                            alt="UserOfSoundBox<%=locals.userLoggedIn.name%><%=locals.userLoggedIn.id%>">Perfil</a>
+                                                            alt="UserOfSoundBox<%=locals.userLoggedIn.name%><%=locals.userLoggedIn.id%>"></a>
                                                 </p>
-                                                <p><a href="#"><i class="fa-solid fa-gear"></i>Ajustes</a></p>
-                                                <p><a href="#"><i class="fa-solid fa-pen-to-square"></i>Editar</a>
+                                                <p><a href="/admin/profile/<%=locals.userLoggedIn.id%>"><i class="fa-solid fa-gear"></i>Ajustes</a></p>
+                                                <!-- <p><a href="#"><i class="fa-solid fa-pen-to-square"></i>Editar</a> -->
                                                 </p>
                                                 <p><a href="/users/logOut"><i
                                                             class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a>
@@ -287,6 +285,7 @@
                     <a href="/productCart">Mi cajita<span class="bar-bottom"></span></a>
                     <a href="/products/allTheProducts">Nuestro productos<span class="bar-bottom"></span></a>
                     <a href="/allCategories">Categorías<span class="bar-bottom"></span></a>
+                    <a href="/brands/allBrands">Marcas<span class="bar-bottom"></span></a>
                     <a href="/contactUs">Quienes somos?<span class="bar-bottom"></span></a>
                     
                 </ul>

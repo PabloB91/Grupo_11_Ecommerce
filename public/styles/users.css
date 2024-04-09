@@ -12,18 +12,8 @@ main {
 	border-radius: 8px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
-	overflow: hidden;
 	margin-bottom: 5vh;
-}
-
-h1 {
-	text-align: center;
-	background: black;
-	color: wheat;
-}
-
-h3 {
-	padding-bottom: 3vh;
+	box-shadow: 0px 5px 10px 2px dimgray;
 }
 
 #profile-title {
@@ -33,8 +23,8 @@ h3 {
 	margin-top: 3vh;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
-	height: 5vh;
-	padding-top: 1px;
+	box-shadow: 0px 0px 10px 2px dimgray;
+
 }
 
 #edit-user-form {
@@ -65,31 +55,29 @@ h3 {
 }
 
 .first-section {
-	background-color: rgba(0, 0, 0, 0.4);
-	backdrop-filter: blur(5px);
-	border-radius: 8px;
-	width: 50%;
+	background-color: var(--LightTan-color);
+	box-shadow: 0px 0px 10px 2px dimgray;
+	border-radius: 10px;
+	border: 1px solid;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	padding: 1rem;
-	margin: 5px;
+	margin: 2rem;
 	overflow: hidden;
 
 	.user-description {
 		width: 100%;
 		height: 100%;
 
-		h3 {
-			background-color: rgba(0, 0, 0, 0.2);
-			overflow: hidden;
-			padding-left: 10px;
-			color: white;
-		}
-
 		span {
-			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			font-size: 18px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 	}
 }
@@ -100,7 +88,6 @@ h3 {
 }
 
 .second-section {
-	width: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -163,8 +150,8 @@ h3 {
 .img-container img:hover {
 	border: 1px solid black;
 	border-radius: 8px;
-	transform: scale(1.2);
-	transition: all 0.5s ease;
+	transform: scale(1.1);
+	transition: all 0.3s ease;
 }
 
 
@@ -180,19 +167,11 @@ h3 {
 
 @media (max-width: 1024px) {
 	#profile-title {
-	width: 75%;
+		width: 75%;
 	}
 
 	.primary-section {
 		width: 75%;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		background: #fff;
-
-		.first-section {
-			width: 100%;
-		}
 	}
 
 	.registered-purchases {
@@ -206,11 +185,6 @@ h3 {
 /* MEDIA CELULARES */
 
 @media screen and (max-width: 425px) {
-	.primary-section {
-		.first-section {
-			width: 90%;
-		}
-	}
 
 	.second-section .img-container {
 		margin-left: 5vw;

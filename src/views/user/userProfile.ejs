@@ -10,41 +10,40 @@
 
         <!-- =========================================================================================================== -->
 
-    <main>             
-                
-        <h3 id="profile-title">
-            <strong> Perfil de Usuario de </strong>
-            <%= user.first_name %> <%= user.last_name %>
-        </h3>
-        <section class="primary-section">
-                    
+        <main>
+
+            <h3 id="profile-title">
+                <strong> Perfil de Usuario de </strong>
+                <%= user.first_name %>
+                    <%= user.last_name %>
+            </h3>
+            <section class="primary-section">
+                <section class="first-section">
                     <section class="second-section">
                         <div class="img-container">
                             <img src="/img/users/<%= user.image %>" alt="">
                         </div>
                     </section>
-                    
-                
-                <section class="first-section">
                     <div class="user-description" id="user-description">
-                        <h3 style="text-decoration: underline;">
+                        <span style="text-decoration: underline;">
                             Tus Datos:
-                        </h3>
-                        <h3>
-                            Nombre: <%= user.first_name %>
-                        </h3>
-                        <h3>
-                            Apellido: <%= user.last_name %>
-                        </h3>
-                        <h3>
-                            E-mail: <%= user.e_mail %>
-                        </h3>
-                        <h3>
-                            Tipo de usuario: <%= user.user_type.user_type %>
-                        </h3>
-                        <h3>
-                            País: <%= user.country.country %>
-                        </h3>
+                        </span>
+                        <span>
+                            Nombre: <br>
+                            <%= user.first_name %>
+                        </span>
+                        <span>
+                            Apellido: <br>
+                            <%= user.last_name %>
+                        </span>
+                        <span>
+                            E-mail: <br>
+                            <%= user.e_mail %>
+                        </span>
+                        <span>
+                            País: <br>
+                            <%= user.country.country %>
+                        </span>
 
                         <div class="delete-user">
                             <button class="profile-button" onclick="show()"> Editar usuario </button>
@@ -53,46 +52,51 @@
                     <section id="edit-user-form">
                         <!-- SE BUSCA EL TIPO DE USUARIO DE LA SESIÓN A TRAVÉS DE 'LOCALS', PARA CONFIGURAR EL ATRIBUTO 'action' DEL FORMULARIO -->
                         <% if (locals.userIsLogged==true && locals.userIsAdmin==false) { %>
-                            <form action="/users/userProfile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/x-www-form-urlencoded">
-                        <% } else if (locals.userIsLogged==true && locals.userIsAdmin==true) { %>
-                            <form action="/admin/userProfile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/x-www-form-urlencoded">
-                        <% } %>
+                            <form action="/users/userProfile/<%= user.id %>?_method=PUT" method="POST"
+                                enctype="multipart/x-www-form-urlencoded">
+                                <% } else if (locals.userIsLogged==true && locals.userIsAdmin==true) { %>
+                                    <form action="/admin/userProfile/<%= user.id %>?_method=PUT" method="POST"
+                                        enctype="multipart/x-www-form-urlencoded">
+                                        <% } %>
 
-                        <div class="errores">
-                            <ul></ul>    
-                        </div>
-                        
-                            <label for=""><p>Name</p>
-                                <input id="user-name" name="first_name" type="text" value="<%= user.first_name %>" >
-                            </label>
-                            <label for="">
-                                <p>Last name</p>
-                                <input id="last-name" name="last_name" type="text" value="<%= user.last_name %>">
-                            </label>
-                            <label for="">
-                                <p>Email</p>
-                                <input id="e-mail" name="e_mail" type="text" value="<%= user.e_mail %>" >
-                            </label>
-                            
-                            <div>
-                                <input class="profile-button" type="submit">
-                                <button class="profile-button" onclick="hide()">Volver</button>
-                            </div>
-                            
-                        </form>
+                                            <div class="errores">
+                                                <ul></ul>
+                                            </div>
+
+                                            <label for="">
+                                                <p>Name</p>
+                                                <input id="user-name" name="first_name" type="text"
+                                                    value="<%= user.first_name %>">
+                                            </label>
+                                            <label for="">
+                                                <p>Last name</p>
+                                                <input id="last-name" name="last_name" type="text"
+                                                    value="<%= user.last_name %>">
+                                            </label>
+                                            <label for="">
+                                                <p>Email</p>
+                                                <input id="e-mail" name="e_mail" type="text" value="<%= user.e_mail %>">
+                                            </label>
+
+                                            <div>
+                                                <input class="profile-button" type="submit">
+                                                <button class="profile-button" onclick="hide()">Volver</button>
+                                            </div>
+
+                                    </form>
                     </section>
-                    
+
                 </section>
             </section>
-                
-                <section class="registered-purchases">
-                    <h3>Compras anteriores</h3>
-                    <div class="latest-purchases">
-                        <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                        <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                        <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                        <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                    </div>
+
+            <section class="registered-purchases">
+                <h3>Compras anteriores</h3>
+                <div class="latest-purchases">
+                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                </div>
 
             </section>
         </main>
@@ -101,6 +105,6 @@
 
         <!-- FOOTER / PIE DE PAGINA -->
         <%- include('../partials/footer.ejs') %>
-        <script src="/scripts/user.js"></script>
+            <script src="/scripts/user.js"></script>
 
-    <!-- =========================================================================================================== -->
+            <!-- =========================================================================================================== -->
