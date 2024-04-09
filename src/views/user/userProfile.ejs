@@ -35,6 +35,7 @@
                         </div>
                     </section>
                     <div class="user-description" id="user-description">
+<<<<<<< HEAD
                         <div class="data-user">
                             <span style="text-decoration: underline;">
                                 Tus Datos:
@@ -51,6 +52,30 @@
                                 País: <br>
                                 <%= user.country.country %>
                             </span>
+=======
+                        <span style="text-decoration: underline;">
+                            Tus Datos:
+                        </span>
+                        <span>
+                            Nombre: <br>
+                            <%= user.first_name %>
+                        </span>
+                        <span>
+                            Apellido: <br>
+                            <%= user.last_name %>
+                        </span>
+                        <span>
+                            E-mail: <br>
+                            <%= user.e_mail %>
+                        </span>
+                        <span>
+                            País: <br>
+                            <%= user.country.country %>
+                        </span>
+
+                        <div class="delete-user">
+                            <button class="profile-button" onclick="show()"> Editar usuario </button>
+>>>>>>> f9e9655188597c1b67409a9ee9308234c9b64728
                         </div>
                        <!--  <section class="registered-purchases">
                             <div class="latest-purchases">

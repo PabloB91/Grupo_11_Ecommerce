@@ -64,16 +64,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	/* ========================================================================= */
 	/* 1Funcion para las flechas de desplazamiento delas cards */
-	const rightBtnSliderCards = document.querySelector("div#btnsCards-right");
-	const leftBtnSliderCards = document.querySelector("div#btnsCards-left");
-	const containerCards = document.querySelector("#div_cards--scrolling");
+	const rightBtnSliderCards = document.querySelectorAll("div#btnsCards-right");
+	const leftBtnSliderCards = document.querySelectorAll("div#btnsCards-left");
+	const containerCards = document.querySelectorAll("#div_cards--scrolling");
+
+	console.log(rightBtnSliderCards);
+	console.log(leftBtnSliderCards);
+	console.log(containerCards);
 	//scroll left
-	rightBtnSliderCards.addEventListener("click", () => {
-		containerCards.scrollLeft += 800;
+	rightBtnSliderCards.forEach(btn => {
+		btn.addEventListener("click", () => {
+			containerCards.forEach(container => {
+				container.scrollLeft += 800;	
+			})
+		});
+		
 	});
-	leftBtnSliderCards.addEventListener("click", () => {
-		containerCards.scrollLeft -= 800;
+	leftBtnSliderCards.forEach(btn => {
+		btn.addEventListener("click", () => {
+			containerCards.forEach(container => {
+				container.scrollLeft -= 800;	
+			})
+		});
+		
 	});
+	
 
 	/* ========================================================================= */
 

@@ -521,23 +521,81 @@ footer {
 		}
 
 		.headerBottom {
+			justify-content: center;
 			.navContainer {
-				display: flex;
+				width: 74%;
 				align-items: center;
 				justify-content: center;
-				width: 45%;
+				margin: 0px 10px;
 
 				nav {
-					width: 40px;
-					height: 40px;
+					width: 100%;
+					height: 100%;
 					display: flex;
-					justify-content: center;
+					flex-wrap: wrap;
 					align-items: center;
+					justify-content: flex-end;
+				}
+
+				.dropdowns {
+					display: flex;
+					width: 94%;
+					justify-content: space-evenly;
+					font-family: "Montserrat", sans-serif;
+					font-weight: 600;
+					font-size: 0.8rem;
+
+					/*El contenedor <div> - necesario para posicionar el contenido desplegable */
+					.dropdown {
+						position: relative;
+						color: var(--orange-color);
+						div.name-dropdown{
+							display: flex;
+							align-items: center;
+						}
+					}
+
+					/* Contenido desplegable (oculto de forma predet	erminada) */
+					.dropdown-content {
+						overflow: hidden;
+						display: none;
+						position: absolute;
+						background: var(--white-color);
+						border-radius: 5px;
+						min-width: 160px;
+						box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+						z-index: 999;
+
+						a{
+							padding: 8px 16px;
+						}
+
+					}
+					/* Enlaces dentro del menú desplegable */
+					a {
+						font-family: "Montserrat";
+						font-size: 0.6rem;
+						text-decoration: none;
+						display: block;
+					}
+
+					/* Mostrar el menú desplegable al pasar el mouse */
+					.dropdown:hover .dropdown-content {
+						display: block;
+					}
+				}
+
+				.search-bar {
+					display: none;
+				}
+
+				.menu-burguer {
+					display: none;
 				}
 			}
 
 			.menu-burguer {
-				width: 17%;
+				width: auto;
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
@@ -602,7 +660,7 @@ footer {
 		}
 	}
 
-	aside.right-menu-container {
+	/* aside.right-menu-container {
 		.container__button {
 			display: flex;
 		}
@@ -618,7 +676,7 @@ footer {
 		.right-icons {
 			box-shadow: -2px 2px 13px var(--Tan-color);
 		}
-	}
+	} */
 }
 
 @media screen and (min-width: 1024px) {
@@ -651,13 +709,6 @@ footer {
 				}
 
 				.dropdowns {
-					display: flex;
-					width: 96%;
-					justify-content: space-evenly;
-					font-family: "Montserrat", sans-serif;
-					font-weight: 600;
-					font-size: 0.8rem;
-
 					/*El contenedor <div> - necesario para posicionar el contenido desplegable */
 					.dropdown {
 						position: relative;
@@ -674,20 +725,21 @@ footer {
 						min-width: 160px;
 						box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 						z-index: 999;
+						a{
+						padding: 12px 16px; 	
 
-						/* Enlaces dentro del menú desplegable */
-						a {
-							font-family: "Montserrat";
-							font-size: 14px;
-							padding: 12px 16px;
-							text-decoration: none;
-							display: block;
-
-							/* Cambiar el color de los enlaces desplegables al pasar el mouse */
-							&:hover {
-								background: var(--white-color-hover);
-							}
+						&:hover {
+							background: var(--white-color-hover);
 						}
+						}
+
+					}
+					/* Enlaces dentro del menú desplegable */
+					a {
+						font-family: "Montserrat";
+						font-size: 14px;
+						text-decoration: none;
+						display: block;
 					}
 
 					/* Mostrar el menú desplegable al pasar el mouse */
