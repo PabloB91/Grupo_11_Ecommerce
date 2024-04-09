@@ -81,7 +81,7 @@
                     class="main__content-categories main__section--bgColor flex flex-wrap center-x mW-768-margin-60-y mW-768-W-85">
 
                     <div class="dropdown-content-category_title">
-                        <h3>Categorías</h3>
+                        <h3>Compara Por Categorías</h3>
                         <!-- <div class="dd-modalWindow1">
                             <p>
                                 aquí encontrarás productos filtrados por categorías o puedes ver todas las categorías
@@ -476,7 +476,7 @@
 
                             <div class="promo-container_cards" id="promo-container-one">
                                 <% newsAdd.forEach(product=> { %>
-                                    <div class="card">
+                                    <a href="/products/productDetail/<%= product.id %>" class="card">
 
                                         <picture class="img-product">
                                             <img loading="lazy" src="/img/products/<%= product.image %>"
@@ -524,7 +524,7 @@
                                                 </p>
                                             </div>
                                         </article>
-                                    </div>
+                                    </a>
 
                                     <% }); %>
                             </div>
@@ -539,7 +539,7 @@
 
                             <div class="promo-container_cards" id="promo-container-two">
                                 <% newsComments.forEach(product=> { %>
-                                    <div class="card">
+                                    <a href="/products/productDetail/<%= product.id %>" class="card">
                                         <picture class="img-product">
                                             <img loading="lazy" src="/img/products/<%= product.image %>"
                                                 alt="<%= product.category, product.name, product.brand %>">
@@ -586,7 +586,7 @@
                                                 </p>
                                             </div>
                                         </article>
-                                    </div>
+                                    </a>
 
                                     <% }); %>
                             </div>
@@ -601,7 +601,7 @@
 
                             <div class="promo-container_cards" id="promo-container-third">
                                 <% newsAdd.forEach(product=> { %>
-                                    <div class="card">
+                                    <a href="/products/productDetail/<%= product.id %>" class="card">
                                         <picture class="img-product">
                                             <img loading="lazy" src="/img/products/<%= product.image %>"
                                                 alt="<%= product.category, product.name, product.brand %>">
@@ -648,7 +648,7 @@
                                                 </p>
                                             </div>
                                         </article>
-                                    </div>
+                                    </a>
 
                                     <% }); %>
                             </div>
