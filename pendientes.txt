@@ -1,13 +1,13 @@
 
 Menú del perfil en el header:
     .Es difícil saber por dónde pasar el mouse para que no desaparezca
-    .Sacarle el link de 'ajustes'
-    .Mejorar el diseño
 
-Crear producto:
-    . Borrar la vista previa
+Menú hamburguesa en la vista celulares tapa todo
 
-Menú hamburguesa en todas las vistas responsive está rotísimo
+
+DESPUÉS DEL CURSO:
+
+Subir base de datos a chatbot y crear tabla para guardar la info que solicite el usuario al chatbot (generación de ticket e info del mismo)
 
 Vista de Categorías está incompleta:
     .arreglar categorías y aumentarlas
@@ -21,12 +21,34 @@ Vista tamaño celular del listado de Marcas:
 El diseño de la vista del Carrito está incompleto
 
 Vista de Contáctanos (ver si es necesario o lo dejamos sin funcionalidad)
-Banner principal del index debería funcionar automáticamente
-
-Completar la funcionalidad de todos los links del idex
 
 Ventana Modal de Categorías la dejé comentada porque no funciona en otros tamaños
 La barra de filtrado de productos no tiene funcionalidad y no tiene diseño responsive
 
-DESPUÉS DEL CURSO:
-Subir base de datos a chatbot y crear tabla para guardar la info que solicite el usuario al chatbot (generación de ticket e info del mismo)
+Crear producto:
+    . Borrar la vista previa
+
+Funcionalidades nuevas:
+    . Crear cambio de idioma
+    . Crear cambio de moneda
+    . Rearmar Register (con opción obligatoria de validación de e-mail)
+    . Crear 2FA-Auth + vista de validación de código
+    . Rearmar la funcionalidad Editar usuario (que sea una vista Ejs)
+    . Hacer Carrito de compras funcional
+    . Crear Inicio de sesión con terceros (API) (Google, Facebook, Apple)
+    . Realizar funcionalidades (API) de métodos de pago
+    . Restablecer contraseña
+    . Funcionalidad de Spam/promoción automática por e-mail (cada 30 días)
+    . Rearmar el Product Detail (guiándose con MercadoLibre)
+    . Rearmar el Editar Producto
+    . Crear tabla en la DB para "Sección de comentarios", "Valoraciones (estrellas)", "Registro de tickets recibidos por el Chatbot"
+    . Cambiar el Search para usarlo con Sequelize (base de datos)
+    . Completar al 100% el Dashboard de React
+    . Validaciones Front y Back (Editar usuario-Editar Producto-Crear producto)
+    . MODIFICAR DB (Usuarios/Productos), EN CASO DEL USUARIO:
+        - DIRECCIÓN
+        - TELEFONO
+        - DNI
+        - FECHA DE NACIMIENTO
+        - CODIGO POSTAL
+        - PREFERENCIA DE IDIOMA

@@ -20,7 +20,8 @@ const controller = {
 			});
 			res.render("product/productDetail", { product });
 		} catch (err) {
-			/* console.log(err); */ res.render("errors/404.ejs");
+			console.log(err);
+			res.render("errors/404.ejs");
 		}
 	},
 
@@ -40,7 +41,8 @@ const controller = {
 				availableStates,
 			});
 		} catch (err) {
-			/* console.log(err); */ res.render("errors/404.ejs");
+			console.log(err);
+			res.render("errors/404.ejs");
 		}
 	},
 
@@ -114,7 +116,8 @@ const controller = {
 			}
 			res.redirect("../admin/allTheProducts");
 		} catch (err) {
-			/* console.log(err); */ res.render("errors/404.ejs");
+			console.log(err);
+			res.render("errors/404.ejs");
 		}
 	},
 
@@ -144,7 +147,8 @@ const controller = {
 				availableBrands,
 			});
 		} catch (err) {
-			/* console.log(err); */ res.render("errors/404.ejs");
+			console.log(err); 
+			res.render("errors/404.ejs");
 		}
 	},
 
@@ -189,7 +193,7 @@ const controller = {
 			console.log("Producto editado: ", editedProduct); */
 			res.redirect("/products/productDetail/" + req.params.id);
 		} catch (err) {
-			/* console.log(err); */
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
@@ -209,7 +213,7 @@ const controller = {
 			});
 			res.redirect("/admin/allTheProducts");
 		} catch (err) {
-			/* console.log(err); */
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},
