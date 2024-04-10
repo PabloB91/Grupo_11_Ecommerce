@@ -12,19 +12,47 @@
 
         <main>
 
-            <h3 id="profile-title">
-                <strong> Perfil de Usuario de </strong>
-                <%= user.first_name %>
-                    <%= user.last_name %>
-            </h3>
+            <div id="profile-title">
+
+            </div>
             <section class="primary-section">
                 <section class="first-section">
                     <section class="second-section">
                         <div class="img-container">
                             <img src="/img/users/<%= user.image %>" alt="">
                         </div>
+                        <strong>
+                            <%= user.first_name %>
+                                <%= user.last_name %>
+                        </strong>
+                        <div class="user-buttons">
+                            <div class="delete-user">
+                                <button class="profile-button" onclick="show()"> Editar usuario </button>
+                            </div>
+                            <div class="more-user">
+                                <button class="profile-button"> > </button>
+                            </div>
+                        </div>
                     </section>
                     <div class="user-description" id="user-description">
+<<<<<<< HEAD
+                        <div class="data-user">
+                            <span style="text-decoration: underline;">
+                                Tus Datos:
+                            </span>
+                            <span>
+                                E-mail: <br>
+                                <%= user.e_mail %>
+                            </span>
+                            <span>
+                                Tipo de usuario: <br>
+                                <%= user.user_type.user_type %>
+                            </span>
+                            <span>
+                                País: <br>
+                                <%= user.country.country %>
+                            </span>
+=======
                         <span style="text-decoration: underline;">
                             Tus Datos:
                         </span>
@@ -47,7 +75,17 @@
 
                         <div class="delete-user">
                             <button class="profile-button" onclick="show()"> Editar usuario </button>
+>>>>>>> f9e9655188597c1b67409a9ee9308234c9b64728
                         </div>
+                       <!--  <section class="registered-purchases">
+                            <div class="latest-purchases">
+                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                            </div>
+
+                        </section> -->
                     </div>
                     <section id="edit-user-form">
                         <!-- SE BUSCA EL TIPO DE USUARIO DE LA SESIÓN A TRAVÉS DE 'LOCALS', PARA CONFIGURAR EL ATRIBUTO 'action' DEL FORMULARIO -->
@@ -87,17 +125,6 @@
                     </section>
 
                 </section>
-            </section>
-
-            <section class="registered-purchases">
-                <h3>Compras anteriores</h3>
-                <div class="latest-purchases">
-                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                    <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                </div>
-
             </section>
         </main>
 
