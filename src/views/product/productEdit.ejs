@@ -70,13 +70,13 @@
                                     class="descripcion-form" value="<%= productToEdit.description %>"></input>
                             </div>
 
-                            <div class="fieldset-colores colores-disponibles">
+                            <!-- <div class="fieldset-colores colores-disponibles">
                                 <label for="colores">Colores</label>
-                                <% productToEdit.Colores.forEach(color => { %>
-                                    <input type="checkbox" name="colors" value="<%= color.id %>" class="fieldset-input colors-form" checked>
-                                    <label for="color1" class="fieldset-lbl lbl-productColor"><%= color.color_name %></label>
-                                <% }) %>
-                            </div>
+                                productToEdit.Colores.forEach(color => { 
+                                    <input type="checkbox" name="colors" value="color.id" class="fieldset-input colors-form" checked>
+                                    <label for="color1" class="fieldset-lbl lbl-productColor">color.color_name</label>
+                                })
+                            </div> -->
 
                             <div class="fieldset cantidad-disponibles">
                                 <label for="disponibles">Cantidad disponibles</label>
