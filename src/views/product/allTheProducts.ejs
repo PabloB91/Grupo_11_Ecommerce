@@ -166,80 +166,86 @@
             <section class="seccion-general">
                 <div class="todasLasCards">
                     <% if(locals.userIsLogged==true && locals.userIsAdmin==true){ %>
-                    <!-- carta de creacion del admin -->
-                    <article class="container-producto" id="creationCard">
-                        <a href="/products/create" class="card">
-                            <div class="face front">
-                                <img src="/img/products/IMG_DEFAULT.svg" alt="soundBox">
-                            </div>
-                            <div class="face back">
-                                <div class="img_card-add">
-                                    <i id="add-icon" class="fa-solid fa-plus"></i>
-                                </div>
-                                <h3>Crear producto</h3>
-                            </div>
-                        </a>
-                    </article>
-                    <% }  %>
-
-                    <% products.forEach(product=> { %>
-
-                        <article class="container-producto">
-                            <a href="/products/productDetail/<%= product.id %>" class="card">
+                        <!-- carta de creacion del admin -->
+                        <article class="container-producto" id="creationCard">
+                            <a href="/products/create" class="card">
                                 <div class="face front">
-                                    <img src="/img/products/<%= product.image %> " alt=<%=product.name %> >
+                                    <img src="/img/products/IMG_DEFAULT.svg" alt="soundBox">
                                 </div>
                                 <div class="face back">
-                                    <div class="face-back-child">
-                                        <h3 class="product-name">
-                                            <%= product.name%>
-                                        </h3>
-                                        <p class="product-brand">
-                                            - Marca: <%= product.brand.brand_name %>
-                                        </p>
-                                        <p class="product-category">
-                                            - Categoria: <%= product.category.category %>
-                                        </p>
-                                        <p class="product-state">
-                                            - Estado: <%= product.state.state %>
-                                        </p>
-                                        <p class="product-color">Color/es:
-                                            <% product.Colores.forEach(color=> { %>
-                                                <%= color.color_name %>
-                                                    <% if (color !== product.Colores[product.Colores.length - 1]) { %>
-                                                        , <!-- Añade una coma si no es el último color -->
-                                                        <% } %>
-                                                            <% }) %>
-                                        </p>
-                                        <div class="price-back">
-                                            <span class="text-price">Precio:</span>
-                                            <p class="product-price">
-                                                $<%= product.price %>
-                                            </p>
-                                        </div>
-                                        <% if(product.discount != 0) {%>
-
-                                            <p class="product-with-discount">
-                                                <%= product.discount %>
-                                                <span>%OFF</span>
-                                            </p>
-                                            
-                                        <% }else{ %>
-
-                                            <p class="product-without-discount">
-                                                Sin Descuento
-                                            </p>
-
-                                        <% } %>
+                                    <div class="img_card-add">
+                                        <i id="add-icon" class="fa-solid fa-plus"></i>
                                     </div>
+                                    <p>Crear producto</p>
                                 </div>
                             </a>
                         </article>
-                        <% }); %>
+                        <% } %>
+
+                            <% products.forEach(product=> { %>
+
+                                <article class="container-producto">
+                                    <a href="/products/productDetail/<%= product.id %>" class="card">
+                                        <div class="face front">
+                                            <% if (product.image == null ) { %>
+                                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
+                                                <% } else {%>
+                                                    <img src="/img/products/<%= product.image %> "
+                                                        alt="<%=product.name %>">
+                                                    <% } %>
+                                        </div>
+                                        <div class="face back">
+                                            <div class="face-back-child">
+                                                <h3 class="product-name">
+                                                    <%= product.name%>
+                                                </h3>
+                                                <p class="product-brand">
+                                                    - Marca: <%= product.brand.brand_name %>
+                                                </p>
+                                                <p class="product-category">
+                                                    - Categoria: <%= product.category.category %>
+                                                </p>
+                                                <p class="product-state">
+                                                    - Estado: <%= product.state.state %>
+                                                </p>
+                                                <p class="product-color">Color/es:
+                                                    <% product.Colores.forEach(color=> { %>
+                                                        <%= color.color_name %>
+                                                            <% if (color !==product.Colores[product.Colores.length - 1])
+                                                                { %>
+                                                                , <!-- Añade una coma si no es el último color -->
+                                                                <% } %>
+                                                                    <% }) %>
+                                                </p>
+                                                <div class="price-back">
+                                                    <span class="text-price">Precio:</span>
+                                                    <p class="product-price">
+                                                        $<%= product.price %>
+                                                    </p>
+                                                </div>
+                                                <% if(product.discount !=0) {%>
+
+                                                    <p class="product-with-discount">
+                                                        <%= product.discount %>
+                                                            <span>%OFF</span>
+                                                    </p>
+
+                                                    <% }else{ %>
+
+                                                        <p class="product-without-discount">
+                                                            Sin Descuento
+                                                        </p>
+
+                                                        <% } %>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <% }); %>
 
                 </div>
             </section>
         </main>
-            <script src="/scripts/allProducts.js"></script>
+        <script src="/scripts/allProducts.js"></script>
 
         <%- include("../partials/footer") %>

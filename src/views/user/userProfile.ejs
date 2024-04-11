@@ -1,7 +1,8 @@
 <!-- -VISTA PARA USUARIOS- -->
 
 <%- include('../partials/head.ejs') %>
-    <link href="/styles/users.css" rel="stylesheet">
+    <link href="/styles/userProfile.css" rel="stylesheet">
+
 
     <!-- =========================================================================================================== -->
 
@@ -11,81 +12,61 @@
         <!-- =========================================================================================================== -->
 
         <main>
-
+            <div class="goBack-container">
+                <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
             <div id="profile-title">
 
+                <div class="img-container">
+                    <img src="/img/users/<%=user.image%>" alt="">
+                </div>
             </div>
             <section class="primary-section">
                 <section class="first-section">
                     <section class="second-section">
-                        <div class="img-container">
-                            <img src="/img/users/<%= user.image %>" alt="">
-                        </div>
-                        <strong>
+                        <strong class="user-fullName">
                             <%= user.first_name %>
                                 <%= user.last_name %>
                         </strong>
                         <div class="user-buttons">
-                            <div class="delete-user">
-                                <button class="profile-button" onclick="show()"> Editar usuario </button>
+                            <div class="edit-user">
+                                <button class="profile-button" onclick="show()"> Edit Profile </button>
                             </div>
                             <div class="more-user">
-                                <button class="profile-button"> > </button>
+                                <button class="profile-showMore-button"> <i class="fa-solid fa-caret-down"></i>
+                                </button>
                             </div>
                         </div>
                     </section>
+                    <ul class="profile-info-navBar">
+                        <li class="profile-navBar-buttons">Perfil</li>
+                        <li class="profile-navBar-buttons">Compras</li>
+                        <li class="profile-navBar-buttons">Favoritos</li>
+                        <li class="profile-navBar-buttons">Reseñas</li>
+                    </ul>
                     <div class="user-description" id="user-description">
-<<<<<<< HEAD
                         <div class="data-user">
                             <span style="text-decoration: underline;">
-                                Tus Datos:
+                                Todos tus datos:
                             </span>
                             <span>
-                                E-mail: <br>
+                                Email: <br>
                                 <%= user.e_mail %>
                             </span>
                             <span>
-                                Tipo de usuario: <br>
-                                <%= user.user_type.user_type %>
-                            </span>
-                            <span>
-                                País: <br>
+                                Pais: <br>
                                 <%= user.country.country %>
                             </span>
-=======
-                        <span style="text-decoration: underline;">
-                            Tus Datos:
-                        </span>
-                        <span>
-                            Nombre: <br>
-                            <%= user.first_name %>
-                        </span>
-                        <span>
-                            Apellido: <br>
-                            <%= user.last_name %>
-                        </span>
-                        <span>
-                            E-mail: <br>
-                            <%= user.e_mail %>
-                        </span>
-                        <span>
-                            País: <br>
-                            <%= user.country.country %>
-                        </span>
-
-                        <div class="delete-user">
-                            <button class="profile-button" onclick="show()"> Editar usuario </button>
->>>>>>> f9e9655188597c1b67409a9ee9308234c9b64728
+                            <span>
+                                Fecha de Registro: <br>
+                                <%= user.registered_date %>
+                            </span>
+                            <span>
+                                Tipo de Usuario: <br>
+                                <%= user.user_type.user_type %>
+                            </span>
                         </div>
-                       <!--  <section class="registered-purchases">
-                            <div class="latest-purchases">
-                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                                <img src="/img/products/IMG_DEFAULT.svg" alt="">
-                            </div>
 
-                        </section> -->
                     </div>
                     <section id="edit-user-form">
                         <!-- SE BUSCA EL TIPO DE USUARIO DE LA SESIÓN A TRAVÉS DE 'LOCALS', PARA CONFIGURAR EL ATRIBUTO 'action' DEL FORMULARIO -->
@@ -126,10 +107,17 @@
 
                 </section>
             </section>
+            <section class="imageProfile-window" id="imageProfile-window">
+                <div class="image-container-modalWindow">
+                    <img src="/img/users/<%=user.image%>" alt="">
+                </div>
+                <div class="closeProfileModal" id="closeProfileModal">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+            </section>
         </main>
 
         <!-- =========================================================================================================== -->
-
         <!-- FOOTER / PIE DE PAGINA -->
         <%- include('../partials/footer.ejs') %>
             <script src="/scripts/user.js"></script>

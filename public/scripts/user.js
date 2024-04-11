@@ -60,3 +60,20 @@ function hide() {       //--> Función para esconder el formulario de editar usu
     document.getElementById("user-description").style.display = "flex"; 
 
 }
+
+let profileModalWindow = document.getElementById("profile-title");
+let imageProfileWindow = document.getElementById("imageProfile-window");
+let closeProfileModal = document.getElementById("closeProfileModal");
+
+
+profileModalWindow.addEventListener('click', function () {
+    imageProfileWindow.style.display = "flex";
+    
+
+});
+
+closeProfileModal.addEventListener('click', function () {
+    imageProfileWindow.style.display = "none";
+    
+
+});

@@ -1,0 +1,297 @@
+.goBack-container {
+    margin-top: 15px;
+    position: absolute;
+    left: 15px;
+    background: black;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 50%;
+    z-index: 10;
+
+    a {
+        color: white;
+    }
+}
+
+.primary-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 10px 2px dimgray;
+
+}
+
+#profile-title {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+    /*  background-image: url(/img/products/pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+
+    .img-container {
+        transform: translateY(75px);
+        width: 150px;
+        height: 150px;
+        padding: 1rem;
+        margin: auto;
+
+        img {
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                border: 1px solid black;
+                border-radius: 8px;
+                transform: scale(1.1);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+#edit-user-form {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            p {
+                font-size: 20px;
+            }
+
+            input {
+                width: 100%;
+                margin: 15px;
+                margin-left: 0px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                background-color: #e1dddd;
+            }
+        }
+    }
+}
+
+.first-section {
+    border-radius: 10px;
+    border: 1px solid;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow: hidden;
+
+    .user-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .edit-user {
+            width: 90%;
+
+            .profile-button {
+                background: #4197ffaa;
+                border-radius: 8px;
+                width: 100%;
+                padding: 5px;
+                font-size: 18px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #4196ff;
+                }
+            }
+        }
+
+        .more-user {
+
+            .profile-showMore-button {
+                width: 25px;
+                height: 25px;
+                background: lightgray;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .user-description {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .data-user {
+            display: grid;
+
+            span {
+                margin-bottom: 1rem;
+                font-size: 18px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.second-section {
+    width: 100%;
+    margin: 3rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.profile-info-navBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 2rem;
+
+    .profile-navBar-buttons {
+        padding: 5px;
+        margin: 15px;
+        cursor: pointer;
+        
+        &:hover {
+            background: rgba(211, 211, 211, 0.773);
+            border-radius: 10px;
+        }
+    }
+}
+
+.imageProfile-window {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 18px;
+    flex-direction: column;
+    align-items: center;
+    color: var(--orange-color);
+    z-index: 11;
+
+    
+    .closeProfileModal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        background: gray;
+        padding: 0 4px;
+        border: 1px solid;
+        border-radius: 50%;
+        margin: 0.5rem;
+        cursor: pointer;
+    }
+
+    .image-container-modalWindow {
+        position: relative;
+        width: 550px;
+        height: 550px;
+        margin: auto;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+.errores {
+    color: crimson;
+    font-size: 12px;
+    text-align: center;
+}
+
+/************************************************************************************/
+/* MEDIA COMPUTADORA SMALL */
+@media (min-width: 1024px) {}
+
+/* MEDIA TABLET */
+@media (min-width: 769px) {
+    #profile-title {
+        height: 45vh;
+
+        .img-container {
+            position: absolute;
+            left: 10vw;
+            transform: translateY(175px);
+            width: 200px;
+            height: 200px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .first-section {
+        .user-buttons {
+            .edit-user {
+                display: flex;
+                justify-content: flex-end;
+
+                .profile-button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .second-section {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 18px;
+        align-self: flex-end;
+    }
+
+    .user-fullName {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+/* MEDIA CELULARES */
+
+@media (min-width: 425px) {
+    .primary-section {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .first-section {
+        .user-buttons {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
