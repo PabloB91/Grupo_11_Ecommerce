@@ -159,7 +159,7 @@
 
 .profile-info-navBar {
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-around;
     font-size: 18px;
     border-bottom: 2px solid lightgray;
@@ -293,5 +293,9 @@
             justify-content: flex-end;
             align-items: center;
         }
+    }
+
+    .profile-info-navBar {
+        display: flex;
     }
 }
