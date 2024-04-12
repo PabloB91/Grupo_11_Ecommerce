@@ -2,8 +2,8 @@
     margin-top: 15px;
     position: absolute;
     left: 15px;
-    background: black;
-    padding: 10px;
+    background: var(--orange-color);
+    padding: 5px 10px;
     font-size: 25px;
     border-radius: 50%;
     z-index: 10;
@@ -169,7 +169,7 @@
         padding: 5px;
         margin: 15px;
         cursor: pointer;
-        
+
         &:hover {
             background: rgba(211, 211, 211, 0.773);
             border-radius: 10px;
@@ -186,20 +186,24 @@
     height: 100vh;
     padding: 1rem;
     background: rgb(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1.5px);
     border-radius: 18px;
     flex-direction: column;
     align-items: center;
     color: var(--orange-color);
     z-index: 11;
 
-    
+
     .closeProfileModal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
         position: absolute;
         top: 1rem;
         right: 1rem;
         color: white;
-        background: gray;
         padding: 0 4px;
         border: 1px solid;
         border-radius: 50%;
@@ -209,13 +213,14 @@
 
     .image-container-modalWindow {
         position: relative;
-        width: 550px;
-        height: 550px;
+        width: 250px;
+        height: 250px;
         margin: auto;
-        
+
         img {
             width: 100%;
             height: 100%;
+            border-radius: 18px;
         }
     }
 
@@ -275,6 +280,12 @@
         justify-content: center;
     }
 
+
+    .imageProfile-window .image-container-modalWindow {
+        width: 450px;
+        height: 450px;
+    }
+
 }
 
 /* MEDIA CELULARES */
@@ -298,4 +309,5 @@
     .profile-info-navBar {
         display: flex;
     }
+
 }
