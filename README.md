@@ -40,8 +40,7 @@ Servicios:
      
 ### 6. DESCRIPCIÓN DE LOS INTEGRANTES DEL GRUPO
 ___________________________________________________________________________________________________________________________________
-
-  - #### ***[Bautista Garcia Oliver](https://github.com/BautistaGarcia)***
+#### ***[Bautista Garcia Oliver](https://github.com/BautistaGarcia)***
   - Profile links: -->
   - https://www.linkedin.com/in/bautista-garcia-oliver-22571429b/
   - https://github.com/BautistaGarcia
