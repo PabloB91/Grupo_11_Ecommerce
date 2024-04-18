@@ -41,20 +41,29 @@ Servicios:
 ### 6. DESCRIPCIÓN DE LOS INTEGRANTES DEL GRUPO
 ___________________________________________________________________________________________________________________________________
 
-  - #### Bautista Garcia Oliver
+  - #### ***[Bautista Garcia Oliver](https://github.com/BautistaGarcia)***
+  - Profile links: -->
   - https://www.linkedin.com/in/bautista-garcia-oliver-22571429b/
   - https://github.com/BautistaGarcia
-# * ENGLISH: *
+
+    
+- **Node.js** 🟢
+- **HTML 5** 🟠
+- **CSS 3** 🔵
+- **JavaScript** 🟡
+- - **Embedded JavaScript** 🟡
+- **MySql** ⏺️
+- **Sequelize** 📀
+##### ENGLISH: 
    - I'm an italian with passport, actually living in Brussels, Belgium.  I am 21 years old and very interested in the permanent development of my skills as a Full Stack programmer specialized in e-commerces!!
    I have a perfect knowledge in the following languages; French(B2), English(B2), Spanish(native).
    I am very determined and interested in getting serious work experience in a company for starting my professional career as a Junior Developer.
   
-# * FRANCAIS: *
+##### FRANCAIS: 
    - Je suis: Junior Full Stack Developeur avec spécialisation en e-commerces, je suis Italien avec passeport qui vis actuellement au centre de Brusselles.  J'ai vingt et un ans et je suis très intéressé à développer mes compétences comme Developer dans votre entreprise!!
    Je parle parfaitement les suivants languages; Francais(B2), Anglais(B2).
    Je suis très intéressé à avoir une expérience de travail serieuse dans votre entreprise ou proyect!!
 
-   ~  Node.js | HTML5 | CSS3 | JavaScript | Embedded JS | MySql  | Sequelize | Api Rest | Postman | Github. ~
 ___________________________________________________________________________________________________________________________________
 
   - ##### ***[Miguel Ángel Vargas Navarro](https://github.com/Miguel-A-VN)***
