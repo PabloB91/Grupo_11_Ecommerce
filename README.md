@@ -41,6 +41,22 @@ Servicios:
 ### 6. DESCRIPCIÓN DE LOS INTEGRANTES DEL GRUPO
 ___________________________________________________________________________________________________________________________________
 
+  - #### Bautista Garcia Oliver
+ https://www.linkedin.com/in/bautista-garcia-oliver-22571429b/
+ https://github.com/BautistaGarcia
+ENGLISH:
+   I'm an italian with passport, actually living in Brussels, Belgium.  I am 21 years old and very interested in the permanent development of my skills as a Full Stack programmer specialized in e-commerces!!
+   I have a perfect knowledge in the following languages; French(B2), English(B2), Spanish(native).
+   I am very determined and interested in getting serious work experience in a company for starting my professional career as a Junior Developer.
+   
+FRANCAIS:
+   Je suis: Junior Full Stack Developeur avec spécialisation en e-commerces, je suis Italien avec passeport qui vis actuellement au centre de Brusselles.  J'ai vingt et un ans et je suis très intéressé à développer mes compétences comme Developer dans votre entreprise!!
+   Je parle parfaitement les suivants languages; Francais(B2), Anglais(B2).
+   Je suis très intéressé à avoir une expérience de travail serieuse dans votre entreprise ou proyect!!
+
+   ~  Node.js | HTML5 | CSS3 | JavaScript | Embedded JS | MySql  | Sequelize | Api Rest | Postman | Github. ~
+___________________________________________________________________________________________________________________________________
+
   - ##### ***[Miguel Ángel Vargas Navarro](https://github.com/Miguel-A-VN)***
     
     - Soy un colombiano apasionado por las nuevas tecnologías y me gusta estar en constante aprendizaje.
@@ -98,13 +114,6 @@ ________________________________________________________________________________
   
     - 20 años cultivando experiencias como diseñador gráfico, director creativo, director audiovisual, y experto en branding. Encuentro mi verdadera vocación al descubrir una ciencia holística que me permite entender a las empresas como ‘sistemas vivientes’ más allá de ‘marcas’. Trabajo en la actualidad como Consultor en Comunicaciones & Desarrollo Organizacional Ecosocial (DOE) facilitando procesos de comunicación corporativa, gestión de interdependencias, branding y transformación cultural en varias compañías.
 
-___________________________________________________________________________________________________________________________________
-
-  
-  - #### Bautista Garcia Oliver
-
-    Tengo 20 años, soy de Buenos Aires, tengo perfecto conocimiento en cuatro idiomas, me interesé en la programación en tiempos de pandemia.
-    Aún no tengo asignado un rol en el proyecto
 ___________________________________________________________________________________________________________________________________
 
 ## Enlace al tablero de trabajo en Trello: 
