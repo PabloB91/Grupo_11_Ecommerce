@@ -51,7 +51,7 @@ ________________________________________________________________________________
 - **HTML 5** 🟠
 - **CSS 3** 🔵
 - **JavaScript** 🟡
-- - **Embedded JavaScript** 🟡
+- **Embedded JavaScript** 🟡
 - **MySql** ⏺️
 - **Sequelize** 📀
 ##### ENGLISH: 
