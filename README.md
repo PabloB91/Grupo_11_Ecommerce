@@ -46,14 +46,11 @@ ________________________________________________________________________________
   - https://www.linkedin.com/in/bautista-garcia-oliver-22571429b/
   - https://github.com/BautistaGarcia
 
-    
-- **Node.js** 🟢
-- **HTML 5** 🟠
-- **CSS 3** 🔵
-- **JavaScript** 🟡
-- **Embedded JavaScript** 🟡
-- **MySql** ⏺️
-- **Sequelize** 📀
+      - **HTML** 🟠
+      - **Css** 🔵
+      - **JavaScript** 🟡
+      - **MySql** ⏺️
+      - **Sequelize** 📀
 ##### ENGLISH: 
    - I'm an italian with passport, actually living in Brussels, Belgium.  I am 21 years old and very interested in the permanent development of my skills as a Full Stack programmer specialized in e-commerces!!
    I have a perfect knowledge in the following languages; French(B2), English(B2), Spanish(native).
