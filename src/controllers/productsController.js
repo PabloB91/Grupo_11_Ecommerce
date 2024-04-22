@@ -9,6 +9,14 @@ const { log } = require("console");
 const controller = {
 	// (get) Detail - Detalle de un producto
 	detail: async (req, res) => {
+		// guardar los productos en los k se accede x url
+			const productsId = req.params.id;
+			req.session.lastSeens;
+			if (req.session.lastSeens) {
+				req.session.lastSeens.push(parseInt(productsId))
+			}
+		//
+
 		try {
 			let product = await db.Productos.findByPk(req.params.id, {
 				include: [
@@ -147,7 +155,7 @@ const controller = {
 				availableBrands,
 			});
 		} catch (err) {
-			console.log(err); 
+			console.log(err);
 			res.render("errors/404.ejs");
 		}
 	},

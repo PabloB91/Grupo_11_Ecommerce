@@ -13,6 +13,9 @@ const adminController = require("../controllers/adminController");
 // *********** Middlewares Especificos ***********
 const authMiddleware = require('../middlewares/authMiddleware'); //--> Requerimos el 'authMiddleware'
 
+// *********** Middlewares Especificos ***********
+const lastSeenMiddlewares = require('../middlewares/productSeen.js'); 
+
 // Buscar un producto
 router.get('/search', productsController.search);
 
@@ -20,7 +23,7 @@ router.get('/search', productsController.search);
 router.get('/allTheProducts', adminController.allProducts); 
 
 // Devolver un producto 
-router.get('/productDetail/:id', productsController.detail);
+router.get('/productDetail/:id', lastSeenMiddlewares, productsController.detail);
 
 // Crear un producto
 router.get('/create', authMiddleware.admin ,productsController.create); //--> Se aplica el método 'admin' del 'authMiddleware' ('authMiddleware.admin'), 

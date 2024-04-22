@@ -78,8 +78,6 @@ const usersControllers = {
 	processToLogin: async (req, res) => {
 		let userToLogIn; //--> Creamos la variable del usuario a loguearse
 
-		// Obtengo el valor de user_type y guárdalo en req.session.userType /* BAUTI REVISAR SI ESTO FUNCIONA */
-
 		try {
 			const errors = validationResult(req);
 			if (errors.isEmpty()) {
@@ -93,7 +91,8 @@ const usersControllers = {
 					],
 				});
 
-				if (req.body.email === userToFind.e_mail) {
+				if (
+					req.body.email === userToFind.e_mail) {
 					//--> Si el e_mail ingresado coincide con alguno buscado en la DB, pasa a comparar las contraseñas
 					if (
 						bcrypt.compareSync(

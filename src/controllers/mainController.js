@@ -12,6 +12,12 @@ const { Op, where } = require("sequelize");
 const mainController = {
 	index: async (req, res) => {
 		try {
+
+			const LastSeenProducts = await db.Productos.findAll({
+				where: { // comparamos ke haya coincidencia entre el id de los productos y el array de los last seens
+					id: req.session.lastSeen
+				}
+			});
 			const topSeller = await db.Productos.findAll({
 				where: {
 					price: {
@@ -41,7 +47,7 @@ const mainController = {
 			});
 			const products = await db.Productos.findAll();
 
-			res.render("index", { topSeller, offerts, products, newsComments,newsAdd });
+			res.render("index", { LastSeenProducts, topSeller, offerts, products, newsComments, newsAdd });
 		} catch (err) {
 			console.log(err);
 			res.render("errors/404.ejs");
@@ -69,7 +75,7 @@ const mainController = {
 					{ association: "category", attributes: ["category"] },
 					{ association: "brand", attributes: ["brand_name"] },
 					{ association: "state", attributes: ["state"] }
-			],
+				],
 			});
 			res.render("product/categories.ejs", { category });
 		} catch (err) {

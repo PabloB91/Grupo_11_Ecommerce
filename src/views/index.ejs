@@ -307,12 +307,12 @@
                     class="main__container-cards main__section--bgColor mW-768-margin-60-y mW-768-W-85 width-full">
 
                     <div class="last-seen_title title-section" id="offers">
-                        <h3>Top ventas</h3>
+                        <h3>Ultimos vistos</h3>
                     </div>
 
                     <div id="div_cards--scrolling" class="cards">
 
-                        <% topSeller.forEach(product=> { %>
+                        <% LastSeenProducts.forEach(product=> { %>
                             <div class="card-outline">
                                 <a href="/products/productDetail/<%= product.id %>" class="product">
                                     <div class="card">
@@ -468,7 +468,7 @@
 
                     <div class="container-boxes">
 
-                        <div class="box" id="featured">
+                        <div class="box-gridColumn-1" id="featured">
 
                             <div class="box__title">
                                 <h2>DESTACADOS</h2><span class="bar-bottom"></span>
@@ -531,7 +531,7 @@
 
                         </div>
 
-                        <div class="box" id="comments">
+                        <div class="box-gridColumn-1" id="comments">
 
                             <div class="box__title">
                                 <h2>COMENTARIOS</h2><span class="bar-bottom"></span>
@@ -593,7 +593,7 @@
 
                         </div>
 
-                        <div class="box" id="news">
+                        <div class="box-gridColumn-2" id="news">
 
                             <div class="box__title">
                                 <h2>NOVEDADES</h2><span class="bar-bottom"></span>
@@ -655,7 +655,7 @@
 
                         </div>
 
-                        <article class="box">
+                        <article class="box-promo">
 
                             <picture class="promo-container__box-picture">
                                 <img loading="lazy" src="img/banners/banner_promo.jpg"
