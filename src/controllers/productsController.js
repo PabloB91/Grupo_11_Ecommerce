@@ -15,6 +15,7 @@ const controller = {
 			if (req.session.lastSeens) {
 				req.session.lastSeens.push(parseInt(productsId))
 			}
+			/* console.log(req.session.lastSeens); Para observar la id de los productos ultimos visto es un array*/ 
 		//
 
 		try {

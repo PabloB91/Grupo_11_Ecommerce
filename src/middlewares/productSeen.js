@@ -1,6 +1,6 @@
 function productSeen(req, res, next) {
-    if (!req.session.lastSeen) {
-        req.session.lastSeen = [];
+    if (!req.session.lastSeens) {
+        req.session.lastSeens = [];
     } 
     next();
 }
